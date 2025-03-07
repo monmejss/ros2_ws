@@ -1,0 +1,60 @@
+xolobot_arm:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 10  
+  
+  # Position Controllers ---------------------------------------
+  joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jnt_pecho_hombro
+    pid:
+      p: 100.0 
+      i: 0.01
+      d: 10.0
+    interface_name: "position"
+      
+  joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jnt_hombro_hombro
+    pid:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    interface_name: "position"
+
+  joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jnt_hombro_biceps
+    pid:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    interface_name: "position"
+  
+  joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jnt_biceps_codo
+    pid:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    interface_name: "position"
+    
+  joint5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jnt_codo_antebrazo
+    pid:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    interface_name: "position"
+    
+  joint6_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: jnt_palma_pulgar_1
+    pid:
+      p: 100.0
+      i: 0.01
+      d: 10.0
+    interface_name: "position"
