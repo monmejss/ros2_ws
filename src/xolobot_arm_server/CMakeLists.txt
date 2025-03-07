@@ -8,6 +8,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(fmt REQUIRED)
 
 include_directories(
    include
@@ -30,5 +31,12 @@ install(DIRECTORY include/${PROJECT_NAME}/
   DESTINATION include/${PROJECT_NAME}
   FILES_MATCHING PATTERN "*.hpp"
 ) 
+
+ament_target_dependencies(xolobot_arm_server
+  rclcpp
+  std_msgs
+  fmt
+)
+
 
 ament_package()

@@ -1,0 +1,17 @@
+[0.113s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.709s] [ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o[0m
+[14.047s] In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/startServerNode.cpp:1[m[K:
+[14.047s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:36:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ was not declared in this scope
+[14.048s]    36 |     std::vector<rclcpp::Publisher<[01;31m[Kstd_msgs[m[K::msg::Float64>::SharedPtr> jointPub;
+[14.048s]       |                                   [01;31m[K^~~~~~~~[m[K
+[14.048s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:36:57:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[14.048s]    36 |     std::vector<rclcpp::Publisher<std_msgs::msg::Float64[01;31m[K>[m[K::SharedPtr> jointPub;
+[14.049s]       |                                                         [01;31m[K^[m[K
+[14.054s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:36:69:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[14.055s]    36 | :vector<rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr[01;31m[K>[m[K jointPub;
+[14.056s]       |                                                             [01;31m[K^[m[K
+[14.056s] 
+[14.056s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:36:69:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[16.424s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:76: CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o] Error 1
+[16.426s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[16.426s] gmake: *** [Makefile:146: all] Error 2
