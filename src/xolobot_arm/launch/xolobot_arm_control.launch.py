@@ -52,21 +52,7 @@ def generate_launch_description():
             'robot_description': open(os.path.join(pkg_xolobot_arm, 'models', 'xolobot.urdf')).read()
         }]
     )
-
-    # Nodo: urdf_spawner. Para URDF
-    #urdf_spawner = Node(
-    #    # cambia de gazebo_ros a ros_gz_sim. Y de spawn_model a spawn_entity
-    #    package='ros_gz_sim',
-    #    executable='spawn_entity',
-    #    output='screen',
-    #    arguments=[
-    #        '-urdf',
-    #        '-param', 'robot_description',
-    #        '-model', 'xolobot_arm_j',
-    #        '-x', '0.5', '-y', '0.5', '-z', '0.52277'
-    #    ]
-    #)
-
+    
     # Nodo: spawn_sdf. Para el SDF
     sdf_spawner = Node(
         package='ros_gz_sim',
@@ -86,11 +72,18 @@ def generate_launch_description():
         output='screen',
         arguments=['--load', os.path.join(pkg_xolobot_control, 'config', 'xolobot_control.yaml')]
     )
+    
+    joint_state_broadcaster_node = Node(
+        package='controller_manager',
+        executable='spawner',
+        output='screen',
+        arguments=['joint_state_broadcaster']
+    )
 
     return LaunchDescription(declared_arguments + [
         gazebo_launch,
         robot_state_publisher_node,
-        #urdf_spawner,
+        joint_state_broadcaster_node,
         sdf_spawner,
         controller_spawner
     ])
