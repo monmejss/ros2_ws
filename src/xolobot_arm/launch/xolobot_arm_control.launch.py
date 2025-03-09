@@ -1,16 +1,27 @@
-import os
+import os 
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch_ros.actions import Node
+from launch_ros.actions import Node 
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from ament_index_python.packages import get_package_share_directory
+
+# os - manejo de rutas de archivos
+# LaunchDescription - define estructura del launch
+# Node - para lanzar nodos en ROS 2
+# DeclareLaunchArgument - define argumentos que pueden modificarse
+# IncludeLaunchDescription - permite incluir otros launch
+# PythonLaunchDescriptionSource - incluir launch escritos en Python
+# get_package_share_directory - buscar paquetes dentro del ws
+
 
 def generate_launch_description():
     pkg_xolobot_arm = get_package_share_directory('xolobot_arm')
     pkg_xolobot_control = get_package_share_directory('xolobot_control')
-    gazebo_ros_launch = os.path.join(get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')
     
-    # Argumentos de la simulación
+    # Cambia a ros_gz_sim para usar Ignition. Antes: gazebo_ros
+    gazebo_ros_launch = os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gazebo.launch.py')
+    
+    # These are the arguments you can pass this launch file
     declared_arguments = [
         DeclareLaunchArgument('paused', default_value='false'),
         DeclareLaunchArgument('use_sim_time', default_value='true'),
@@ -19,8 +30,8 @@ def generate_launch_description():
         DeclareLaunchArgument('debug', default_value='false'),
     ]
 
-    # Incluye el launch de Gazebo Ignition
-    gazebo = IncludeLaunchDescription(
+    # Cargar el mundo coca_levitando.world
+    gazebo_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(gazebo_ros_launch),
         launch_arguments={
             'world': os.path.join(pkg_xolobot_arm, 'worlds', 'coca_levitando.world'),
@@ -32,8 +43,8 @@ def generate_launch_description():
         }.items(),
     )
 
-    # Publicador del estado del robot
-    robot_state_publisher = Node(
+    # Cargar la descripcion desde el URDF. Publicar para ros2 en robot_description
+    robot_state_publisher_node = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
@@ -42,20 +53,21 @@ def generate_launch_description():
         }]
     )
 
-    # Spawner URDF
-    urdf_spawner = Node(
-        package='gazebo_ros',
-        executable='spawn_model',
-        output='screen',
-        arguments=[
-            '-urdf',
-            '-param', 'robot_description',
-            '-model', 'xolobot_arm_j',
-            '-x', '0.5', '-y', '0.5', '-z', '0.52277'
-        ]
-    )
+    # Nodo: urdf_spawner. Para URDF
+    #urdf_spawner = Node(
+    #    # cambia de gazebo_ros a ros_gz_sim. Y de spawn_model a spawn_entity
+    #    package='ros_gz_sim',
+    #    executable='spawn_entity',
+    #    output='screen',
+    #    arguments=[
+    #        '-urdf',
+    #        '-param', 'robot_description',
+    #        '-model', 'xolobot_arm_j',
+    #        '-x', '0.5', '-y', '0.5', '-z', '0.52277'
+    #    ]
+    #)
 
-    # Spawner SDF usando Gazebo Ignition
+    # Nodo: spawn_sdf. Para el SDF
     sdf_spawner = Node(
         package='ros_gz_sim',
         executable='spawn_entity',
@@ -67,18 +79,18 @@ def generate_launch_description():
         ]
     )
 
-    # Cargar configuraciones de controladores desde YAML
+    # Load joint controller configurations from YAML file
     controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
         output='screen',
-        parameters=[os.path.join(pkg_xolobot_control, 'config', 'xolobot_control.yaml')]
+        arguments=['--load', os.path.join(pkg_xolobot_control, 'config', 'xolobot_control.yaml')]
     )
 
     return LaunchDescription(declared_arguments + [
-        gazebo,
-        robot_state_publisher,
-        urdf_spawner,
+        gazebo_launch,
+        robot_state_publisher_node,
+        #urdf_spawner,
         sdf_spawner,
         controller_spawner
     ])
