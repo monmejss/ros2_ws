@@ -19,7 +19,7 @@ def generate_launch_description():
     pkg_xolobot_control = get_package_share_directory('xolobot_control')
     
     # Cambia a ros_gz_sim para usar Ignition. Antes: gazebo_ros
-    gazebo_ros_launch = os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gazebo.launch.py')
+    gazebo_ros_launch = os.path.join(get_package_share_directory('ros_gz_sim'), 'launch', 'gz_sim.launch.py')
     
     # These are the arguments you can pass this launch file
     declared_arguments = [
@@ -56,7 +56,8 @@ def generate_launch_description():
     # Nodo: spawn_sdf. Para el SDF
     sdf_spawner = Node(
         package='ros_gz_sim',
-        executable='spawn_entity',
+        # se cambia de spawn_entity a create porque asi se llama en esta version de Gazebo
+        executable='create',
         output='screen',
         arguments=[
             '-file', os.path.join(pkg_xolobot_arm, 'models', 'xolobot_arm.sdf'),
