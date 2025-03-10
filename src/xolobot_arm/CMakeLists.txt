@@ -9,4 +9,19 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
+install(
+  DIRECTORY launch/
+  DESTINATION share/${PROJECT_NAME}/
+)
+
+install(
+  DIRECTORY models/
+  DESTINATION share/${PROJECT_NAME}/models
+)
+
+install(
+  DIRECTORY worlds/
+  DESTINATION share/${PROJECT_NAME}/
+)
+
 ament_package()
