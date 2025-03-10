@@ -1,4 +1,6 @@
 #include "SimulationController.hpp"
+#include "gazebo_msgs/msg/contacts_state.hpp"
+
 
 bool colisionDetectada = false;
 
@@ -74,12 +76,4 @@ void SimulationController::generaAleatorios() {
         jointPub[i]->publish(msg);
         rate.sleep();
     }
-}
-
-int main(int argc, char **argv) {
-    rclcpp::init(argc, argv);
-    auto node = std::make_shared<SimulationController>();
-    node->startTrajectory();
-    rclcpp::shutdown();
-    return 0;
 }

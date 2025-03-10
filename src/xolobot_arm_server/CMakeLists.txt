@@ -9,6 +9,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(fmt REQUIRED)
+find_package(gazebo_msgs REQUIRED)
+
 
 include_directories(
    include
@@ -36,7 +38,7 @@ ament_target_dependencies(xolobot_arm_server
   rclcpp
   std_msgs
   fmt
+  gazebo_msgs
 )
-
 
 ament_package()
