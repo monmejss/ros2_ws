@@ -66,12 +66,22 @@ def generate_launch_description():
         ]
     )
 
+    # Nodo: Para cargar los del .YAML
+    control_params = os.path.join(pkg_xolobot_control, 'config', 'xolobot_control.yaml')
+    controller_manager = Node(
+        package='controller_manager',
+        executable='ros2_control_node',
+        parameters=[control_params],
+        output='screen'
+    )
+    
     # Load joint controller configurations from YAML file
     controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
         output='screen',
-        arguments=['--load', os.path.join(pkg_xolobot_control, 'config', 'xolobot_control.yaml')]
+        # Controlador: joint_trajectory_controller
+        arguments=['joint_trajectory_controller']
     )
     
     joint_state_broadcaster_node = Node(
@@ -86,5 +96,6 @@ def generate_launch_description():
         robot_state_publisher_node,
         joint_state_broadcaster_node,
         sdf_spawner,
-        controller_spawner
+        controller_spawner,
+        controller_manager
     ])
