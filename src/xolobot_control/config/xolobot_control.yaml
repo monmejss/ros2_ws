@@ -1,11 +1,26 @@
 xolobot_arm:
-  # Publish all joint states -----------------------------------
-  #joint_state_controller:
-    #type: joint_state_controller/JointStateController
+  ros_parameters: 
+    update_rate: 100
+
   joint_state_broadcaster:
     type: joint_state_broadcaster/JointStateBroadcaster
-    publish_rate: 10  
-  
+    publish_rate: 50
+
+  joint_trajectory_controller:
+    type: joint_trajectory_controller/JointTrajectoryController
+    joints:
+      - jnt_pecho_hombro
+      - jnt_hombro_hombro
+      - jnt_hombro_biceps
+      - jnt_biceps_codo
+      - jnt_codo_antebrazo
+      - jnt_palma_pulgar_1
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+
   # Position Controllers ---------------------------------------
   joint1_position_controller:
     type: position_controllers/JointPositionController
