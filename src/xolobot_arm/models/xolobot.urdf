@@ -68,10 +68,10 @@
     <transmission name="trans_pecho_hombro">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_pecho_hombro">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
         </joint>
         <actuator name="mtr_pecho_hombro">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -79,10 +79,10 @@
     <transmission name="trans_hombro_hombro">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_hombro_hombro">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
         </joint>
         <actuator name="mtr_hombro_hombro">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -90,10 +90,10 @@
     <transmission name="trans_hombro_biceps">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_hombro_biceps">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
         </joint>
         <actuator name="mtr_hombro_biceps">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -101,10 +101,10 @@
     <transmission name="trans_biceps_codo">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_biceps_codo">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
         </joint>
         <actuator name="mtr_biceps_codo">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -112,10 +112,10 @@
     <transmission name="trans_codo_antebrazo">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_codo_antebrazo">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
         </joint>
         <actuator name="mtr_codo_antebrazo">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
@@ -123,12 +123,49 @@
     <transmission name="trans_palma_pulgar_1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_palma_pulgar_1">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
         </joint>
         <actuator name="mtr_palma_pulgar_1">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <hardwareInterface>hardware_interface/effort</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
-    
+
+  <!--Para el plugin de gazebo_ros2_control-->
+  <ros2_control name="xolobot_arm_ros2_control" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+    <joint name="jnt_pecho_hombro">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="jnt_hombro_hombro">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="jnt_hombro_biceps">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="jnt_biceps_codo">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="jnt_codo_antebrazo">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="jnt_palma_pulgar_1">
+      <command_interface name="effort"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
 </robot>
