@@ -69,11 +69,17 @@ def generate_launch_description():
     # Nodo: Para cargar los del .YAML
     control_params = os.path.join(pkg_xolobot_control, 'config', 'xolobot_control.yaml')
     controller_manager = Node(
-    package='controller_manager',
-    executable='ros2_control_node',
-    parameters=[{"use_sim_time": True}, control_params],
-    output='screen'
-)
+        package='controller_manager',
+        executable='ros2_control_node',
+        parameters=[
+            {"use_sim_time": True},
+            control_params,  # Asegúrate de que esta ruta sea correcta
+            {"robot_description": open(os.path.join(pkg_xolobot_arm, 'models', 'xolobot.urdf')).read()}
+        ],
+        output='screen'
+    )
+
+
 
     
     # Load joint controller configurations from YAML file
