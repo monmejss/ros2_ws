@@ -1884,7 +1884,7 @@
         <material>
           <lighting>1</lighting>
           <script>
-            <uri>/home/antonio/catkin_space/src/xolobot_arm/models/textures/xolobot.material</uri>
+            <uri>/home/monica/ros2_ws/src/xolobot_arm/models/textures/xolobot.material</uri>
             <name>Xolobot/Aluminio</name>
           </script>
           <shader type='pixel'>
@@ -1979,7 +1979,7 @@
         <material>
           <lighting>1</lighting>
           <script>
-            <uri>/home/antonio/catkin_space/src/xolobot_arm/models/textures/xolobot.material</uri>
+            <uri>/home/monica/ros2_ws/src/xolobot_arm/models/textures/xolobot.material</uri>
             <name>Xolobot/MetalBarras</name>
           </script>
           <shader type='pixel'>
@@ -2768,15 +2768,5 @@
   <child>link_pecho</child>
 </joint>
 
-  <gazebo>
-    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
-        <parameters>$(find xolobot_control)/config/xolobot_control.yaml</parameters>
-        <ros>
-            <remapping>/controller_manager/robot_description:=/robot_description</remapping>
-        </ros>
-    </plugin>
-  </gazebo>
-
-
-</model>
+  </model>
 </sdf>

@@ -1,24 +1,12 @@
-xolobot_arm:
+controller_manager:
   ros__parameters:
+    update_rate: 100
 
     joint_state_broadcaster:
       type: "joint_state_broadcaster/JointStateBroadcaster"
-      publish_rate: 10
 
     joint_trajectory_controller:
       type: "joint_trajectory_controller/JointTrajectoryController"
-      joints:
-        - "jnt_pecho_hombro"
-        - "jnt_hombro_hombro"
-        - "jnt_hombro_biceps"
-        - "jnt_biceps_codo"
-        - "jnt_codo_antebrazo"
-        - "jnt_palma_pulgar_1"
-      command_interfaces:
-        - "position"
-      state_interfaces:
-        - "position"
-        - "velocity"
 
     joint1_position_controller:
       type: "position_controllers/JointPositionController"
@@ -73,3 +61,21 @@ xolobot_arm:
         i: 0.01
         d: 10.0
       interface_name: "position"
+
+    joint_trajectory_controller:
+      ros__parameters:
+        joints:
+          - "jnt_pecho_hombro"
+          - "jnt_hombro_hombro"
+          - "jnt_hombro_biceps"
+          - "jnt_biceps_codo"
+          - "jnt_codo_antebrazo"
+          - "jnt_palma_pulgar_1"
+        command_interfaces:
+          - "position"
+        state_interfaces:
+          - "position"
+          - "velocity"
+
+    hardware_interface:
+      plugin: "gz_ros2_control/GazeboSystemInterface"

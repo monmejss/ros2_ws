@@ -11,6 +11,14 @@ find_package(std_msgs REQUIRED)
 find_package(fmt REQUIRED)
 find_package(gazebo_msgs REQUIRED)
 
+find_package(gazebo_ros REQUIRED)
+find_package(ros2_control REQUIRED)
+find_package(hardware_interface REQUIRED)
+find_package(controller_manager REQUIRED)
+find_package(robot_state_publisher REQUIRED)
+
+find_package(controller_interface REQUIRED)
+
 
 include_directories(
    include
@@ -39,6 +47,10 @@ ament_target_dependencies(xolobot_arm_server
   std_msgs
   fmt
   gazebo_msgs
+  gazebo_ros
+  ros2_control
+  hardware_interface
+  controller_manager
 )
 
 ament_package()

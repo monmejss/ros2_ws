@@ -8,6 +8,16 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(gazebo_ros REQUIRED)
+find_package(ros2_control REQUIRED)
+find_package(hardware_interface REQUIRED)
+find_package(controller_manager REQUIRED)
+find_package(robot_state_publisher REQUIRED)
+
+find_package(controller_interface REQUIRED)
+
+find_package(gz_ros2_control REQUIRED)
+
 
 install(
   DIRECTORY launch/
