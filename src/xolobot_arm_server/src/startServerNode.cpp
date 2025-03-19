@@ -12,15 +12,16 @@ int main(int argc, char** argv)
     if (argc > 1)
     {
         printf("ENTRO AL IF DE CAMBIO DE ENTORNO\n");
-        std::string puerto = std::string("http://localhost:1135") + argv[1];
-        setenv("ROS_MASTER_URI", puerto.c_str(), 1);
+        std::string dominio = argv[1];
+        setenv("ROS_DOMAIN_ID", dominio.c_str(), 1);  // ROS 2 usa ROS_DOMAIN_ID en lugar de ROS_MASTER_URI
     }
 
-    auto node = rclcpp::Node::make_shared("xolobot_arm_server");
-    SimulationController sim;
-    sim.startTrajectory();
-    RCLCPP_INFO(node->get_logger(), "La simulacion ha terminado");
-    rclcpp::spin_some(node);
+    auto node = std::make_shared<SimulationController>();
+
+    node->startTrajectory();
+    RCLCPP_INFO(node->get_logger(), "La simulación ha terminado");
+
+    rclcpp::spin(node);  // Mantener la simulación en ejecución
     rclcpp::shutdown();
     
     return 0;

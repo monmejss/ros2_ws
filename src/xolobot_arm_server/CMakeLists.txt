@@ -1,56 +1,43 @@
 cmake_minimum_required(VERSION 3.8)
 project(xolobot_arm_server)
 
-if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif()
-
+# Encontrar paquetes de ROS 2 necesarios
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(fmt REQUIRED)
-find_package(gazebo_msgs REQUIRED)
-
-find_package(gazebo_ros REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(action_msgs REQUIRED)
+find_package(gazebo_msgs REQUIRED)  
 find_package(ros2_control REQUIRED)
-find_package(hardware_interface REQUIRED)
+find_package(ros2_controllers REQUIRED)
 find_package(controller_manager REQUIRED)
-find_package(robot_state_publisher REQUIRED)
 
-find_package(controller_interface REQUIRED)
+# Agregar directorio de include
+include_directories(include)
 
+# Crear una biblioteca para SimulationController
+add_library(simulation_controller_lib src/SimulationController.cpp)
+ament_target_dependencies(simulation_controller_lib rclcpp std_msgs sensor_msgs geometry_msgs gazebo_msgs)
 
-include_directories(
-   include
-)
+# Agregar el ejecutable start_server_node y vincularlo con la biblioteca SimulationController
+add_executable(start_server_node src/startServerNode.cpp)
+target_link_libraries(start_server_node simulation_controller_lib)
+ament_target_dependencies(start_server_node rclcpp std_msgs sensor_msgs geometry_msgs gazebo_msgs)
 
-add_executable(xolobot_arm_server
-	src/startServerNode.cpp
-	src/SimulationController.cpp
-)
-	
-target_link_libraries(xolobot_arm_server
-  rclcpp::rclcpp
-  fmt::fmt
-)
-install(TARGETS xolobot_arm_server
+# Instalar los ejecutables
+install(TARGETS
+  start_server_node
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY include/${PROJECT_NAME}/
-  DESTINATION include/${PROJECT_NAME}
-  FILES_MATCHING PATTERN "*.hpp"
-) 
-
-ament_target_dependencies(xolobot_arm_server
-  rclcpp
-  std_msgs
-  fmt
-  gazebo_msgs
-  gazebo_ros
-  ros2_control
-  hardware_interface
-  controller_manager
+# Instalar los directorios necesarios (Si existen)
+install(DIRECTORY launch config
+  DESTINATION share/${PROJECT_NAME}
+  OPTIONAL
 )
+
+# Exportar dependencias correctamente
+ament_export_dependencies(rclcpp std_msgs sensor_msgs geometry_msgs gazebo_msgs ros2_control ros2_controllers controller_manager)
 
 ament_package()

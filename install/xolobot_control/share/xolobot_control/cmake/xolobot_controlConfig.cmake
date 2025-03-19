@@ -1,1 +1,0 @@
-/home/monica/ros2_ws/build/xolobot_control/ament_cmake_core/xolobot_controlConfig.cmake

@@ -1,1 +1,0 @@
-/home/monica/ros2_ws/build/xolobot_arm_server/ament_cmake_core/xolobot_arm_serverConfig.cmake

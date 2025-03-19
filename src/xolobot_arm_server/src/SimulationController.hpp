@@ -1,5 +1,5 @@
-#ifndef SRC_SIMULATIONCONTROLLER_H_
-#define SRC_SIMULATIONCONTROLLER_H_
+#ifndef SIMULATION_CONTROLLER_HPP
+#define SIMULATION_CONTROLLER_HPP
 
 #include <rclcpp/rclcpp.hpp>
 #include "std_msgs/msg/float64.hpp"
@@ -27,6 +27,7 @@ public:
     void startTrajectory();     
     void generaAleatorios(); 
     void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
+
 private:
     // Atributos
     std::vector<double> jointValues;    // Valores generados para cada articulación
@@ -34,8 +35,7 @@ private:
     std::vector<Range> jointLimits;     // Rango permitido para cada articulación
 
     std::vector<rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr> jointPub;
-    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr colisionSub;
-
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr collision_subscriber_;
 };
 
-#endif /* SRC_SIMULATIONCONTROLLER_H_ */
+#endif // SIMULATION_CONTROLLER_HPP

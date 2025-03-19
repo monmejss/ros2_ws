@@ -1,6 +1,6 @@
 #include "SimulationController.hpp"
 #include "gazebo_msgs/msg/contacts_state.hpp"
-
+#include <random>
 
 bool colisionDetectada = false;
 
@@ -26,12 +26,13 @@ SimulationController::SimulationController() : Node("simulation_controller") {
     // Crear publicadores para cada articulación
     for (size_t i = 0; i < TOTAL_JOINTS; i++) {
         std::string topicCmd = "/xolobot_arm/joint" + std::to_string(i + 1) + "_position_controller/command";
-        jointPub.push_back(this->create_publisher<std_msgs::msg::Float64>(topicCmd, 5));
+        jointPub.push_back(this->create_publisher<std_msgs::msg::Float64>(topicCmd, rclcpp::QoS(10)));
     }
 
     // Suscriptor para detección de colisión
-    colisionSub = this->create_subscription<gazebo_msgs::msg::ContactsState>(
-        "/collision_topic", 10, std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    collision_subscriber_ = this->create_subscription<gazebo_msgs::msg::ContactsState>(
+        "/collision_topic", rclcpp::QoS(10), 
+        std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
 
     RCLCPP_INFO(this->get_logger(), "Nodo SimulationController iniciado.");
 }

@@ -1,1 +1,0 @@
-/home/monica/ros2_ws/src/xolobot_arm/launch/xolobot_arm_control.launch.py

@@ -3,79 +3,23 @@ controller_manager:
     update_rate: 100
 
     joint_state_broadcaster:
-      type: "joint_state_broadcaster/JointStateBroadcaster"
+      type: joint_state_broadcaster/JointStateBroadcaster
 
-    joint_trajectory_controller:
-      type: "joint_trajectory_controller/JointTrajectoryController"
-
-    joint1_position_controller:
-      type: "position_controllers/JointPositionController"
-      joint: "jnt_pecho_hombro"
-      pid:
-        p: 100.0
-        i: 0.01
-        d: 10.0
-      interface_name: "position"
-
-    joint2_position_controller:
-      type: "position_controllers/JointPositionController"
-      joint: "jnt_hombro_hombro"
-      pid:
-        p: 100.0
-        i: 0.01
-        d: 10.0
-      interface_name: "position"
-
-    joint3_position_controller:
-      type: "position_controllers/JointPositionController"
-      joint: "jnt_hombro_biceps"
-      pid:
-        p: 100.0
-        i: 0.01
-        d: 10.0
-      interface_name: "position"
-
-    joint4_position_controller:
-      type: "position_controllers/JointPositionController"
-      joint: "jnt_biceps_codo"
-      pid:
-        p: 100.0
-        i: 0.01
-        d: 10.0
-      interface_name: "position"
-
-    joint5_position_controller:
-      type: "position_controllers/JointPositionController"
-      joint: "jnt_codo_antebrazo"
-      pid:
-        p: 100.0
-        i: 0.01
-        d: 10.0
-      interface_name: "position"
-
-    joint6_position_controller:
-      type: "position_controllers/JointPositionController"
-      joint: "jnt_palma_pulgar_1"
-      pid:
-        p: 100.0
-        i: 0.01
-        d: 10.0
-      interface_name: "position"
-
-    joint_trajectory_controller:
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
       ros__parameters:
-        joints:
-          - "jnt_pecho_hombro"
-          - "jnt_hombro_hombro"
-          - "jnt_hombro_biceps"
-          - "jnt_biceps_codo"
-          - "jnt_codo_antebrazo"
-          - "jnt_palma_pulgar_1"
-        command_interfaces:
-          - "position"
-        state_interfaces:
-          - "position"
-          - "velocity"
+        joints: 
+          - jnt_pecho_hombro
+          - jnt_hombro_hombro
+          - jnt_hombro_biceps
+          - jnt_biceps_codo
+          - jnt_codo_antebrazo
+          - jnt_palma_pulgar_1
+        command_interfaces: 
+          - position
+        state_interfaces: 
+          - position
+          - velocity
 
     hardware_interface:
-      plugin: "gz_ros2_control/GazeboSystemInterface"
+      plugin: gazebo_ros2_control/GazeboSystemInterface
