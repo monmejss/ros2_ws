@@ -5,16 +5,12 @@ controller_manager:
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
 
-    arm_controller:
+    joint_trajectory_controller:
       type: joint_trajectory_controller/JointTrajectoryController
       ros__parameters:
         joints: 
-          - jnt_pecho_hombro
-          - jnt_hombro_hombro
-          - jnt_hombro_biceps
-          - jnt_biceps_codo
-          - jnt_codo_antebrazo
-          - jnt_palma_pulgar_1
+          - arm_base
+          - base_to_arm
         command_interfaces: 
           - position
         state_interfaces: 

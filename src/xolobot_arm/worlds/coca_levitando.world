@@ -44,6 +44,12 @@
       <cast_shadows>0</cast_shadows>
       <direction>0 0 -1</direction>
     </light>
+
+    <include>
+      <uri>file:///home/monica/ros2_ws/src/xolobot_arm/models/xolobot_arm.sdf</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>   
+
     <model name='ground_plane'>
       <static>1</static>
       <link name='link'>
@@ -122,6 +128,6 @@
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
-    </gui>    
+    </gui> 
   </world>
 </sdf>
