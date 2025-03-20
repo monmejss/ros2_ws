@@ -10,7 +10,8 @@ find_package(ros2_control REQUIRED)
 find_package(ros2_controllers REQUIRED)
 find_package(controller_manager REQUIRED)
 find_package(gazebo_ros REQUIRED)
-find_package(gazebo_ros2_control REQUIRED)
+find_package(gz_ros2_control REQUIRED)
+find_package(gazebo REQUIRED)
 
 
 install(DIRECTORY launch models worlds

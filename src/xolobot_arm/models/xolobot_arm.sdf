@@ -1,31 +1,36 @@
-<model name="xolobot_arm">
-  <static>0</static>
-  
-  <plugin filename="libgz_ros2_control-system.so" name="gazebo_ros2_control">
-    <parameters>$(find-pkg-share xolobot_control)/config/xolobot_control.yaml</parameters>
-  </plugin>
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name="xolobot_arm">
+    <static>0</static>
+    
+    <gazebo>
+      <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+        <parameters>$(find xolobot_control)/config/xolobot_control.yaml</parameters>
+      </plugin>
+    </gazebo>
 
-  <link name="arm_base">
-    <inertial>
-      <mass>5.0</mass>
-      <inertia>
-        <ixx>0.01</ixx>
-        <iyy>0.01</iyy>
-        <izz>0.01</izz>
-      </inertia>
-    </inertial>
-  </link>
+    <link name="arm_base">
+      <inertial>
+        <mass>5.0</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <iyy>0.01</iyy>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+    </link>
 
-  <joint name="base_to_arm" type="revolute">
-    <parent>world</parent>
-    <child>arm_base</child>
-    <axis>
-      <xyz>0 0 1</xyz>
-      <limit>
-        <lower>-1.57</lower>
-        <upper>1.57</upper>
-      </limit>
-    </axis>
-  </joint>
+    <joint name="base_to_arm" type="revolute">
+      <parent>world</parent>
+      <child>arm_base</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.57</lower>
+          <upper>1.57</upper>
+        </limit>
+      </axis>
+    </joint>
 
-</model>
+  </model>
+</sdf>

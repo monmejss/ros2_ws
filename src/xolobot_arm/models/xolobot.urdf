@@ -1,5 +1,4 @@
 <?xml version="1.0" ?>
-<!-- Revolute-Revolute Manipulator -->
 <robot name="xolobot_arm">      
 
     <link name='link_pecho'> </link>
@@ -131,9 +130,9 @@
         </actuator>
     </transmission>
 
-    <ros2_control name="GazeboSystem" type="system">
+    <ros2_control name="IgnitionSystem" type="system">
         <hardware>
-            <plugin>gz_ros2_control/GazeboSystem</plugin>
+            <plugin>ign_ros2_control/IgnitionSystem</plugin>
         </hardware>
 
         <joint name="jnt_pecho_hombro">

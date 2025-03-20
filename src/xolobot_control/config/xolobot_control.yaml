@@ -1,6 +1,6 @@
 controller_manager:
   ros__parameters:
-    update_rate: 100
+    update_rate: 1000
 
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
@@ -20,6 +20,3 @@ controller_manager:
         state_interfaces: 
           - position
           - velocity
-
-    hardware_interface:
-      plugin: gazebo_ros2_control/GazeboSystemInterface
