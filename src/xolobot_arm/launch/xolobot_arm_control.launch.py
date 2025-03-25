@@ -22,7 +22,7 @@ def generate_launch_description():
         "config", "xolobot_control.yaml"
     )
     
-    # xolobot_arm.sdf. Lo quite de aqui porque esta en el world
+    # xolobot_arm.sdf
     #sdf_path = os.path.join(
     #    FindPackageShare(package_name1).find(package_name1), 
     #    "models", "xolobot_arm.sdf"
@@ -39,12 +39,23 @@ def generate_launch_description():
         cmd=['ign', 'gazebo', world_path, '-v', '4', '--gui'],
         output='screen'
     )
+    
+    #spawn_robot = ExecuteProcess(
+    #    cmd=[
+    #        'ros2', 'run', 'ros_gz_sim', 'create',
+    #        '-file', sdf_path,
+    #        '-name', 'xolobot_arm',
+    #        '-x', '0.5', '-y', '0.5', '-z', '0.52277'
+    #    ],
+    #    output='screen'
+    #)
         
     with open(urdf_path, 'r') as file:
         descripcion_xolobot = file.read()
 
     return LaunchDescription([
         gazebo_launch,
+        #spawn_robot,
         
         # Este nodo utiliza la descripcion del URDF
         Node(

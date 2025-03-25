@@ -2,40 +2,35 @@
 #define SIMULATION_CONTROLLER_HPP
 
 #include <rclcpp/rclcpp.hpp>
-#include "std_msgs/msg/float64.hpp"
-#include "gazebo_msgs/msg/contacts_state.hpp"
+#include <std_msgs/msg/float64.hpp>
+#include <ros_ign_interfaces/msg/contacts.hpp>  // <--- NUEVO
+
 #include <string>
 #include <vector>
 #include <utility>
 #include <random>
 
-#define TOTAL_JOINTS 6 // Total de articulaciones del brazo
-
-// Alias para definir rangos de movimiento de las articulaciones
+#define TOTAL_JOINTS 6
 using Range = std::pair<double, double>;
 
 enum Joint { PECHO = 0, SHOULDER, BICEPS, ELBOW, WRIST, THUMB };
 
 class SimulationController : public rclcpp::Node {
 public:
-    // Constructor
     SimulationController();
-    // Destructor
     virtual ~SimulationController();
 
-    // Métodos principales
     void startTrajectory();     
     void generaAleatorios(); 
-    void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
 
 private:
-    // Atributos
-    std::vector<double> jointValues;    // Valores generados para cada articulación
-    std::vector<double> curJointVals;   // Valores acumulados para cada articulación
-    std::vector<Range> jointLimits;     // Rango permitido para cada articulación
+    std::vector<double> jointValues;
+    std::vector<double> curJointVals;
+    std::vector<Range> jointLimits;
 
     std::vector<rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr> jointPub;
-    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr collision_subscriber_;
+
+    rclcpp::Subscription<ros_ign_interfaces::msg::Contacts>::SharedPtr collision_subscriber_;
 };
 
-#endif // SIMULATION_CONTROLLER_HPP
+#endif

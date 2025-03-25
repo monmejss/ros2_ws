@@ -1,20 +1,22 @@
+<?xml version="1.0"?>
 <package format="3">
   <name>xolobot_arm</name>
-  <version>0.1.0</version>
+  <version>0.0.0</version>
   <description>The xolobot_arm package</description>
-  <maintainer email="tuemail@example.com">Tu Nombre</maintainer>
+  <maintainer email="antonio@todo.todo">Antonio</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <depend>rclcpp</depend>
-  <depend>std_msgs</depend>
-  <depend>sensor_msgs</depend>
-  <depend>geometry_msgs</depend>
-  <depend>ros2_control</depend>
-  <depend>ros2_controllers</depend>
-  <depend>controller_manager</depend>
-  <depend>gazebo_ros</depend>
-  <depend>gazebo_ros2_control</depend>
+
+  <build_depend>urdf</build_depend>
+  <build_depend>robot_state_publisher</build_depend>
+  <build_depend>gazebo_ros</build_depend>
+  <build_depend>rclpy</build_depend>
+
+  <exec_depend>urdf</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>gazebo_ros</exec_depend>
+  <exec_depend>rclpy</exec_depend>
 
   <export>
     <build_type>ament_cmake</build_type>
