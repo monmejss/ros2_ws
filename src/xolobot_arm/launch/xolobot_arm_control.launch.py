@@ -64,21 +64,19 @@ def generate_launch_description():
             parameters=[{'robot_description': descripcion_xolobot}],
             output='screen'
         ),
-
+        
         Node(
             package='controller_manager',
             executable='ros2_control_node',
-            parameters=[{config_path},{'gazebo_ros2_control': 'gazebo_ros2_control/GazeboSystemInterface'}],
+            parameters=[{config_path}],
             output='screen'
         ),
         
-        # joint_trajectory_controller
         ExecuteProcess(
             cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
             output='screen'
         ),
         
-        # joint_state_broadcaster
         ExecuteProcess(
             cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_state_broadcaster'],
             output='screen'
