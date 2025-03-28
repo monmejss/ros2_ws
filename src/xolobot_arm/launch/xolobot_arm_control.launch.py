@@ -1,84 +1,63 @@
 import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
+from launch.actions import ExecuteProcess, RegisterEventHandler, TimerAction
+from launch.event_handlers import OnProcessExit
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
-from launch.actions import LogInfo, ExecuteProcess
-
 def generate_launch_description():
-    # Paquetes necesarios
-    package_name1 = "xolobot_arm"
-    package_name2 = "xolobot_control"
-    
-    # coca_levitando.world
-    world_path = os.path.join(
-        FindPackageShare(package_name1).find(package_name1), 
-        "worlds", "coca_levitando.world"
-    )
-    
-    # xolobot_control.yaml
-    config_path = os.path.join(
-        FindPackageShare(package_name2).find(package_name2), 
-        "config", "xolobot_control.yaml"
-    )
-    
-    # xolobot_arm.sdf
-    #sdf_path = os.path.join(
-    #    FindPackageShare(package_name1).find(package_name1), 
-    #    "models", "xolobot_arm.sdf"
-    #)
-    
-    # xolobot.urdf
-    urdf_path = os.path.join(
-        FindPackageShare(package_name1).find(package_name1), 
-        "models", "xolobot.urdf"
-    )
-    
-    # Iniciar Gazebo Ignition con el modelo SDF
-    gazebo_launch = ExecuteProcess(
-        cmd=['ign', 'gazebo', world_path, '-v', '4', '--gui'],
+    package_xolobot_arm = get_package_share_directory('xolobot_arm')
+    world_path = os.path.join(package_xolobot_arm, "worlds", "coca_levitando.world")
+    urdf_path = os.path.join(package_xolobot_arm, "models", "xolobot.urdf")
+    sdf_path = os.path.join(package_xolobot_arm, "models", "xolobot_arm.sdf")
+
+    # Configurar la variable use_sim_time
+    use_sim_time = LaunchConfiguration('use_sim_time', default='true')
+
+    gazebo = ExecuteProcess(
+        cmd=['gazebo', '--verbose', world_path, '-s', 'libgazebo_ros_factory.so'],
         output='screen'
     )
-    
-    #spawn_robot = ExecuteProcess(
-    #    cmd=[
-    #        'ros2', 'run', 'ros_gz_sim', 'create',
-    #        '-file', sdf_path,
-    #        '-name', 'xolobot_arm',
-    #        '-x', '0.5', '-y', '0.5', '-z', '0.52277'
-    #    ],
-    #    output='screen'
-    #)
-        
-    with open(urdf_path, 'r') as file:
-        descripcion_xolobot = file.read()
+
+    # Cargar la descripción URDF (necesario para ROS 2 Control)
+    with open(urdf_path, 'r') as urdf_file:
+        robot_description = urdf_file.read()
+
+    robot_state_publisher = Node(
+        package='robot_state_publisher',
+        executable='robot_state_publisher',
+        parameters=[{'robot_description': robot_description, 'use_sim_time': use_sim_time}],
+        output='screen'
+    )
+
+    spawn_model = TimerAction(
+        period = 5.0,
+        actions=[Node(
+            package='gazebo_ros',
+            executable='spawn_entity.py',
+            name='spawn_xolobot',
+            arguments=['-file', sdf_path, '-entity', 'xolobot_arm', '-x', '0', '-y', '0', '-z', '1'],
+            output='screen'
+        )]
+    )
+
+    # Cargar controladores después de spawn
+    load_joint_state_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_state_broadcaster'],
+        output='screen'
+    )
+
+    load_trajectory_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
+        output='screen'
+    )
 
     return LaunchDescription([
-        gazebo_launch,
-        #spawn_robot,
-        
-        # Este nodo utiliza la descripcion del URDF
-        Node(
-            package='robot_state_publisher',
-            executable='robot_state_publisher',
-            parameters=[{'robot_description': descripcion_xolobot}],
-            output='screen'
-        ),
-        
-        Node(
-            package='controller_manager',
-            executable='ros2_control_node',
-            parameters=[{config_path}],
-            output='screen'
-        ),
-        
-        ExecuteProcess(
-            cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
-            output='screen'
-        ),
-        
-        ExecuteProcess(
-            cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_state_broadcaster'],
-            output='screen'
-        ),
+        gazebo,
+        robot_state_publisher,
+        spawn_model,
+        load_joint_state_controller,
+        load_trajectory_controller
     ])
