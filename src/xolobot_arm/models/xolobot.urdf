@@ -130,11 +130,10 @@
         </actuator>
     </transmission>
 
-    <ros2_control name="IgnitionSystem" type="system">
+    <ros2_control name="GazeboSystem" type="system">
         <hardware>
-            <plugin>ign_ros2_control/IgnitionSystem</plugin>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
-
         <joint name="jnt_pecho_hombro">
             <command_interface name="position"/>
             <state_interface name="position"/>
@@ -167,3 +166,4 @@
         </joint>
     </ros2_control>
 </robot>
+

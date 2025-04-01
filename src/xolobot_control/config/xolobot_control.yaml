@@ -1,14 +1,12 @@
 controller_manager:
   ros__parameters:
-    update_rate: 1000
+    update_rate: 100
 
-    # Controlador para publicar el estado de las articulaciones
     joint_state_broadcaster:
-      type: joint_state_broadcaster/JointStateBroadcaster
+      type: "joint_state_broadcaster/JointStateBroadcaster"
 
-    # Controlador para mover el robot a una posición deseada en varias articulaciones
-    joint_group_position_controller:
-      type: position_controllers/JointGroupPositionController 
+    position_controller:
+      type: "position_controllers/JointPositionController"
       ros__parameters:
         joints:
           - jnt_pecho_hombro
@@ -16,6 +14,7 @@ controller_manager:
           - jnt_hombro_biceps
           - jnt_biceps_codo
           - jnt_codo_antebrazo
+          - jnt_palma_pulgar_1
         command_interfaces:
           - position  
         state_interfaces:

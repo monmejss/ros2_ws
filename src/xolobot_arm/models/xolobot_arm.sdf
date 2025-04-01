@@ -2746,11 +2746,14 @@
   <child>link_base</child>
 </joint>
 
-<gazebo>
-  <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-    <parameters>$(find xolobot_control)/config/xolobot_control.yaml</parameters>
-  </plugin>
-</gazebo>
+<joint name="fixed_to_ground2" type="fixed">
+  <parent>world</parent>
+  <child>link_pecho</child>
+</joint>
+
+<plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+  <parameters>/home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/config/xolobot_control.yaml</parameters>
+</plugin>
 
 </model>
 </sdf>
