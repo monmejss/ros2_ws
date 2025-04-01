@@ -7,6 +7,7 @@ find_package(std_msgs REQUIRED)
 find_package(fmt REQUIRED)
 find_package(ros_ign_interfaces REQUIRED)
 
+find_package(trajectory_msgs REQUIRED)
 
 include_directories(include)
 
@@ -17,6 +18,7 @@ add_executable(xolobot_arm_server
 
 ament_target_dependencies(xolobot_arm_server
   rclcpp
+  trajectory_msgs
   std_msgs
   fmt
   ros_ign_interfaces

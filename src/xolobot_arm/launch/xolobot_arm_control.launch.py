@@ -43,23 +43,19 @@ def generate_launch_description():
         )]
     )
 
-    load_controllers = TimerAction(
-        period = 5.0,
-        actions=[
-            ExecuteProcess(
-                cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_state_broadcaster'],
-                output='screen'
-            ),
-            ExecuteProcess(
-                cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'position_controller'],
-                output='screen'
-            )
-        ]
+    load_joint_state_broadcaster = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_state_broadcaster'],
+        output='screen'
+    )
+    load_joint_trajectory_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
+        output='screen'
     )
 
     return LaunchDescription([
         gazebo,
         robot_state_publisher,
         spawn_model,
-        load_controllers
+        load_joint_state_broadcaster,
+        load_joint_trajectory_controller
     ])

@@ -9,7 +9,7 @@ find_package(std_msgs REQUIRED)
 find_package(ros2_control REQUIRED)
 find_package(control_msgs REQUIRED)
 find_package(controller_manager REQUIRED)
-
+find_package(trajectory_msgs REQUIRED)
 
 find_package(ros2_controllers REQUIRED)
 find_package(gazebo_ros2_control REQUIRED)
