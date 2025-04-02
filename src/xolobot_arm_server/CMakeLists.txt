@@ -3,11 +3,11 @@ project(xolobot_arm_server)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
-find_package(fmt REQUIRED)
-find_package(ros_ign_interfaces REQUIRED)
-
+find_package(fmt REQUIRED) # mensajes y logs
+find_package(gazebo_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
+
 
 include_directories(include)
 
@@ -16,28 +16,21 @@ add_executable(xolobot_arm_server
   src/SimulationController.cpp
 )
 
-ament_target_dependencies(xolobot_arm_server
-  rclcpp
-  trajectory_msgs
-  std_msgs
-  fmt
-  ros_ign_interfaces
-)
-
-
-target_include_directories(xolobot_arm_server PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>
-)
-
-
 install(TARGETS xolobot_arm_server
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY include/
-  DESTINATION include/
-  FILES_MATCHING PATTERN "*.h"
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION include/${PROJECT_NAME}
+  FILES_MATCHING PATTERN "*.hpp"
+) 
+
+ament_target_dependencies(xolobot_arm_server
+  rclcpp
+  fmt
+  gazebo_msgs
+  trajectory_msgs
+  std_msgs
 )
 
 ament_package()
