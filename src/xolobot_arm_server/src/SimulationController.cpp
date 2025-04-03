@@ -77,7 +77,10 @@ void SimulationController::generaAleatorios(){
         }
         //Biceps
         else if(i==2){
-            msg.data = -0.087;
+            bicepMov += -0.087;
+            rclcpp::Rate bicepRate(64.0);
+            msg.data = bicepMov;
+            jointPub[i]->publish(msg);
             RCLCPP_INFO(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
         }
 

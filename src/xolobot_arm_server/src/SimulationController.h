@@ -35,6 +35,8 @@ private:
     std::vector<double> curJointVals;  // Valores acumulados para cada articulación
     std::vector<Range> jointLimits;    // Rango permitido para cada articulación
 
+    double bicepMov = 0.0;
+
     //Publicadores para articulaciones
     rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr jointPub[TOTAL_JOINTS];
     
