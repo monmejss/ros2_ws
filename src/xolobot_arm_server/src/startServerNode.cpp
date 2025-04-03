@@ -1,5 +1,5 @@
 #include "SimulationController.h"
-#include <ros/ros.h>
+#include <rclcpp/rclcpp.hpp>
 #include <vector>
 #include <string>
 #include <utility>
@@ -16,12 +16,10 @@ int main(int argc, char** argv)
       std::string puerto = std::string("http://localhost:1135") + argv[1];
       setenv("ROS_MASTER_URI", puerto.c_str(), 1);
    }
-   ros::init(argc, argv, "xolobot_arm_server");
+   rclcpp::init(argc, argv);
    SimulationController sim;
 
    sim.startTrajectory();
-
-   ROS_INFO("La simulacion ha terminado\n");
 
    return 0;
 }

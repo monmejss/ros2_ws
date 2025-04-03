@@ -1,12 +1,15 @@
 #ifndef SRC_SIMULATIONCONTROLLER_H_
 #define SRC_SIMULATIONCONTROLLER_H_
 
-#include <ros/ros.h>
-#include <std_msgs/Float64.h>
+#include <rclcpp/rclcpp.hpp>
+#include "std_msgs/msg/float64.hpp"
+#include "gazebo_msgs/msg/contacts_state.hpp"
 #include <string>
 #include <vector>
 #include <utility>
 #include <random>  
+#include "trajectory_msgs/msg/joint_trajectory.hpp"
+#include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 
 #define TOTAL_JOINTS 6 // Total de articulaciones del brazo
 
@@ -15,7 +18,7 @@ using Range = std::pair<double, double>;
 
 enum Joint { PECHO = 0, SHOULDER, BICEPS, ELBOW, WRIST, THUMB };
 
-class SimulationController{
+class SimulationController : public rclcpp::Node{
 public:
     // Constructor
     SimulationController();
@@ -32,9 +35,13 @@ private:
     std::vector<double> curJointVals;  // Valores acumulados para cada articulación
     std::vector<Range> jointLimits;    // Rango permitido para cada articulación
 
-    ros::NodeHandle nh;
     //Publicadores para articulaciones
-    ros::Publisher jointPub[TOTAL_JOINTS];
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr jointPub[TOTAL_JOINTS];
+    
+    // Publicador para la trayectoria completa
+    rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
+    
+    void deteccionColision(gazebo_msgs::msg::ContactsState::SharedPtr msg);
 };
 
 #endif /* SRC_SIMULATIONCONTROLLER_H_ */

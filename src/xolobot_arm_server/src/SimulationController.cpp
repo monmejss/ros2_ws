@@ -1,20 +1,17 @@
-#include "SimulationController.hpp"
-#include "gazebo_msgs/msg/contacts_state.hpp"
-#include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/float64.hpp>
+#include "SimulationController.h"
+#include "std_msgs/msg/float64.hpp"
 #include <random>
+#include "gazebo_msgs/msg/contacts_state.hpp"
+#include "trajectory_msgs/msg/joint_trajectory.hpp"
+#include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 
 bool colisionDetectada = false;
-
-// Método para detectar colisiones
-void SimulationController::deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg) {
-    if (!msg->states.empty()) {
-        colisionDetectada = true;
-        RCLCPP_WARN(this->get_logger(), "Se ha detectado una colisión");
-    }
+void SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState::SharedPtr msg) {
+    RCLCPP_WARN(this->get_logger(), "Se ha detectado una colisión");
 }
 
-SimulationController::SimulationController() : Node("simulation_controller") {
+// Inicializa el nodo simulation_controller
+SimulationController::SimulationController() : rclcpp::Node("simulation_controller"){
     // Inicializar los límites de las articulaciones (en radianes)
     jointLimits = {{-0.5, 0.5},  // Pecho
                    {-1.0, 1.0},  // Hombro
@@ -27,56 +24,73 @@ SimulationController::SimulationController() : Node("simulation_controller") {
     jointValues.assign(TOTAL_JOINTS, 0.0);
 
     // Crear publicadores para cada articulación
-    for (int i = 0; i < TOTAL_JOINTS; i++) {
+    for (int i = 0; i < TOTAL_JOINTS; i++){
         std::string topicCmd = "/xolobot_arm/joint" + std::to_string(i + 1) + "_position_controller/command";
         jointPub[i] = this->create_publisher<std_msgs::msg::Float64>(topicCmd, 5);
     }
 
-    // Crear el suscriptor para colisiones
-    colisionSub = this->create_subscription<gazebo_msgs::msg::ContactsState>(
-        "/collision_topic", 10, std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
-
-    RCLCPP_INFO(this->get_logger(), "Nodo SimulationController iniciado.");
+    // Publicador para trayectoria completa
+    jointTrajectoryPub = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
 }
-
 SimulationController::~SimulationController() {}
 
-void SimulationController::startTrajectory() {
-    RCLCPP_INFO(this->get_logger(), "Iniciando simulación");
+void SimulationController::startTrajectory(){
+    RCLCPP_INFO(this->get_logger(), "Iniciando simulacion");
     rclcpp::Rate loop_rate(0.5);
-    
-    while (rclcpp::ok()) {
-        // Generar valores aleatorios para las articulaciones
+    while (rclcpp::ok())
+    {
         generaAleatorios();
         loop_rate.sleep();
     }
 }
 
-void SimulationController::generaAleatorios() {
+void SimulationController::generaAleatorios(){
     std::random_device rd;
     std::mt19937 gen(rd());
     rclcpp::Rate rate(8.0);
+    
+    trajectory_msgs::msg::JointTrajectory jointTrajectoryMsg;
+    // Define nombres de articulaciones
+    jointTrajectoryMsg.joint_names = {"jnt_pecho_hombro", "jnt_hombro_hombro", "jnt_hombro_biceps", 
+                                      "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_palma_pulgar_1"};
 
-    for (size_t i = 0; i < TOTAL_JOINTS; ++i) {
-        auto msg = std_msgs::msg::Float64();
+    // Crear el punto de la trayectoria para las posiciones
+    trajectory_msgs::msg::JointTrajectoryPoint point;
 
+
+    for (size_t i = 0; i < TOTAL_JOINTS; ++i){
+        std_msgs::msg::Float64 msg;
         // Codo
-        if (i == 3) {
+        if(i==3){
             msg.data = 1.5708;
-            RCLCPP_INFO(this->get_logger(), "Articulación %lu. Valor Fijo: %f", i + 1, msg.data);
+            RCLCPP_INFO(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
         }
-        // Muñeca
+        //Muñeca 
         else if (i == 4) {
             msg.data = -1.5708;
-            RCLCPP_INFO(this->get_logger(), "Articulación %lu. Valor Fijo: %f", i + 1, msg.data);
+            /*
+            1.5708
+            4.7124
+            6.2832
+            */
+            RCLCPP_INFO(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
         }
-        // Bíceps
-        else if (i == 2) {
-            msg.data = (jointLimits[i].first + jointLimits[i].second) / 2.0;
-            RCLCPP_INFO(this->get_logger(), "Articulación %lu Moviéndose: %f", i + 1, msg.data);
+        //Biceps
+        else if(i==2){
+            msg.data = -0.087;
+            RCLCPP_INFO(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
         }
 
+        // Publica el valor y se añada al punto
         jointPub[i]->publish(msg);
+        point.positions.push_back(msg.data);
         rate.sleep();
     }
+
+    point.time_from_start.sec = 1;
+    // Juntar valores
+    jointTrajectoryMsg.points.push_back(point);
+    // Publicar trayectoria completa
+    jointTrajectoryPub->publish(jointTrajectoryMsg);
 }
+

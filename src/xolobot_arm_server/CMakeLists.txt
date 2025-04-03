@@ -16,6 +16,11 @@ add_executable(xolobot_arm_server
   src/SimulationController.cpp
 )
 
+target_link_libraries(${PROJECT_NAME}
+  ${rclcpp_LIBRARIES}
+  ${gazebo_msgs_LIBRARIES}
+)
+
 install(TARGETS xolobot_arm_server
   DESTINATION lib/${PROJECT_NAME}
 )
