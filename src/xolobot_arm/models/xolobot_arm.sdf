@@ -448,7 +448,6 @@
       </sensor>
     </link>
 
-
     <link name='link_palma_izq'>
       <inertial>
         <mass>1</mass>
@@ -2135,6 +2134,8 @@
         </surface>
       </collision>
     </link>
+
+    <!--AQUI EMPIEZAN LOS JOINTS-->
     <joint name='jnt_pecho_hombro' type='revolute'>
       <parent>link_pecho</parent>
       <child>link_hombro_alto_izq</child>
@@ -2300,6 +2301,41 @@
         </ode>
       </physics>
     </joint>
+    <!--JOINT DE ANTEBRAZO Y PALMA-->
+    <joint name='jnt_antebrazo_palma' type='revolute'>
+      <parent>link_antebrazo_izq</parent>
+      <child>link_palma_izq</child>
+      <pose frame=''>0 0 0.1 0 -0 0</pose>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <use_parent_model_frame>0</use_parent_model_frame>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+          <effort>8000</effort>
+          <velocity>1000</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>10</damping>
+          <friction>2</friction>
+        </dynamics>
+      </axis>
+      <physics>
+        <ode>
+          <limit>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </limit>
+          <suspension>
+            <cfm>0</cfm>
+            <erp>0.2</erp>
+          </suspension>
+        </ode>
+      </physics>
+    </joint>
+
     <joint name='jnt_palma_pulgar_1' type='revolute'>
       <parent>link_antebrazo_izq</parent>
       <child>link_pulgar_1_izq</child>
