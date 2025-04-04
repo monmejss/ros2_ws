@@ -53,6 +53,16 @@
         <limit effort="1000" lower="-3.1416" upper="3.1416" velocity="1000" />  
         <dynamics damping="10" friction="2" />
     </joint>
+
+    <!--Nuevo joint para el antebrazo_palma-->
+    <joint name="jnt_antebrazo_palma" type="revolute">
+        <parent link="link_antebrazo_izq" />
+        <child link="link_palma_izq" />
+        <origin xyz="0 0 0.100" rpy="0 0 0" />        
+        <axis xyz="0 0 1" />
+        <limit effort="1000" lower="-3.1416" upper="3.1416" velocity="1000" />  
+        <dynamics damping="10" friction="2" />
+    </joint>
     
     <joint name="jnt_palma_pulgar_1" type="revolute">
         <parent link="link_antebrazo_izq" />
@@ -118,6 +128,18 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
+
+    <!--NUeva transmision para jnt_antebrazo_palma-->
+    <transmission name="trans_antebrazo_palma">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_antebrazo_palma">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_antebrazo_palma">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
     
     <transmission name="trans_palma_pulgar_1">
         <type>transmission_interface/SimpleTransmission</type>
@@ -160,6 +182,13 @@
             <state_interface name="effort"/>
         </joint>
         <joint name="jnt_codo_antebrazo">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+        <!--Nuevo joint para antebrazo_palma-->
+        <joint name="jnt_antebrazo_palma">
             <command_interface name="position"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
