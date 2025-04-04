@@ -29,6 +29,10 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
         jointPub[i] = this->create_publisher<std_msgs::msg::Float64>(topicCmd, 5);
     }
 
+    // Suscriptor para el bumper
+    //suscriptorBicep = this->create_subscription<std_msgs::msg::Float64>(
+    //    "/bicep_position_topic", 10, std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+
     // Publicador para trayectoria completa
     jointTrajectoryPub = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
 }
