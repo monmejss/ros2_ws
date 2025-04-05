@@ -13,12 +13,13 @@ void SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState::Sh
 // Inicializa el nodo simulation_controller
 SimulationController::SimulationController() : rclcpp::Node("simulation_controller"){
     // Inicializar los límites de las articulaciones (en radianes)
-    jointLimits = {{-0.5, 0.5},  // Pecho
-                   {-1.0, 1.0},  // Hombro
-                   {-0.5, 0.5},  // Bíceps
-                   {-0.5, 0.5},  // Codo
-                   {-1.0, 1.0},  // Muñeca
-                   {-1.0, 1.0}}; // Pulgar
+    jointLimits = {{-0.5, 0.5},  // jnt_pecho_hombro 0
+                   {-1.0, 1.0},  // jnt_hombro_hombro 1
+                   {-0.5, 0.5},  // jnt_hombro_biceps 2
+                   {-0.5, 0.5},  // jnt_biceps_codo 3
+                   {-1.0, 1.0},  // jnt_codo_antebrazo 4
+                   {-1.0, 1.0},  // jnt_antebrazo_palma 5
+                   {-1.0, 1.0}}; // jnt_palma_pulgar_1 6
 
     // Inicializar valores por defecto
     jointValues.assign(TOTAL_JOINTS, 0.0);
@@ -56,7 +57,7 @@ void SimulationController::generaAleatorios(){
     trajectory_msgs::msg::JointTrajectory jointTrajectoryMsg;
     // Define nombres de articulaciones
     jointTrajectoryMsg.joint_names = {"jnt_pecho_hombro", "jnt_hombro_hombro", "jnt_hombro_biceps", 
-                                      "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_palma_pulgar_1"};
+                                      "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", "jnt_palma_pulgar_1"};
 
     // Crear el punto de la trayectoria para las posiciones
     trajectory_msgs::msg::JointTrajectoryPoint point;
@@ -70,7 +71,7 @@ void SimulationController::generaAleatorios(){
             RCLCPP_INFO(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
         }
         //Muñeca 
-        else if (i == 4) {
+        else if (i==4) {
             msg.data = -1.5708;
             /*
             1.5708
