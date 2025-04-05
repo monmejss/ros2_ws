@@ -430,22 +430,6 @@
           </contact>
         </surface>
       </collision>
-
-      <!--BUMPER-->
-      <sensor name="antebrazo_sensor" type="contact">
-        <update_rate>10</update_rate>
-        <contact>
-          <collision>collision</collision>
-        </contact>
-        <plugin name="antebrazo_bumper" filename="libgazebo_ros_bumper.so">
-          <ros>
-            <!--<namespace>/xolobot_arm</namespace>-->
-            <!--<remapping>bumper_states:=bumper_antebrazo</remapping> -->
-          </ros>
-          <alwaysOn>true</alwaysOn>
-          <body_name>link_antebrazo_izq</body_name> 
-        </plugin>
-      </sensor>
     </link>
 
     <link name='link_palma_izq'>
@@ -2338,7 +2322,7 @@
     </joint>
 
     <joint name='jnt_palma_pulgar_1' type='revolute'>
-      <parent>link_antebrazo_izq</parent>
+      <parent>link_palma_izq</parent>
       <child>link_pulgar_1_izq</child>
       <pose frame=''>0.0119 0.00435 0 0 -0 0</pose>
       <axis>
@@ -2437,7 +2421,7 @@
       </physics>
     </joint>    
     <joint name='jnt_palma_indice_1' type='revolute'>
-      <parent>link_antebrazo_izq</parent>
+      <parent>link_palma_izq</parent>
       <child>link_indice_1_izq</child>
       <pose frame=''>0 0 0.0138 0 -0 0</pose>
       <axis>
@@ -2536,7 +2520,7 @@
       </physics>
     </joint>
     <joint name='jnt_palma_cordial_1' type='revolute'>
-      <parent>link_antebrazo_izq</parent>
+      <parent>link_palma_izq</parent>
       <child>link_cordial_1_izq</child>
       <pose frame=''>0 0 0.0167 0 -0 0</pose>
       <axis>
@@ -2635,7 +2619,7 @@
       </physics>
     </joint>
     <joint name='jnt_palma_anular_1' type='revolute'>
-      <parent>link_antebrazo_izq</parent>
+      <parent>link_palma_izq</parent>
       <child>link_anular_1_izq</child>
       <pose frame=''>0 0 0.015 0 -0 0</pose>
       <axis>
@@ -2734,7 +2718,7 @@
       </physics>
     </joint>
     <joint name='jnt_palma_menique_1' type='revolute'>
-      <parent>link_antebrazo_izq</parent>
+      <parent>link_palma_izq</parent>
       <child>link_menique_1_izq</child>
       <pose frame=''>0 0 0.0109 0 -0 0</pose>
       <axis>
@@ -2853,23 +2837,6 @@
       <parent>link_base</parent>
       <child>link_tubo</child>
       <pose frame=''>0 0 0 0 -0 0</pose>
-      <physics>
-        <ode>
-          <limit>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </limit>
-          <suspension>
-            <cfm>0</cfm>
-            <erp>0.2</erp>
-          </suspension>
-        </ode>
-      </physics>
-    </joint>
-    <joint name='jnt_palma_izq' type='fixed'>
-      <parent>link_antebrazo_izq</parent>
-      <child>link_palma_izq</child>
-      <pose frame=''>0 0 0 0 0 0</pose>
       <physics>
         <ode>
           <limit>
