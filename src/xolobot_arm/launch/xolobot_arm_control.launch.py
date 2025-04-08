@@ -1,7 +1,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, TimerAction
+from launch.actions import ExecuteProcess
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -10,7 +10,9 @@ def generate_launch_description():
     world_path = os.path.join(package_xolobot_arm, "worlds", "coca_levitando.world")
     urdf_path = os.path.join(package_xolobot_arm, "models", "xolobot.urdf")
     sdf_path = os.path.join(package_xolobot_arm, "models", "xolobot_arm.sdf")
+    objeto_path = os.path.join(package_xolobot_arm, "models/utileria", "objeto.sdf")
 
+    # Alinear tiempo de ros con el de la simulacion
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
     gazebo = ExecuteProcess(
@@ -28,15 +30,20 @@ def generate_launch_description():
         output='screen'
     )
 
-    spawn_model = TimerAction(
-        period = 5.0,
-        actions=[Node(
-            package='gazebo_ros',
-            executable='spawn_entity.py',
-            name='spawn_xolobot',
-            arguments=['-file', sdf_path, '-entity', 'xolobot_arm', '-x', '0', '-y', '0', '-z', '0.55'],
-            output='screen'
-        )]
+    spawn_model = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        name='spawn_xolobot',
+        arguments=['-file', sdf_path, '-entity', 'xolobot_arm', '-x', '0', '-y', '0', '-z', '0.55'],
+        output='screen'
+    )
+    
+    objeto = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        name='spawn_lata',
+        arguments=['-file', objeto_path, '-entity', 'objeto'],
+        output='screen'
     )
 
     load_joint_state_broadcaster = ExecuteProcess(
@@ -52,6 +59,7 @@ def generate_launch_description():
         gazebo,
         robot_state_publisher,
         spawn_model,
+        objeto,
         load_joint_state_broadcaster,
         load_joint_trajectory_controller
     ])
