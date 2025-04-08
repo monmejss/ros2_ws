@@ -1,11 +1,9 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import ExecuteProcess, RegisterEventHandler, TimerAction
-from launch.event_handlers import OnProcessExit
+from launch.actions import ExecuteProcess, TimerAction
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     package_xolobot_arm = get_package_share_directory('xolobot_arm')
@@ -13,7 +11,6 @@ def generate_launch_description():
     urdf_path = os.path.join(package_xolobot_arm, "models", "xolobot.urdf")
     sdf_path = os.path.join(package_xolobot_arm, "models", "xolobot_arm.sdf")
 
-    # Configurar la variable use_sim_time
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
 
     gazebo = ExecuteProcess(
@@ -21,7 +18,6 @@ def generate_launch_description():
         output='screen'
     )
 
-    # Cargar la descripción URDF (necesario para ROS 2 Control)
     with open(urdf_path, 'r') as urdf_file:
         robot_description = urdf_file.read()
 

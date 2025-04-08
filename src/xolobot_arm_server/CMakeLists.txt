@@ -3,7 +3,7 @@ project(xolobot_arm_server)
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
-find_package(fmt REQUIRED) # mensajes y logs
+find_package(fmt REQUIRED) # Para mensajes y logs
 find_package(gazebo_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(std_msgs REQUIRED)

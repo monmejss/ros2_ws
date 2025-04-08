@@ -9,7 +9,10 @@ find_package(robot_state_publisher REQUIRED)
 find_package(yaml_cpp_vendor REQUIRED)
 
 
-install(DIRECTORY config launch
+install(
+  DIRECTORY 
+    config 
+    launch
   DESTINATION share/${PROJECT_NAME}
 )
 
