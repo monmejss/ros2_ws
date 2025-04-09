@@ -518,32 +518,18 @@
           </contact>
         </surface>
       </collision>
+      <!--Bumper-->
+      <sensor name="palma_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin" filename="libgazebo_ros_bumper.so">
+          <always_on>true</always_on>
+          <frame_name>link_palma_izq</frame_name>
+        </plugin>
+      </sensor>
     </link>
-
-
-    <!--<link name='link_palma_izq'>
-      <pose frame=''>-0.03641 0.063676 0.03 0 -0 0</pose>
-      <gravity>0</gravity>
-      <self_collide>0</self_collide>
-      <kinematic>0</kinematic>
-      <enable_wind>0</enable_wind>
-      <visual name='visual'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <geometry>
-          <sphere>
-            <radius>.0125</radius>
-          </sphere>        
-        </geometry>
-        <material>
-          <ambient>0 0 0 1</ambient>
-          <diffuse>0 0 0 1</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>1 0 0 1</emissive>
-        </material>      
-        <transparency>0</transparency>
-        <cast_shadows>0</cast_shadows>
-      </visual>
-    </link>-->
     
     <link name='link_pulgar_1_izq'>
       <inertial>

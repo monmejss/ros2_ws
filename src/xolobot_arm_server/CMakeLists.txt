@@ -7,6 +7,7 @@ find_package(fmt REQUIRED) # Para mensajes y logs
 find_package(gazebo_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(gazebo_ros REQUIRED)
 
 
 include_directories(include)
@@ -19,6 +20,7 @@ add_executable(xolobot_arm_server
 target_link_libraries(${PROJECT_NAME}
   ${rclcpp_LIBRARIES}
   ${gazebo_msgs_LIBRARIES}
+  ${gazebo_ros_LIBRARIES}
 )
 
 install(TARGETS xolobot_arm_server
@@ -36,6 +38,7 @@ ament_target_dependencies(xolobot_arm_server
   gazebo_msgs
   trajectory_msgs
   std_msgs
+  gazebo_ros
 )
 
 ament_package()

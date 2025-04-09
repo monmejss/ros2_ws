@@ -42,10 +42,6 @@ private:
     // Publicador para la trayectoria completa
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
     
-    // Suscriptor del biceps
-    //rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr suscriptorBicep;
-    void deteccionColision(gazebo_msgs::msg::ContactsState::SharedPtr msg);
-
 };
 
 #endif /* SRC_SIMULATIONCONTROLLER_H_ */
