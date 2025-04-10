@@ -11,7 +11,7 @@
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 
-#define TOTAL_JOINTS 7 // Total de articulaciones del brazo
+#define TOTAL_JOINTS 7
 
 // Alias para definir rangos de movimiento de las articulaciones
 using Range = std::pair<double, double>;
@@ -32,16 +32,16 @@ public:
 private:
     // Atributos
     std::vector<double> jointValues;    // Valores generados para cada articulación
-    std::vector<double> curJointVals;  // Valores acumulados para cada articulación
     std::vector<Range> jointLimits;    // Rango permitido para cada articulación
 
     double bicepMov = 0.0;
+    bool colisionDetectada;
 
-    //Publicadores para articulaciones
-    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr jointPub[TOTAL_JOINTS];
     // Publicador para la trayectoria completa
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
-    
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPalma;
+   
+    void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
 };
 
 #endif /* SRC_SIMULATIONCONTROLLER_H_ */

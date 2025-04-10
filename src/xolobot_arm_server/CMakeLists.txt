@@ -8,6 +8,7 @@ find_package(gazebo_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(gazebo_ros REQUIRED)
+find_package(gazebo_ros2_control REQUIRED)
 
 
 include_directories(include)
