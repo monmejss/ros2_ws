@@ -47,13 +47,13 @@ def generate_launch_description():
         output='screen'
     )
     
-    soporte = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        name='spawn_lata',
-        arguments=['-file', soporte_path, '-entity', 'soporte'],
-        output='screen'
-    )
+    #soporte = Node(
+    #    package='gazebo_ros',
+    #    executable='spawn_entity.py',
+    #    name='spawn_lata',
+    #    arguments=['-file', soporte_path, '-entity', 'soporte'],
+    #    output='screen'
+    #)
 
     load_position_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
@@ -66,6 +66,6 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_model,
         objeto,
-        soporte,
+        #soporte,
         load_position_controller
     ])

@@ -33,14 +33,14 @@ private:
     std::vector<double> jointValues;    // Valores generados para cada articulación
     std::vector<Range> jointLimits;    // Rango permitido para cada articulación
 
-    double bicepMov = 0.0;
-    bool colisionDetectada;
+    //double bicepMov = 0.0;
+    //bool colisionDetectada;
 
     // Publicador para la trayectoria completa
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
-    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPalma;
+    //rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPalma;
    
-    void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
+    //void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
 };
 
 #endif /* SRC_SIMULATIONCONTROLLER_H_ */
