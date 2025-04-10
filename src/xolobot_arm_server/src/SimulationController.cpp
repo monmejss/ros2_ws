@@ -24,7 +24,7 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
 
     // Suscriptor para bumper
     suscriptorPalma = this ->create_subscription<gazebo_msgs::msg::ContactsState>
-        ("/bumper_states", 10, std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+        ("/bumper_states", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
 
     rclcpp::Rate wait_rate(1.0);
     wait_rate.sleep();

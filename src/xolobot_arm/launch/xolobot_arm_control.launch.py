@@ -11,6 +11,7 @@ def generate_launch_description():
     urdf_path = os.path.join(package_xolobot_arm, "models", "xolobot.urdf")
     sdf_path = os.path.join(package_xolobot_arm, "models", "xolobot_arm.sdf")
     objeto_path = os.path.join(package_xolobot_arm, "models/utileria", "objeto.sdf")
+    soporte_path = os.path.join(package_xolobot_arm, "models/utileria", "soporte.sdf")
 
     # Alinear tiempo de ros con el de la simulacion
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
@@ -45,6 +46,14 @@ def generate_launch_description():
         arguments=['-file', objeto_path, '-entity', 'objeto'],
         output='screen'
     )
+    
+    soporte = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        name='spawn_lata',
+        arguments=['-file', soporte_path, '-entity', 'soporte'],
+        output='screen'
+    )
 
     load_position_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
@@ -57,5 +66,6 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_model,
         objeto,
+        soporte,
         load_position_controller
     ])

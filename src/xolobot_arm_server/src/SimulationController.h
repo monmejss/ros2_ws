@@ -28,7 +28,6 @@ public:
     // Métodos principales
     void startTrajectory();     
     void generaAleatorios(); 
-
 private:
     // Atributos
     std::vector<double> jointValues;    // Valores generados para cada articulación
