@@ -9,6 +9,7 @@
     <link name="link_antebrazo_izq"> </link>
     <link name="link_palma_izq"> </link>
     <link name="link_pulgar_1_izq"> </link>
+    <link name="link_indice_1_izq"> </link>
 
     <joint name="jnt_pecho_hombro" type="revolute">
         <parent link="link_pecho" />
@@ -68,6 +69,16 @@
     <joint name="jnt_palma_pulgar_1" type="revolute">
         <parent link="link_palma_izq" />
         <child link="link_pulgar_1_izq" />
+        <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
+        <axis xyz="0 0 -1" />
+        <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
+        <dynamics damping="5" friction="1" />
+    </joint>
+
+    <!--INDICE-->
+    <joint name="jnt_palma_indice_1" type="revolute">
+        <parent link="link_palma_izq" />
+        <child link="link_indice_1_izq" />
         <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
         <axis xyz="0 0 -1" />
         <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
@@ -153,6 +164,17 @@
         </actuator>
     </transmission>
 
+    <transmission name="trans_palma_indice_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_palma_indice_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_palma_indice_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
     <ros2_control name="GazeboSystem" type="system">
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -196,6 +218,12 @@
             <state_interface name="effort"/>
         </joint>
         <joint name="jnt_palma_pulgar_1">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+        <joint name="jnt_palma_indice_1">
             <command_interface name="position"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>

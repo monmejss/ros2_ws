@@ -16,8 +16,9 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
                    {-0.5, 0.5},  // jnt_biceps_codo
                    {-1.0, 1.0},  // jnt_codo_antebrazo
                    {-1.0, 1.0},  // jnt_antebrazo_palma
-                   {-1.0, 1.0}}; // jnt_palma_pulgar_1
-
+                   {-1.0, 1.0},   // jnt_palma_pulgar_1
+                   {-1.0, 1.0}}; // jnt_palma_indice_1
+                   
     // Inicializar valores por defecto
     jointValues.assign(TOTAL_JOINTS, 0.0);
 
@@ -55,7 +56,7 @@ void SimulationController::generaAleatorios(){
     
     trajectory_msgs::msg::JointTrajectory jointTrajectoryMsg;
     jointTrajectoryMsg.joint_names = {"jnt_pecho_hombro", "jnt_hombro_hombro", "jnt_hombro_biceps", 
-        "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", "jnt_palma_pulgar_1"};
+        "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", "jnt_palma_pulgar_1", "jnt_palma_indice_1"};
 
     trajectory_msgs::msg::JointTrajectoryPoint point;
 
@@ -83,6 +84,14 @@ void SimulationController::generaAleatorios(){
         }*/
         else if(i==2){
             msg.data = -0.9000;
+            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
+        }
+        else if(i==6){
+            msg.data = 1.5708;
+            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
+        }
+        else if(i==7){
+            msg.data = 1.2217;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
         }
         else{

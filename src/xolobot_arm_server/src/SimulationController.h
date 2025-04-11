@@ -11,12 +11,12 @@
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 
-#define TOTAL_JOINTS 7
+#define TOTAL_JOINTS 8
 
 // Alias para definir rangos de movimiento de las articulaciones
 using Range = std::pair<double, double>;
 
-enum Joint { PECHO = 0, SHOULDER, BICEPS, ELBOW, WRIST, WRIST2, THUMB };
+enum Joint { PECHO = 0, SHOULDER, BICEPS, ELBOW, WRIST, WRIST2, THUMB, INDEX};
 
 class SimulationController : public rclcpp::Node{
 public:
