@@ -17,9 +17,8 @@ int main(int argc, char** argv)
       setenv("ROS_MASTER_URI", puerto.c_str(), 1);
    }
    rclcpp::init(argc, argv);
-   SimulationController sim;
-
-   sim.startTrajectory();
+   auto sim = std::make_shared<SimulationController>();
+   rclcpp::spin(sim);
 
    return 0;
 }

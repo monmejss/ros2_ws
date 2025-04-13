@@ -25,34 +25,38 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
     // Publicador para trayectoria completa
     jointTrajectoryPub = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
 
-    /* Suscriptor para bumper
+    // Suscriptor para bumper
     suscriptorPalma = this ->create_subscription<gazebo_msgs::msg::ContactsState>
-        ("/bumper_states", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));*/
+        ("/bumper_states", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+
+    timer_ = this->create_wall_timer(
+        std::chrono::milliseconds(1000),
+        std::bind(&SimulationController::startTrajectory, this));
+
     rclcpp::Rate wait_rate(1.0);
     wait_rate.sleep();
+    
 }
 SimulationController::~SimulationController() {}
-/*
+
 void SimulationController::deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg){
+    RCLCPP_INFO(this->get_logger(), "SI ENTRO A LA FUNCION DE LA COLISION");
     if(!msg->states.empty() && !colisionDetectada){
         colisionDetectada = true;
         RCLCPP_WARN(this->get_logger(),"¡Colision detectada!");
     }
-}*/
+}
 
 void SimulationController::startTrajectory(){
     RCLCPP_INFO(this->get_logger(), "Iniciando simulacion");
-    rclcpp::Rate loop_rate(1.3);
-    while (rclcpp::ok()){
-        generaAleatorios();
-        loop_rate.sleep();
-    }
+    generaAleatorios(); 
 }
+
 
 void SimulationController::generaAleatorios(){
     std::random_device rd;
     std::mt19937 gen(rd());
-    rclcpp::Rate rate(8.0);
+    rclcpp::Rate rate(2.0);
     
     trajectory_msgs::msg::JointTrajectory jointTrajectoryMsg;
     jointTrajectoryMsg.joint_names = {"jnt_pecho_hombro", "jnt_hombro_hombro", "jnt_hombro_biceps", 
@@ -76,24 +80,24 @@ void SimulationController::generaAleatorios(){
             msg.data = 1.5708;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor FIJO: %f",i, msg.data);
         }
-        /*jnt_hombro_biceps
-        else if(i==2){
+        //jnt_hombro_biceps
+        else if(i==2 && !colisionDetectada){
             bicepMov += -0.087;
             msg.data = bicepMov;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
-        }*/
-        else if(i==2){
-            msg.data = -0.9000;
+        }
+        else if(i==2 && colisionDetectada){
+            msg.data = bicepMov;
+            RCLCPP_INFO(this->get_logger(), "Joint %lu. Detenido en: %f",i, msg.data);
+        }
+        /*else if(i==6){
+            msg.data = 1.0;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
         }
-        else if(i==6){
-            msg.data = 1.5708;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
-        }
-        else if(i==7){
+        else if(i==7 && colisionDetectada){
             msg.data = 1.2217;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
-        }
+        }*/
         else{
             msg.data = 0.0;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
