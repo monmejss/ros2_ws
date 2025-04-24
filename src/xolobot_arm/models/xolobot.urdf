@@ -8,8 +8,15 @@
     <link name="link_codo_izq"> </link>
     <link name="link_antebrazo_izq"> </link>
     <link name="link_palma_izq"> </link>
+    
     <link name="link_pulgar_1_izq"> </link>
+    <link name="link_pulgar_2_izq"> </link>
+    <link name="link_pulgar_3_izq"> </link>
+
     <link name="link_indice_1_izq"> </link>
+    <link name="link_cordial_1_izq"> </link>
+    <link name="link_anular_1_izq"> </link>
+    <link name="link_menique_1_izq"> </link>
 
     <joint name="jnt_pecho_hombro" type="revolute">
         <parent link="link_pecho" />
@@ -56,7 +63,6 @@
         <dynamics damping="10" friction="2" />
     </joint>
 
-    <!--Nuevo joint para el antebrazo_palma-->
     <joint name="jnt_antebrazo_palma" type="revolute">
         <parent link="link_antebrazo_izq" />
         <child link="link_palma_izq" />
@@ -65,7 +71,7 @@
         <limit effort="1000" lower="-3.1416" upper="3.1416" velocity="1000" />  
         <dynamics damping="10" friction="2" />
     </joint>
-    
+    <!--DEDOS-->
     <joint name="jnt_palma_pulgar_1" type="revolute">
         <parent link="link_palma_izq" />
         <child link="link_pulgar_1_izq" />
@@ -74,11 +80,53 @@
         <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
         <dynamics damping="5" friction="1" />
     </joint>
+    <joint name="jnt_pulgar_1_2" type="revolute">
+        <parent link="link_pulgar_1_izq" />
+        <child link="link_pulgar_2_izq" />
+        <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
+        <axis xyz="0 0 -1" />
+        <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
+        <dynamics damping="5" friction="1" />
+    </joint>
+    <joint name="jnt_pulgar_2_3" type="revolute">
+        <parent link="link_pulgar_2_izq" />
+        <child link="link_pulgar_3_izq" />
+        <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
+        <axis xyz="0 0 -1" />
+        <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
+        <dynamics damping="5" friction="1" />
+    </joint>
 
-    <!--INDICE-->
     <joint name="jnt_palma_indice_1" type="revolute">
         <parent link="link_palma_izq" />
         <child link="link_indice_1_izq" />
+        <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
+        <axis xyz="0 0 -1" />
+        <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
+        <dynamics damping="5" friction="1" />
+    </joint>
+
+    <joint name="jnt_palma_cordial_1" type="revolute">
+        <parent link="link_palma_izq" />
+        <child link="link_cordial_1_izq" />
+        <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
+        <axis xyz="0 0 -1" />
+        <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
+        <dynamics damping="5" friction="1" />
+    </joint>
+
+    <joint name="jnt_palma_jnt_palma_anular_1indice_1" type="revolute">
+        <parent link="link_palma_izq" />
+        <child link="link_anular_1_izq" />
+        <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
+        <axis xyz="0 0 -1" />
+        <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
+        <dynamics damping="5" friction="1" />
+    </joint>
+
+    <joint name="jnt_palma_menique_1" type="revolute">
+        <parent link="link_palma_izq" />
+        <child link="link_menique_1_izq" />
         <origin xyz="0.0119  0.00435  0" rpy="0 0 0" />         
         <axis xyz="0 0 -1" />
         <limit effort="8000" lower="0.0" upper="1.45" velocity="2" />  
@@ -141,7 +189,6 @@
         </actuator>
     </transmission>
 
-    <!--NUeva transmision para jnt_antebrazo_palma-->
     <transmission name="trans_antebrazo_palma">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_antebrazo_palma">
@@ -153,12 +200,33 @@
         </actuator>
     </transmission>
     
+    <!--DEDOS-->
     <transmission name="trans_palma_pulgar_1">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="jnt_palma_pulgar_1">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="mtr_palma_pulgar_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_pulgar_1_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_pulgar_1_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_pulgar_1_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_pulgar_2_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_pulgar_2_3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_pulgar_2_3">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
@@ -170,6 +238,39 @@
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
         <actuator name="mtr_palma_indice_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_palma_cordial_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_palma_cordial_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_palma_cordial_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_palma_indice_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_palma_anular_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_palma_indice_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_palma_menique_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="jnt_palma_menique_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="mtr_palma_menique_1">
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
@@ -210,20 +311,52 @@
             <state_interface name="velocity"/>
             <state_interface name="effort"/>
         </joint>
-        <!--Nuevo joint para antebrazo_palma-->
         <joint name="jnt_antebrazo_palma">
             <command_interface name="position"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
             <state_interface name="effort"/>
         </joint>
+
+        <!--DEDOS-->
         <joint name="jnt_palma_pulgar_1">
             <command_interface name="position"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>
             <state_interface name="effort"/>
         </joint>
+        <joint name="jnt_pulgar_1_2">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+        <joint name="jnt_pulgar_2_3">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+
         <joint name="jnt_palma_indice_1">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+        <joint name="jnt_palma_cordial_1">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+        <joint name="jnt_palma_anular_1">
+            <command_interface name="position"/>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+        <joint name="jnt_palma_menique_1">
             <command_interface name="position"/>
             <state_interface name="position"/>
             <state_interface name="velocity"/>

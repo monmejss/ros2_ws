@@ -5,9 +5,7 @@
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 
-
 SimulationController::SimulationController() : rclcpp::Node("simulation_controller"){
-    //quitamos la funcion de colision detectada
     // Inicializar los límites de las articulaciones (en radianes)
 
     jointLimits = {{-0.5, 0.5},  // jnt_pecho_hombro
@@ -16,8 +14,13 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
                    {-0.5, 0.5},  // jnt_biceps_codo
                    {-1.0, 1.0},  // jnt_codo_antebrazo
                    {-1.0, 1.0},  // jnt_antebrazo_palma
-                   {-1.0, 1.0},   // jnt_palma_pulgar_1
-                   {-1.0, 1.0}}; // jnt_palma_indice_1
+                   {-1.0, 1.0},  // jnt_palma_pulgar_1 (6)
+                   {-1.0, 1.0},  // jnt_pulgar_1_2
+                   {-1.0, 1.0},  // jnt_pulgar_2_3
+                   {-1.0, 1.0},  // jnt_palma_indice_1
+                   {-1.0, 1.0},  // jnt_palma_cordial_1
+                   {-1.0, 1.0},  // jnt_palma_anular_1
+                   {-1.0, 1.0}}; // jnt_palma_menique_1
                    
     // Inicializar valores por defecto
     jointValues.assign(TOTAL_JOINTS, 0.0);
@@ -30,7 +33,7 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
         ("/bumper_states", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
 
     timer_ = this->create_wall_timer(
-        std::chrono::milliseconds(1000),
+        std::chrono::milliseconds(700),
         std::bind(&SimulationController::startTrajectory, this));
 
     rclcpp::Rate wait_rate(1.0);
@@ -40,7 +43,6 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
 SimulationController::~SimulationController() {}
 
 void SimulationController::deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg){
-    RCLCPP_INFO(this->get_logger(), "SI ENTRO A LA FUNCION DE LA COLISION");
     if(!msg->states.empty() && !colisionDetectada){
         colisionDetectada = true;
         RCLCPP_WARN(this->get_logger(),"¡Colision detectada!");
@@ -60,7 +62,8 @@ void SimulationController::generaAleatorios(){
     
     trajectory_msgs::msg::JointTrajectory jointTrajectoryMsg;
     jointTrajectoryMsg.joint_names = {"jnt_pecho_hombro", "jnt_hombro_hombro", "jnt_hombro_biceps", 
-        "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", "jnt_palma_pulgar_1", "jnt_palma_indice_1"};
+        "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", "jnt_palma_pulgar_1", "jnt_pulgar_1_2",
+        "jnt_pulgar_2_3", "jnt_palma_indice_1", "jnt_palma_cordial_1", "jnt_palma_anular_1", "jnt_palma_menique_1"};
 
     trajectory_msgs::msg::JointTrajectoryPoint point;
 
@@ -69,7 +72,6 @@ void SimulationController::generaAleatorios(){
         //jnt_codo_antebrazo
         if(i==4){
             msg.data = -1.5708;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu .Valor FIJO:%f", i, msg.data);
         }
         //jnt_biceps_codo 
         else if (i==3) {
@@ -78,29 +80,27 @@ void SimulationController::generaAleatorios(){
             4.7124
             6.2832*/
             msg.data = 1.5708;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor FIJO: %f",i, msg.data);
         }
         //jnt_hombro_biceps
         else if(i==2 && !colisionDetectada){
             bicepMov += -0.087;
             msg.data = bicepMov;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
         }
         else if(i==2 && colisionDetectada){
             msg.data = bicepMov;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Detenido en: %f",i, msg.data);
         }
-        /*else if(i==6){
-            msg.data = 1.0;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
+        else if(i==6 && colisionDetectada){
+            msg.data = 1.5708;
         }
-        else if(i==7 && colisionDetectada){
-            msg.data = 1.2217;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
-        }*/
+        else if((i==7 || i==8) && colisionDetectada){
+            msg.data = -1.0;
+        }
+        else if(i==9 && colisionDetectada){
+            msg.data = 0.80;
+        }
         else{
             msg.data = 0.0;
-            RCLCPP_INFO(this->get_logger(), "Joint %lu. Valor: %f",i, msg.data);
         }
         point.positions.push_back(msg.data);
     }
