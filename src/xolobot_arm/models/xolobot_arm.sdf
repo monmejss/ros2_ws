@@ -430,6 +430,28 @@
           </contact>
         </surface>
       </collision>
+      <!--Bumper antebrazo
+      <sensor name="antebrazo_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_antebrazo" filename="libgazebo_ros_bumper.so">
+          <always_on>true</always_on>
+          <frame_name>link_antebrazo_izq</frame_name>
+          <topic_name>/bumper_states_antebrazo</topic_name>
+        </plugin>
+      </sensor>-->
+
+      <sensor name="antebrazo_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_antebrazo" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_antebrazo</remapping>
+        </plugin>
+      </sensor>
     </link>
 
     <link name='link_palma_izq'>
@@ -518,16 +540,25 @@
           </contact>
         </surface>
       </collision>
-      <!--Bumper-->
+      <!--Bumper
       <sensor name="palma_sensor" type="contact">
         <update_rate>10</update_rate>
         <contact>
           <collision>collision</collision>
         </contact>
-        <plugin name="bumper_plugin" filename="libgazebo_ros_bumper.so">
+        <plugin name="bumper_plugin_palma" filename="libgazebo_ros_bumper.so">
           <always_on>true</always_on>
           <frame_name>link_palma_izq</frame_name>
-          <topic_name>/bumper_states</topic_name>
+          <topic_name>/bumper_states_palma</topic_name>
+        </plugin>
+      </sensor>-->
+      <sensor name="palma_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_palma" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_palma</remapping>
         </plugin>
       </sensor>
     </link>

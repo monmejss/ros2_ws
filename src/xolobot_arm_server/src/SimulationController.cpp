@@ -18,9 +18,17 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
                    {-1.0, 1.0},  // jnt_pulgar_1_2
                    {-1.0, 1.0},  // jnt_pulgar_2_3
                    {-1.0, 1.0},  // jnt_palma_indice_1
+                   {-1.0, 1.0},  // jnt_indice_1_2
+                   {-1.0, 1.0},  // jnt_indice_2_3
                    {-1.0, 1.0},  // jnt_palma_cordial_1
+                   {-1.0, 1.0},  // jnt_cordial_1_2
+                   {-1.0, 1.0},  // jnt_cordial_2_3
                    {-1.0, 1.0},  // jnt_palma_anular_1
-                   {-1.0, 1.0}}; // jnt_palma_menique_1
+                   {-1.0, 1.0},  // jnt_anular_1_2
+                   {-1.0, 1.0},  // jnt_anular_2_3
+                   {-1.0, 1.0}   // jnt_palma_menique_1
+                   {-1.0, 1.0},  // jnt_menique_1_2
+                   {-1.0, 1.0}}; // jnt_menique_2_3
                    
     // Inicializar valores por defecto
     jointValues.assign(TOTAL_JOINTS, 0.0);
@@ -30,8 +38,12 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
 
     // Suscriptor para bumper
     suscriptorPalma = this ->create_subscription<gazebo_msgs::msg::ContactsState>
-        ("/bumper_states", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+        ("/bumper_states_palma", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
 
+    // Suscriptor para bumper
+    suscriptorAntebrazo= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+        ("/bumper_states_antebrazo", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    
     timer_ = this->create_wall_timer(
         std::chrono::milliseconds(700),
         std::bind(&SimulationController::startTrajectory, this));
@@ -54,7 +66,6 @@ void SimulationController::startTrajectory(){
     generaAleatorios(); 
 }
 
-
 void SimulationController::generaAleatorios(){
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -62,8 +73,12 @@ void SimulationController::generaAleatorios(){
     
     trajectory_msgs::msg::JointTrajectory jointTrajectoryMsg;
     jointTrajectoryMsg.joint_names = {"jnt_pecho_hombro", "jnt_hombro_hombro", "jnt_hombro_biceps", 
-        "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", "jnt_palma_pulgar_1", "jnt_pulgar_1_2",
-        "jnt_pulgar_2_3", "jnt_palma_indice_1", "jnt_palma_cordial_1", "jnt_palma_anular_1", "jnt_palma_menique_1"};
+        "jnt_biceps_codo", "jnt_codo_antebrazo", "jnt_antebrazo_palma", 
+        "jnt_palma_pulgar_1", "jnt_pulgar_1_2", "jnt_pulgar_2_3", 
+        "jnt_palma_indice_1", "jnt_indice_1_2", "jnt_indice_2_3", 
+        "jnt_palma_cordial_1", "jnt_cordial_1_2", "jnt_cordial_2_3", 
+        "jnt_palma_anular_1", "jnt_anular_1_2", "jnt_anular_2_3", 
+        "jnt_palma_menique_1", "jnt_menique_1_2", "jnt_menique_2_3"};
 
     trajectory_msgs::msg::JointTrajectoryPoint point;
 

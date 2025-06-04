@@ -16,7 +16,8 @@
 // Alias para definir rangos de movimiento de las articulaciones
 using Range = std::pair<double, double>;
 
-enum Joint { PECHO = 0, SHOULDER, BICEPS, ELBOW, WRIST, WRIST2, THUMB, THUMB2, THUMB3, INDEX, CORDIAL, ANNULAR, PINKY};
+enum Joint { PECHO = 0, SHOULDER, BICEPS, ELBOW, WRIST, WRIST2, THUMB, THUMB2, THUMB3, INDEX, INDEX2, INDEX3, 
+    CORDIAL, CORDIAL2, CORDIAL3, ANNULAR, ANNULAR2, ANNULAR3, PINKY, PINKY2, PINKY3};
 
 class SimulationController : public rclcpp::Node{
 public:
@@ -40,6 +41,7 @@ private:
     // Publicador para la trayectoria completa
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPalma;
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorAntebrazo;
    
     void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
 };
