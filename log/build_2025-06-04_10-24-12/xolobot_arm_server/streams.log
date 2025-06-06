@@ -1,0 +1,49 @@
+[0.062s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.852s] [ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o[0m
+[13.026s] [ 66%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o[0m
+[20.691s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[20.692s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:30:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K{[m[K’ token
+[20.692s]    30 |                    [01;31m[K{[m[K-1.0, 1.0},  // jnt_menique_1_2
+[20.692s]       |                    [01;31m[K^[m[K
+[20.695s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:11:19:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[20.695s]    11 |     jointLimits = [01;36m[K{[m[K{-0.5, 0.5},  // jnt_pecho_hombro
+[20.696s]       |                   [01;36m[K^[m[K
+[20.724s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:29:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K{[m[K’ token
+[20.724s]    29 |                    {-1.0, 1.0}[01;31m[K [m[K  // jnt_palma_menique_1 (18)
+[20.725s]       |                               [01;31m[K^[m[K
+[20.725s]       |                               [32m[K;[m[K
+[20.725s]    30 |                    [32m[K{[m[K-1.0, 1.0},  // jnt_menique_1_2
+[20.727s]       |                    [32m[K~[m[K           
+[20.728s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:30:31:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+[20.728s]    30 |                    {-1.0, 1.0}[01;31m[K,[m[K  // jnt_menique_1_2
+[20.728s]       |                               [01;31m[K^[m[K
+[20.729s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:31:20:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+[20.729s]    31 |                    [01;31m[K{[m[K-1.0, 1.0}}; // jnt_menique_2_3
+[20.729s]       |                    [01;31m[K^[m[K
+[20.734s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K At global scope:
+[20.734s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:[m[K [01;31m[Kerror: [m[K‘[01m[KjointValues[m[K’ does not name a type
+[20.734s]    34 |     [01;31m[KjointValues[m[K.assign(TOTAL_JOINTS, 0.0);
+[20.734s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[20.743s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:37:5:[m[K [01;31m[Kerror: [m[K‘[01m[KjointTrajectoryPub[m[K’ does not name a type
+[20.743s]    37 |     [01;31m[KjointTrajectoryPub[m[K = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
+[20.743s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[20.748s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:40:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsuscriptorPalma[m[K’ does not name a type
+[20.749s]    40 |     [01;31m[KsuscriptorPalma[m[K = this ->create_subscription<gazebo_msgs::msg::ContactsState>
+[20.749s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[20.757s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:44:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsuscriptorAntebrazo[m[K’ does not name a type
+[20.757s]    44 |     [01;31m[KsuscriptorAntebrazo[m[K= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+[20.757s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[20.760s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:47:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ does not name a type; did you mean ‘[01m[Ktimer_t[m[K’?
+[20.760s]    47 |     [01;31m[Ktimer_[m[K = this->create_wall_timer(
+[20.761s]       |     [01;31m[K^~~~~~[m[K
+[20.761s]       |     [32m[Ktimer_t[m[K
+[20.767s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kwait_rate[m[K’ does not name a type
+[20.767s]    52 |     [01;31m[Kwait_rate[m[K.sleep();
+[20.767s]       |     [01;31m[K^~~~~~~~~[m[K
+[20.768s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:54:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+[20.768s]    54 | [01;31m[K}[m[K
+[20.771s]       | [01;31m[K^[m[K
+[23.204s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+[23.205s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[23.205s] gmake: *** [Makefile:146: all] Error 2
+[23.211s] Invoked command in '/home/monica/ros2_ws/build/xolobot_arm_server' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2

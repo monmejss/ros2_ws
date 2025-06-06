@@ -1,0 +1,609 @@
+[0.000000] (-) TimerEvent: {}
+[0.000877] (xolobot_arm) JobQueued: {'identifier': 'xolobot_arm', 'dependencies': OrderedDict()}
+[0.000996] (xolobot_arm_server) JobQueued: {'identifier': 'xolobot_arm_server', 'dependencies': OrderedDict()}
+[0.001054] (xolobot_control) JobQueued: {'identifier': 'xolobot_control', 'dependencies': OrderedDict()}
+[0.001969] (xolobot_arm) JobStarted: {'identifier': 'xolobot_arm'}
+[0.023133] (xolobot_arm_server) JobStarted: {'identifier': 'xolobot_arm_server'}
+[0.047506] (xolobot_arm) JobProgress: {'identifier': 'xolobot_arm', 'progress': 'cmake'}
+[0.052243] (xolobot_arm) JobProgress: {'identifier': 'xolobot_arm', 'progress': 'build'}
+[0.054082] (xolobot_arm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/monica/ros2_ws/build/xolobot_arm', '--', '-j2', '-l2'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1351'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1322,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1322'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c28c95d_60ff_42c1_a2d4_3c009a300103'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9EJF42'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.405'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[0.069075] (xolobot_arm_server) JobProgress: {'identifier': 'xolobot_arm_server', 'progress': 'cmake'}
+[0.073382] (xolobot_arm_server) JobProgress: {'identifier': 'xolobot_arm_server', 'progress': 'build'}
+[0.075333] (xolobot_arm_server) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/monica/ros2_ws/build/xolobot_arm_server', '--', '-j2', '-l2'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm_server', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1351'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1322,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1322'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c28c95d_60ff_42c1_a2d4_3c009a300103'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9EJF42'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.405'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm_server'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[0.099877] (-) TimerEvent: {}
+[0.200871] (-) TimerEvent: {}
+[0.277205] (xolobot_arm_server) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target xolobot_arm_server\x1b[0m\n'}
+[0.301146] (-) TimerEvent: {}
+[0.315516] (xolobot_arm) CommandEnded: {'returncode': 0}
+[0.318399] (xolobot_arm) JobProgress: {'identifier': 'xolobot_arm', 'progress': 'install'}
+[0.374609] (xolobot_arm) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/monica/ros2_ws/build/xolobot_arm'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1351'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1322,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1322'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c28c95d_60ff_42c1_a2d4_3c009a300103'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9EJF42'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.405'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[0.401651] (-) TimerEvent: {}
+[0.409298] (xolobot_arm) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.410033] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/launch\n'}
+[0.411019] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/launch/xolobot_arm_control.launch.py\n'}
+[0.414117] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds\n'}
+[0.417828] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds/coca_levitando.world\n'}
+[0.419853] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds/nada.world\n'}
+[0.422629] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds/luz.world\n'}
+[0.422962] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds/nuevo.world\n'}
+[0.423142] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds/xolobot.world\n'}
+[0.423316] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models\n'}
+[0.424358] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/model.urdf\n'}
+[0.426858] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/xolobot.urdf\n'}
+[0.428256] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/model.config\n'}
+[0.428437] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/untitled.dae\n'}
+[0.428614] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria\n'}
+[0.436486] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/model.config\n'}
+[0.437042] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/pelotas.sdf\n'}
+[0.439900] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures\n'}
+[0.440133] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/metal.material\n'}
+[0.440337] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images\n'}
+[0.445298] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/metal-hoyos.jpg\n'}
+[0.445532] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/blue-metal.jpg\n'}
+[0.445723] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/piso-metal-barras.jpg\n'}
+[0.445934] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/piso-metal-blanco.jpg\n'}
+[0.449045] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/model.config\n'}
+[0.449266] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/xolobot.material\n'}
+[0.449457] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/model_minimo.urdf\n'}
+[0.454132] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/xolobot_arm.sdf\n'}
+[0.455383] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes\n'}
+[0.456728] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/pulgar_2.dae\n'}
+[0.459328] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq_2.dae\n'}
+[0.459539] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_juntos.dae\n'}
+[0.460209] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_der.dae\n'}
+[0.465085] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_izq.dae\n'}
+[0.465375] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq_colision.dae\n'}
+[0.465586] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/banda.blend\n'}
+[0.469047] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_juntos_nuevo.dae\n'}
+[0.469293] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq_bak.dae\n'}
+[0.469504] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/mono.dae\n'}
+[0.474029] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_alto.dae\n'}
+[0.475031] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/codo_izq_colision.dae\n'}
+[0.478147] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_alto_colision.dae\n'}
+[0.481150] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/model.config\n'}
+[0.481417] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq.dae\n'}
+[0.481640] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/codo_izq.dae\n'}
+[0.488694] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_izq_colision.dae\n'}
+[0.495365] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup\n'}
+[0.495722] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/pulgar_2.dae\n'}
+[0.502449] (-) TimerEvent: {}
+[0.503832] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_juntos.dae\n'}
+[0.504291] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_der.dae\n'}
+[0.507106] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_izq.dae\n'}
+[0.507364] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_juntos_nuevo.dae\n'}
+[0.508827] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/hombro_alto.dae\n'}
+[0.513454] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/antebrazo_mano_izq.dae\n'}
+[0.513688] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/codo_izq.dae\n'}
+[0.516541] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/hombro_bajo.dae\n'}
+[0.525096] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos\n'}
+[0.525393] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice.blend1\n'}
+[0.527485] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial_1.dae\n'}
+[0.528406] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_1.blend\n'}
+[0.528657] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice_2.dae\n'}
+[0.537498] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial.blend\n'}
+[0.543638] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_2.blend1\n'}
+[0.543925] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial_2.dae\n'}
+[0.545516] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice_1.dae\n'}
+[0.551732] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique.blend\n'}
+[0.552012] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_1.blend1\n'}
+[0.555295] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_2.dae\n'}
+[0.556658] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular_1.dae\n'}
+[0.558990] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_3.dae\n'}
+[0.559260] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial_3.dae\n'}
+[0.560981] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/mano_completa.blend\n'}
+[0.564856] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique.blend1\n'}
+[0.566281] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_2.blend\n'}
+[0.576868] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular.blend1\n'}
+[0.577650] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_3.blend1\n'}
+[0.577936] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_3.blend\n'}
+[0.581136] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_1.dae\n'}
+[0.581420] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular.blend\n'}
+[0.584048] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice.blend\n'}
+[0.591868] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/mano_completa.blend1\n'}
+[0.593139] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular_3.dae\n'}
+[0.596472] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular_2.dae\n'}
+[0.597253] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial.blend1\n'}
+[0.598240] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice_3.dae\n'}
+[0.610154] (-) TimerEvent: {}
+[0.614305] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/pulgar_1_izq.dae\n'}
+[0.615865] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/pulgar_3.dae\n'}
+[0.618810] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_bajo.dae\n'}
+[0.623447] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos\n'}
+[0.625199] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_2.dae\n'}
+[0.628620] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_1_izq_colision.dae\n'}
+[0.628967] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3_colision.dae\n'}
+[0.632797] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice.blend1\n'}
+[0.633131] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_3_colision.dae\n'}
+[0.633392] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_3_colision.dae\n'}
+[0.636274] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_1.dae\n'}
+[0.639463] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2_colision.dae\n'}
+[0.639812] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1.blend\n'}
+[0.644104] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_2.dae\n'}
+[0.644638] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_3_colision.dae\n'}
+[0.647593] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial.blend\n'}
+[0.647923] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2.blend1\n'}
+[0.648198] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_2.dae\n'}
+[0.648454] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_1.dae\n'}
+[0.653350] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique.blend\n'}
+[0.655352] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_1_colision.dae\n'}
+[0.655665] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1.blend1\n'}
+[0.657891] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2.dae\n'}
+[0.659860] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_1.dae\n'}
+[0.660158] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_1_colision.dae\n'}
+[0.662648] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1_colision.dae\n'}
+[0.665742] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3.dae\n'}
+[0.669057] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_3_colision.dae\n'}
+[0.674882] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_1_colision.dae\n'}
+[0.675827] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_3.dae\n'}
+[0.676142] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_1_izq.dae\n'}
+[0.677161] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/mano_completa.blend\n'}
+[0.688167] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique.blend1\n'}
+[0.689735] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2.blend\n'}
+[0.697001] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_2_colision.dae\n'}
+[0.697883] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular.blend1\n'}
+[0.698175] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_2_colision.dae\n'}
+[0.698448] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3.blend1\n'}
+[0.698709] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_3.dae\n'}
+[0.706449] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3.blend\n'}
+[0.706781] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1.dae\n'}
+[0.709691] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular.blend\n'}
+[0.713346] (-) TimerEvent: {}
+[0.713672] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice.blend\n'}
+[0.713993] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/mano_completa.blend1\n'}
+[0.714258] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_3.dae\n'}
+[0.714516] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_2.dae\n'}
+[0.716009] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial.blend1\n'}
+[0.721171] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_2_colision.dae\n'}
+[0.722234] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_2_colision.dae\n'}
+[0.723842] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_3.dae\n'}
+[0.727342] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/pulgar_1_izq.dae\n'}
+[0.727689] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/codo_izq_tuercas.dae\n'}
+[0.729712] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_bajo_colision.dae\n'}
+[0.734357] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/pulgar_3.dae\n'}
+[0.734634] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/banda_terminada.blend\n'}
+[0.734913] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/model.sdf\n'}
+[0.737988] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/ament_index/resource_index/package_run_dependencies/xolobot_arm\n'}
+[0.738285] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/ament_index/resource_index/parent_prefix_path/xolobot_arm\n'}
+[0.740100] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/ament_prefix_path.sh\n'}
+[0.742428] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/ament_prefix_path.dsv\n'}
+[0.742719] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/path.sh\n'}
+[0.746843] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/path.dsv\n'}
+[0.750003] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.bash\n'}
+[0.750902] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.sh\n'}
+[0.751192] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.zsh\n'}
+[0.751487] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.dsv\n'}
+[0.752236] (xolobot_arm) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/package.dsv\n'}
+[0.757158] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/ament_index/resource_index/packages/xolobot_arm\n'}
+[0.761172] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/cmake/xolobot_armConfig.cmake\n'}
+[0.765201] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/cmake/xolobot_armConfig-version.cmake\n'}
+[0.766723] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/package.xml\n'}
+[0.773438] (xolobot_arm) CommandEnded: {'returncode': 0}
+[0.774506] (xolobot_arm_server) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o\x1b[0m\n'}
+[0.776647] (xolobot_arm) JobEnded: {'identifier': 'xolobot_arm', 'rc': 0}
+[0.791865] (xolobot_control) JobStarted: {'identifier': 'xolobot_control'}
+[0.814370] (-) TimerEvent: {}
+[0.824484] (xolobot_control) JobProgress: {'identifier': 'xolobot_control', 'progress': 'cmake'}
+[0.828313] (xolobot_control) JobProgress: {'identifier': 'xolobot_control', 'progress': 'build'}
+[0.831055] (xolobot_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/monica/ros2_ws/build/xolobot_control', '--', '-j2', '-l2'], 'cwd': '/home/monica/ros2_ws/build/xolobot_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1351'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1322,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1322'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c28c95d_60ff_42c1_a2d4_3c009a300103'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9EJF42'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.405'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[0.914581] (-) TimerEvent: {}
+[1.021225] (-) TimerEvent: {}
+[1.126069] (-) TimerEvent: {}
+[1.205204] (xolobot_control) CommandEnded: {'returncode': 0}
+[1.213657] (xolobot_control) JobProgress: {'identifier': 'xolobot_control', 'progress': 'install'}
+[1.213837] (xolobot_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/monica/ros2_ws/build/xolobot_control'], 'cwd': '/home/monica/ros2_ws/build/xolobot_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1351'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1322,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1322'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c28c95d_60ff_42c1_a2d4_3c009a300103'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.9EJF42'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.405'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[1.227503] (-) TimerEvent: {}
+[1.322413] (xolobot_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.325203] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/config\n'}
+[1.326127] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/config/xolobot_control.yaml\n'}
+[1.328039] (-) TimerEvent: {}
+[1.330085] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/launch\n'}
+[1.330725] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/launch/xolobot_control.launch.py\n'}
+[1.331017] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/ament_index/resource_index/package_run_dependencies/xolobot_control\n'}
+[1.331282] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/ament_index/resource_index/parent_prefix_path/xolobot_control\n'}
+[1.331559] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/ament_prefix_path.sh\n'}
+[1.336434] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/ament_prefix_path.dsv\n'}
+[1.336813] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/path.sh\n'}
+[1.339864] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/path.dsv\n'}
+[1.340318] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.bash\n'}
+[1.340572] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.sh\n'}
+[1.344481] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.zsh\n'}
+[1.346962] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.dsv\n'}
+[1.347315] (xolobot_control) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/package.dsv\n'}
+[1.348870] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/ament_index/resource_index/packages/xolobot_control\n'}
+[1.352398] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/cmake/xolobot_controlConfig.cmake\n'}
+[1.352695] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/cmake/xolobot_controlConfig-version.cmake\n'}
+[1.352996] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/package.xml\n'}
+[1.363847] (xolobot_control) CommandEnded: {'returncode': 0}
+[1.430903] (-) TimerEvent: {}
+[1.488344] (xolobot_control) JobEnded: {'identifier': 'xolobot_control', 'rc': 0}
+[1.532590] (-) TimerEvent: {}
+[1.634375] (-) TimerEvent: {}
+[1.736170] (-) TimerEvent: {}
+[1.836963] (-) TimerEvent: {}
+[1.938622] (-) TimerEvent: {}
+[2.039913] (-) TimerEvent: {}
+[2.141375] (-) TimerEvent: {}
+[2.242180] (-) TimerEvent: {}
+[2.343742] (-) TimerEvent: {}
+[2.444508] (-) TimerEvent: {}
+[2.546061] (-) TimerEvent: {}
+[2.647702] (-) TimerEvent: {}
+[2.751371] (-) TimerEvent: {}
+[2.853269] (-) TimerEvent: {}
+[2.954625] (-) TimerEvent: {}
+[3.058084] (-) TimerEvent: {}
+[3.158913] (-) TimerEvent: {}
+[3.261140] (-) TimerEvent: {}
+[3.363017] (-) TimerEvent: {}
+[3.464892] (-) TimerEvent: {}
+[3.566976] (-) TimerEvent: {}
+[3.669296] (-) TimerEvent: {}
+[3.771141] (-) TimerEvent: {}
+[3.872248] (-) TimerEvent: {}
+[3.973846] (-) TimerEvent: {}
+[4.075876] (-) TimerEvent: {}
+[4.177920] (-) TimerEvent: {}
+[4.279993] (-) TimerEvent: {}
+[4.381868] (-) TimerEvent: {}
+[4.483565] (-) TimerEvent: {}
+[4.585277] (-) TimerEvent: {}
+[4.687129] (-) TimerEvent: {}
+[4.788881] (-) TimerEvent: {}
+[4.890719] (-) TimerEvent: {}
+[4.992938] (-) TimerEvent: {}
+[5.094719] (-) TimerEvent: {}
+[5.198371] (-) TimerEvent: {}
+[5.299655] (-) TimerEvent: {}
+[5.401251] (-) TimerEvent: {}
+[5.504625] (-) TimerEvent: {}
+[5.606881] (-) TimerEvent: {}
+[5.708177] (-) TimerEvent: {}
+[5.809735] (-) TimerEvent: {}
+[5.911916] (-) TimerEvent: {}
+[6.013810] (-) TimerEvent: {}
+[6.116240] (-) TimerEvent: {}
+[6.217884] (-) TimerEvent: {}
+[6.319081] (-) TimerEvent: {}
+[6.420915] (-) TimerEvent: {}
+[6.522822] (-) TimerEvent: {}
+[6.624609] (-) TimerEvent: {}
+[6.725863] (-) TimerEvent: {}
+[6.828377] (-) TimerEvent: {}
+[6.928986] (-) TimerEvent: {}
+[7.031111] (-) TimerEvent: {}
+[7.132081] (-) TimerEvent: {}
+[7.234141] (-) TimerEvent: {}
+[7.336670] (-) TimerEvent: {}
+[7.438947] (-) TimerEvent: {}
+[7.542192] (-) TimerEvent: {}
+[7.644546] (-) TimerEvent: {}
+[7.746521] (-) TimerEvent: {}
+[7.848201] (-) TimerEvent: {}
+[7.949790] (-) TimerEvent: {}
+[8.052239] (-) TimerEvent: {}
+[8.154021] (-) TimerEvent: {}
+[8.255964] (-) TimerEvent: {}
+[8.358952] (-) TimerEvent: {}
+[8.460049] (-) TimerEvent: {}
+[8.562811] (-) TimerEvent: {}
+[8.664610] (-) TimerEvent: {}
+[8.766165] (-) TimerEvent: {}
+[8.868440] (-) TimerEvent: {}
+[8.969887] (-) TimerEvent: {}
+[9.071174] (-) TimerEvent: {}
+[9.173522] (-) TimerEvent: {}
+[9.275131] (-) TimerEvent: {}
+[9.376320] (-) TimerEvent: {}
+[9.477958] (-) TimerEvent: {}
+[9.579896] (-) TimerEvent: {}
+[9.682774] (-) TimerEvent: {}
+[9.783805] (-) TimerEvent: {}
+[9.887464] (-) TimerEvent: {}
+[9.988435] (-) TimerEvent: {}
+[10.090609] (-) TimerEvent: {}
+[10.193284] (-) TimerEvent: {}
+[10.294695] (-) TimerEvent: {}
+[10.396597] (-) TimerEvent: {}
+[10.498631] (-) TimerEvent: {}
+[10.601065] (-) TimerEvent: {}
+[10.702605] (-) TimerEvent: {}
+[10.804897] (-) TimerEvent: {}
+[10.906700] (-) TimerEvent: {}
+[11.009868] (-) TimerEvent: {}
+[11.110909] (-) TimerEvent: {}
+[11.212738] (-) TimerEvent: {}
+[11.314969] (-) TimerEvent: {}
+[11.417246] (-) TimerEvent: {}
+[11.519796] (-) TimerEvent: {}
+[11.621663] (-) TimerEvent: {}
+[11.723594] (-) TimerEvent: {}
+[11.824364] (-) TimerEvent: {}
+[11.925966] (-) TimerEvent: {}
+[12.027635] (-) TimerEvent: {}
+[12.128732] (-) TimerEvent: {}
+[12.230728] (-) TimerEvent: {}
+[12.332854] (-) TimerEvent: {}
+[12.436078] (-) TimerEvent: {}
+[12.537984] (-) TimerEvent: {}
+[12.640370] (-) TimerEvent: {}
+[12.742642] (-) TimerEvent: {}
+[12.844881] (-) TimerEvent: {}
+[12.947911] (-) TimerEvent: {}
+[13.049563] (-) TimerEvent: {}
+[13.152045] (-) TimerEvent: {}
+[13.254663] (-) TimerEvent: {}
+[13.357212] (-) TimerEvent: {}
+[13.459875] (-) TimerEvent: {}
+[13.562078] (-) TimerEvent: {}
+[13.665179] (-) TimerEvent: {}
+[13.767916] (-) TimerEvent: {}
+[13.869703] (-) TimerEvent: {}
+[13.972555] (-) TimerEvent: {}
+[14.074724] (-) TimerEvent: {}
+[14.176780] (-) TimerEvent: {}
+[14.279392] (-) TimerEvent: {}
+[14.381914] (-) TimerEvent: {}
+[14.483735] (-) TimerEvent: {}
+[14.586088] (-) TimerEvent: {}
+[14.688365] (-) TimerEvent: {}
+[14.792199] (-) TimerEvent: {}
+[14.894128] (-) TimerEvent: {}
+[14.996711] (-) TimerEvent: {}
+[15.001484] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:7:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.003314] (xolobot_arm_server) StderrLine: {'line': b'    7 | void \x1b[01;31m\x1b[KSimulationController\x1b[m\x1b[K::deteccionColision(gazebo_msgs::msg::ContactsState::SharedPtr msg) {\n'}
+[15.003609] (xolobot_arm_server) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.004797] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:7:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.005131] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.007198] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[15.007478] (xolobot_arm_server) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KSimulationController\x1b[m\x1b[K{\n'}
+[15.007776] (xolobot_arm_server) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.010148] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KSimulationController::SimulationController()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.010583] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:12:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node::Node()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.013084] (xolobot_arm_server) StderrLine: {'line': b'   12 | SimulationController::SimulationController(\x1b[01;31m\x1b[K)\x1b[m\x1b[K{\n'}
+[15.013418] (xolobot_arm_server) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[15.014041] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[15.014346] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[15.014628] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.014922] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.015214] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.015491] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:1579:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node::Node(const rclcpp::Node&, const string&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.016819] (xolobot_arm_server) StderrLine: {'line': b' 1579 |   \x1b[01;36m\x1b[KNode\x1b[m\x1b[K(\n'}
+[15.017226] (xolobot_arm_server) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[15.017508] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:1579:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 0 provided\n'}
+[15.017805] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:102:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node::Node(const string&, const string&, const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.018102] (xolobot_arm_server) StderrLine: {'line': b'  102 |   explicit \x1b[01;36m\x1b[KNode\x1b[m\x1b[K(\n'}
+[15.018380] (xolobot_arm_server) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[15.023253] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:102:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 0 provided\n'}
+[15.023584] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:90:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node::Node(const string&, const rclcpp::NodeOptions&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.023921] (xolobot_arm_server) StderrLine: {'line': b'   90 |   explicit \x1b[01;36m\x1b[KNode\x1b[m\x1b[K(\n'}
+[15.024210] (xolobot_arm_server) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[15.024484] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:90:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 2 arguments, 0 provided\n'}
+[15.046834] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:27:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kcreate_publisher\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.047461] (xolobot_arm_server) StderrLine: {'line': b'   27 |         jointPub[i] = this->\x1b[01;31m\x1b[Kcreate_publisher\x1b[m\x1b[K<std_msgs::msg::Float64>(topicCmd, 5);\n'}
+[15.047938] (xolobot_arm_server) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.048569] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:27:68:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K>\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[15.048874] (xolobot_arm_server) StderrLine: {'line': b'   27 |         jointPub[i] = this->create_publisher<std_msgs::msg::Float64\x1b[01;31m\x1b[K>\x1b[m\x1b[K(topicCmd, 5);\n'}
+[15.049174] (xolobot_arm_server) StderrLine: {'line': b'      |                                                                    \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[15.052993] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.053473] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.053737] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.055539] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.055827] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.056099] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.056361] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.056619] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.060148] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.060466] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.060842] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.061116] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.061375] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SimulationController::startTrajectory()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.061671] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.062310] (xolobot_arm_server) StderrLine: {'line': b'   34 |     RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Iniciando simulacion");\n'}
+[15.062575] (xolobot_arm_server) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.062858] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.063130] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.063388] (xolobot_arm_server) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Iniciando simulacion");\n'}
+[15.063642] (xolobot_arm_server) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.067897] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.068215] (xolobot_arm_server) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Iniciando simulacion");\n'}
+[15.068477] (xolobot_arm_server) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.068733] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.072384] (xolobot_arm_server) StderrLine: {'line': b'   34 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Iniciando simulacion");\n'}
+[15.072650] (xolobot_arm_server) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.073147] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[15.073412] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.073662] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.073948] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.074237] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.074493] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.076819] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.077667] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.077962] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.078225] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.078510] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.081043] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.083416] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.083936] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.084256] (xolobot_arm_server) StderrLine: {'line': b'   34 |     RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Iniciando simulacion");\n'}
+[15.084530] (xolobot_arm_server) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.085840] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.086166] (xolobot_arm_server) StderrLine: {'line': b'   34 |     RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Iniciando simulacion");\n'}
+[15.086417] (xolobot_arm_server) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.086667] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.086952] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.087209] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.087462] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.087712] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.091245] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.091530] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.091801] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.092074] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.092330] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.094863] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.095318] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.095596] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SimulationController::generaAleatorios()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[15.095930] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.096216] (xolobot_arm_server) StderrLine: {'line': b'   57 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);\n'}
+[15.096488] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.098875] (-) TimerEvent: {}
+[15.099316] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.099680] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.100024] (xolobot_arm_server) StderrLine: {'line': b'   57 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);\n'}
+[15.100304] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.100575] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.104086] (xolobot_arm_server) StderrLine: {'line': b'   57 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);\n'}
+[15.104432] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.104702] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.105001] (xolobot_arm_server) StderrLine: {'line': b'   57 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);\n'}
+[15.105279] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.105547] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[15.108041] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.108404] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.108678] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.108980] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.109298] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.109566] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.113027] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.113394] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.113650] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.113932] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.114192] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.114445] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.114699] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.117181] (xolobot_arm_server) StderrLine: {'line': b'   57 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);\n'}
+[15.117471] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.117728] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.118012] (xolobot_arm_server) StderrLine: {'line': b'   57 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);\n'}
+[15.118264] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.118518] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.121655] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.122117] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.122383] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.122681] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.122974] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.123232] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.123484] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.123736] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.126259] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.126524] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.126810] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.127082] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.127343] (xolobot_arm_server) StderrLine: {'line': b'   67 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);\n'}
+[15.127596] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.131090] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.131412] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.131670] (xolobot_arm_server) StderrLine: {'line': b'   67 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);\n'}
+[15.131961] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.132220] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.132474] (xolobot_arm_server) StderrLine: {'line': b'   67 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);\n'}
+[15.132729] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.135262] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.135542] (xolobot_arm_server) StderrLine: {'line': b'   67 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);\n'}
+[15.135839] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.139961] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[15.140292] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.140550] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.141898] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.142228] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.142484] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.142738] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.145605] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.145886] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.146144] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.146394] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.146647] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.149111] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.149409] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.149671] (xolobot_arm_server) StderrLine: {'line': b'   67 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);\n'}
+[15.149964] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.150224] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.150506] (xolobot_arm_server) StderrLine: {'line': b'   67 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);\n'}
+[15.152452] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.152843] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:71:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[15.153116] (xolobot_arm_server) StderrLine: {'line': b'   71 |             while(\x1b[01;31m\x1b[K)\x1b[m\x1b[K{\n'}
+[15.153366] (xolobot_arm_server) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[15.153614] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.154964] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.155245] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.155501] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.155764] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.156034] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.156283] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.156571] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.159031] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.159359] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.159613] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.159892] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.160152] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.160409] (xolobot_arm_server) StderrLine: {'line': b'   74 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);\n'}
+[15.164288] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.164564] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.164861] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.165174] (xolobot_arm_server) StderrLine: {'line': b'   74 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);\n'}
+[15.165430] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.165685] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.170394] (xolobot_arm_server) StderrLine: {'line': b'   74 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);\n'}
+[15.170701] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.170989] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[15.171263] (xolobot_arm_server) StderrLine: {'line': b'   74 |             \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);\n'}
+[15.171519] (xolobot_arm_server) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.173877] (xolobot_arm_server) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[15.174318] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43\x1b[m\x1b[K,\n'}
+[15.174593] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[15.174887] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[15.175200] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[15.177103] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[15.177520] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[15.177807] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[15.178097] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[15.178366] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[15.178633] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167\x1b[m\x1b[K,\n'}
+[15.179976] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4\x1b[m\x1b[K,\n'}
+[15.180269] (xolobot_arm_server) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1\x1b[m\x1b[K:\n'}
+[15.180535] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.180835] (xolobot_arm_server) StderrLine: {'line': b'   74 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);\n'}
+[15.181117] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.181388] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SimulationController\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.181653] (xolobot_arm_server) StderrLine: {'line': b'   74 |             RCLCPP_INFO(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);\n'}
+[15.186081] (xolobot_arm_server) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[15.186414] (xolobot_arm_server) StderrLine: {'line': b'\x1b[01m\x1b[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:76:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64_<std::allocator<void> > > >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kclass std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64_<std::allocator<void> > > >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kpublish\x1b[m\x1b[K\xe2\x80\x99\n'}
+[15.186704] (xolobot_arm_server) StderrLine: {'line': b'   76 |         jointPub[i].\x1b[01;31m\x1b[Kpublish\x1b[m\x1b[K(msg);\n'}
+[15.187004] (xolobot_arm_server) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[15.199880] (-) TimerEvent: {}
+[15.300454] (-) TimerEvent: {}
+[15.401332] (-) TimerEvent: {}
+[15.504875] (-) TimerEvent: {}
+[15.605710] (-) TimerEvent: {}
+[15.706871] (-) TimerEvent: {}
+[15.808367] (-) TimerEvent: {}
+[15.910846] (-) TimerEvent: {}
+[16.011433] (-) TimerEvent: {}
+[16.114268] (-) TimerEvent: {}
+[16.214882] (-) TimerEvent: {}
+[16.315743] (-) TimerEvent: {}
+[16.416879] (-) TimerEvent: {}
+[16.518206] (-) TimerEvent: {}
+[16.619883] (-) TimerEvent: {}
+[16.720488] (-) TimerEvent: {}
+[16.821885] (-) TimerEvent: {}
+[16.922878] (-) TimerEvent: {}
+[17.023969] (-) TimerEvent: {}
+[17.125465] (-) TimerEvent: {}
+[17.227158] (-) TimerEvent: {}
+[17.328925] (-) TimerEvent: {}
+[17.429536] (-) TimerEvent: {}
+[17.530927] (-) TimerEvent: {}
+[17.631540] (-) TimerEvent: {}
+[17.732878] (-) TimerEvent: {}
+[17.833881] (-) TimerEvent: {}
+[17.935707] (-) TimerEvent: {}
+[18.038881] (-) TimerEvent: {}
+[18.139500] (-) TimerEvent: {}
+[18.240157] (-) TimerEvent: {}
+[18.314352] (xolobot_arm_server) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1\n'}
+[18.315387] (xolobot_arm_server) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2\n'}
+[18.316402] (xolobot_arm_server) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[18.324547] (xolobot_arm_server) CommandEnded: {'returncode': 2}
+[18.341287] (-) TimerEvent: {}
+[18.361387] (xolobot_arm_server) JobEnded: {'identifier': 'xolobot_arm_server', 'rc': 2}
+[18.373705] (-) EventReactorShutdown: {}

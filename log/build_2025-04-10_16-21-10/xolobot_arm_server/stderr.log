@@ -1,0 +1,29 @@
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:20:20:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ before ‘[01m[K{[m[K’ token
+   20 |                    [01;31m[K{[m[K-1.0, 1.0}}; // jnt_palma_indice_1
+      |                    [01;31m[K^[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:13:19:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+   13 |     jointLimits = [01;36m[K{[m[K{-0.5, 0.5},  // jnt_pecho_hombro
+      |                   [01;36m[K^[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:19:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K{[m[K’ token
+   19 |                    {-1.0, 1.0}[01;31m[K [m[K  // jnt_palma_pulgar_1
+      |                               [01;31m[K^[m[K
+      |                               [32m[K;[m[K
+   20 |                    [32m[K{[m[K-1.0, 1.0}}; // jnt_palma_indice_1
+      |                    [32m[K~[m[K           
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K At global scope:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:23:5:[m[K [01;31m[Kerror: [m[K‘[01m[KjointValues[m[K’ does not name a type
+   23 |     [01;31m[KjointValues[m[K.assign(TOTAL_JOINTS, 0.0);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:26:5:[m[K [01;31m[Kerror: [m[K‘[01m[KjointTrajectoryPub[m[K’ does not name a type
+   26 |     [01;31m[KjointTrajectoryPub[m[K = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:32:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kwait_rate[m[K’ does not name a type
+   32 |     [01;31m[Kwait_rate[m[K.sleep();
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+   33 | [01;31m[K}[m[K
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

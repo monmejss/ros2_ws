@@ -1,0 +1,28 @@
+[0.036s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.225s] [35m[1mConsolidate compiler generated dependencies of target xolobot_arm_server[0m
+[0.381s] [ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o[0m
+[0.381s] [ 66%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o[0m
+[8.840s] In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[8.841s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:46:13:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[8.841s]    46 |     rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr suscriptorBicep;
+[8.841s]       |             [01;31m[K^~~~~~~~~~[m[K
+[8.898s] In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/startServerNode.cpp:1[m[K:
+[8.899s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:46:13:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[8.899s]    46 |     rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr suscriptorBicep;
+[8.899s]       |             [01;31m[K^~~~~~~~~~[m[K
+[8.917s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[8.921s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsuscriptorBicep[m[K’ was not declared in this scope
+[8.922s]    33 |     [01;31m[KsuscriptorBicep[m[K = nh.subscribe("/bumper_states", 10, contactoDetectado);
+[8.923s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[8.930s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knh[m[K’ was not declared in this scope
+[8.930s]    33 |     suscriptorBicep = [01;31m[Knh[m[K.subscribe("/bumper_states", 10, contactoDetectado);
+[8.931s]       |                       [01;31m[K^~[m[K
+[8.969s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:58:[m[K [01;31m[Kerror: [m[K‘[01m[KcontactoDetectado[m[K’ was not declared in this scope
+[8.969s]    33 |     suscriptorBicep = nh.subscribe("/bumper_states", 10, [01;31m[KcontactoDetectado[m[K);
+[8.970s]       |                                                          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[12.822s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:76: CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o] Error 1
+[12.822s] gmake[2]: *** Se espera a que terminen otras tareas....
+[13.353s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+[13.354s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[13.355s] gmake: *** [Makefile:146: all] Error 2
+[13.362s] Invoked command in '/home/monica/ros2_ws/build/xolobot_arm_server' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2

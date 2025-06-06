@@ -17,16 +17,16 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
                    {-1.0, 1.0},  // jnt_palma_pulgar_1 (6)
                    {-1.0, 1.0},  // jnt_pulgar_1_2
                    {-1.0, 1.0},  // jnt_pulgar_2_3
-                   {-1.0, 1.0},  // jnt_palma_indice_1
+                   {-1.0, 1.0},  // jnt_palma_indice_1 (9)
                    {-1.0, 1.0},  // jnt_indice_1_2
                    {-1.0, 1.0},  // jnt_indice_2_3
-                   {-1.0, 1.0},  // jnt_palma_cordial_1
+                   {-1.0, 1.0},  // jnt_palma_cordial_1 (12)
                    {-1.0, 1.0},  // jnt_cordial_1_2
                    {-1.0, 1.0},  // jnt_cordial_2_3
-                   {-1.0, 1.0},  // jnt_palma_anular_1
+                   {-1.0, 1.0},  // jnt_palma_anular_1 (15)
                    {-1.0, 1.0},  // jnt_anular_1_2
                    {-1.0, 1.0},  // jnt_anular_2_3
-                   {-1.0, 1.0}   // jnt_palma_menique_1
+                   {-1.0, 1.0},  // jnt_palma_menique_1 (18)
                    {-1.0, 1.0},  // jnt_menique_1_2
                    {-1.0, 1.0}}; // jnt_menique_2_3
                    
@@ -105,14 +105,40 @@ void SimulationController::generaAleatorios(){
             msg.data = bicepMov;
             RCLCPP_INFO(this->get_logger(), "Joint %lu. Detenido en: %f",i, msg.data);
         }
+        // Pulgar (6-7-8)
         else if(i==6 && colisionDetectada){
             msg.data = 1.5708;
         }
         else if((i==7 || i==8) && colisionDetectada){
             msg.data = -1.0;
         }
+        // Indice (9-10-11)
         else if(i==9 && colisionDetectada){
             msg.data = 0.80;
+        }
+        else if((i==10 || i==11)&& colisionDetectada){
+            msg.data = -1.0;
+        }
+        // Cordial (12-13-14)
+        else if(i==12 && colisionDetectada){
+            msg.data = 0.80;
+        }
+        else if((i==13 || i==14)&& colisionDetectada){
+            msg.data = -1.0;
+        }
+        // Anular (15-16-17)
+        else if(i==15 && colisionDetectada){
+            msg.data = 0.80;
+        }
+        else if((i==16 || i==17)&& colisionDetectada){
+            msg.data = -1.0;
+        }
+        // Menique (18-19-20)
+        else if(i==18 && colisionDetectada){
+            msg.data = 0.80;
+        }
+        else if((i==19 || i==20)&& colisionDetectada){
+            msg.data = -1.0;
         }
         else{
             msg.data = 0.0;

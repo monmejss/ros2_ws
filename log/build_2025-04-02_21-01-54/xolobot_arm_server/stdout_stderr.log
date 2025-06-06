@@ -1,0 +1,10 @@
+[35m[1mConsolidate compiler generated dependencies of target xolobot_arm_server[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o[0m
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In member function ‘[01m[Kvoid SimulationController::generaAleatorios()[m[K’:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:72:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
+   72 |         jointPub[i].[01;31m[Kpublish[m[K(msg);
+      |                     [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

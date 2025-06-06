@@ -11,7 +11,7 @@
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 
-#define TOTAL_JOINTS 13
+#define TOTAL_JOINTS 21
 
 // Alias para definir rangos de movimiento de las articulaciones
 using Range = std::pair<double, double>;

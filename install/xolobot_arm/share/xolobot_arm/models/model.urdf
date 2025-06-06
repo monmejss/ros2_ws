@@ -1,0 +1,621 @@
+<?xml version="1.0" ?>
+<robot name="xolobot_arm">
+    
+  <gazebo>  
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/xolobot_arm</robotNamespace>
+    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+  </plugin>
+  </gazebo>
+
+  
+  <joint name="xolobot_arm__jnt_anular_1_2" type="revolute">
+    <parent link="xolobot_arm__link_anular_1_izq"/>
+    <child link="xolobot_arm__link_anular_2_izq"/>
+    <origin xyz="-5.000e-05  0.000e+00 -3.041e-02" rpy="0 0 0"/>
+    <axis xyz="0.95824  0      -0.28595"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_anular_2_3" type="revolute">
+    <parent link="xolobot_arm__link_anular_2_izq"/>
+    <child link="xolobot_arm__link_anular_3_izq"/>
+    <origin xyz="0       0      -0.02636" rpy="0 0 0"/>
+    <axis xyz="0.95824  0      -0.28595"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_palma_anular_1" type="revolute">
+    <parent link="xolobot_arm__link_antebrazo_izq"/>
+    <child link="xolobot_arm__link_anular_1_izq"/>
+    <origin xyz="0.01572  0.00038 -0.22822" rpy="0      -0.28999  0"/>
+    <axis xyz="0.95824  0      -0.28595"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_hombro_biceps" type="revolute">
+    <parent link="xolobot_arm__link_hombro_bajo_izq"/>
+    <child link="xolobot_arm__link_biceps_izq"/>
+    <origin xyz="0.00319  0.00036 -0.07389" rpy="0       0      -3.14159"/>
+    <axis xyz="0  0 -1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+    <dynamics damping="0.7" friction="1"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_menique_1_2" type="revolute">
+    <parent link="xolobot_arm__link_menique_1_izq"/>
+    <child link="xolobot_arm__link_menique_2_izq"/>
+    <origin xyz="6.000e-05 -3.000e-05 -2.209e-02" rpy="0 0 0"/>
+    <axis xyz="0.88491  0      -0.46574"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_palma_menique_1" type="revolute">
+    <parent link="xolobot_arm__link_antebrazo_izq"/>
+    <child link="xolobot_arm__link_menique_1_izq"/>
+    <origin xyz="3.3240e-02  7.0000e-05 -2.2107e-01" rpy="0      -0.48447  0"/>
+    <axis xyz="0.88491  0      -0.46574"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_palma_pulgar_1" type="revolute">
+    <parent link="xolobot_arm__link_antebrazo_izq"/>
+    <child link="xolobot_arm__link_pulgar_1_izq"/>
+    <origin xyz="-0.01628  0.00423 -0.17869" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_palma_cordial_1" type="revolute">
+    <parent link="xolobot_arm__link_antebrazo_izq"/>
+    <child link="xolobot_arm__link_cordial_1_izq"/>
+    <origin xyz="-5.7600e-03 -4.0000e-05 -2.3222e-01" rpy="0    -0.101  0"/>
+    <axis xyz="0.9949   0      -0.10082"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_palma_indice_1" type="revolute">
+    <parent link="xolobot_arm__link_antebrazo_izq"/>
+    <child link="xolobot_arm__link_indice_1_izq"/>
+    <origin xyz="-0.02908  0.00052 -0.23122" rpy="0   0.19 0"/>
+    <axis xyz="0.982   0      0.18885"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_indice_1_2" type="revolute">
+    <parent link="xolobot_arm__link_indice_1_izq"/>
+    <child link="xolobot_arm__link_indice_2_izq"/>
+    <origin xyz="0       0      -0.02797" rpy="0 0 0"/>
+    <axis xyz="0.982   0      0.18885"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_indice_2_3" type="revolute">
+    <parent link="xolobot_arm__link_indice_2_izq"/>
+    <child link="xolobot_arm__link_indice_3_izq"/>
+    <origin xyz="-2.000e-05  0.000e+00 -2.433e-02" rpy="0 0 0"/>
+    <axis xyz="0.982   0      0.18885"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_pecho_hombro" type="revolute">
+    <parent link="xolobot_arm__link_hombro_alto_izq"/>
+    <child link="xolobot_arm__link_hombro_bajo_izq"/>
+    <origin xyz="-0.01804  0.00903  0.04127" rpy="0      0      3.14159"/>
+    <axis xyz="0 -1  0"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+    <dynamics damping="0.7" friction="1"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_pulgar_1_2" type="revolute">
+    <parent link="xolobot_arm__link_pulgar_1_izq"/>
+    <child link="xolobot_arm__link_pulgar_2_izq"/>
+    <origin xyz="-0.03299 -0.00331  0.00969" rpy="0.38  -0.238  0"/>
+    <axis xyz="0      -0.92866  0.37092"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_menique_2_3" type="revolute">
+    <parent link="xolobot_arm__link_menique_2_izq"/>
+    <child link="xolobot_arm__link_menique_3_izq"/>
+    <origin xyz="4.000e-05  4.500e-04 -1.816e-02" rpy="0 0 0"/>
+    <axis xyz="0.88491  0      -0.46574"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_codo_antebrazo" type="revolute">
+    <parent link="xolobot_arm__link_codo_izq"/>
+    <child link="xolobot_arm__link_antebrazo_izq"/>
+    <origin xyz="-0.00256  0.0009  -0.12066" rpy="0 0 0"/>
+    <axis xyz="0  0 -1"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+    <dynamics damping="0.7" friction="1"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_pecho_brazo" type="fixed">
+    <parent link="xolobot_arm__link_pecho"/>
+    <child link="xolobot_arm__link_hombro_alto_izq"/>
+    <origin xyz="-0.23285 -0.01077 -0.04156" rpy="0 0 0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_pulgar_2_3" type="revolute">
+    <parent link="xolobot_arm__link_pulgar_2_izq"/>
+    <child link="xolobot_arm__link_pulgar_3_izq"/>
+    <origin xyz="-0.02922  0.00017 -0.00116" rpy="0.01001 -0.00742  3.13862"/>
+    <axis xyz="0      -0.93232 -0.36161"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="1000.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_biceps_codo" type="revolute">
+    <parent link="xolobot_arm__link_biceps_izq"/>
+    <child link="xolobot_arm__link_codo_izq"/>
+    <origin xyz="-0.00319  0      -0.213" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="2000.0" velocity="-1.0"/>
+    <dynamics damping="0.7" friction="0.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_tubo_pecho" type="fixed">
+    <parent link="xolobot_arm__link_tubo"/>
+    <child link="xolobot_arm__link_pecho"/>
+    <origin xyz="-0.00351  0.00181  0.59589" rpy="0 0 0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_base_tubo" type="fixed">
+    <parent link="xolobot_arm__link_base"/>
+    <child link="xolobot_arm__link_tubo"/>
+    <origin xyz="0.22696 0.06305 0.04696" rpy="0 0 0"/>
+    <axis xyz="0 0 0"/>
+    <limit lower="0" upper="0" effort="0" velocity="0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_cordial_1_2" type="revolute">
+    <parent link="xolobot_arm__link_cordial_1_izq"/>
+    <child link="xolobot_arm__link_cordial_2_izq"/>
+    <origin xyz="-3.000e-05  0.000e+00 -3.392e-02" rpy="0 0 0"/>
+    <axis xyz="0.9949   0      -0.10082"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <joint name="xolobot_arm__jnt_cordial_2_3" type="revolute">
+    <parent link="xolobot_arm__link_cordial_2_izq"/>
+    <child link="xolobot_arm__link_cordial_3_izq"/>
+    <origin xyz="0       0      -0.02877" rpy="0 0 0"/>
+    <axis xyz="0.9949   0      -0.10082"/>
+    <limit lower="-1.79769e+308" upper="1.79769e+308" effort="-1.0" velocity="-1.0"/>
+  </joint>
+  <link name="xolobot_arm__link_antebrazo_izq">
+    <inertial>
+      <mass value="2"/>
+      <origin xyz="0   0   0.15" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0     0    -0.235" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/antebrazo_mano_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0     0    -0.235" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/antebrazo_mano_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_hombro_bajo_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0   0   0.02" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0.0029  0     -0.069" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/hombro_bajo.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0.0029  0     -0.069" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/hombro_bajo.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_menique_1_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      0     -0.0109" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_menique_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      0     -0.0109" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_menique_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_codo_izq">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0    0.012 0.03" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      -0.01165 -0.1175" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/codo_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      -0.01165 -0.1175" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/codo_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_indice_1_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      0     -0.0138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_indice_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      0     -0.0138" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_indice_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_indice_2_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0       0      -0.01205" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_indice_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0       0      -0.01205" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_indice_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_indice_3_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      0     -0.0109" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_indice_3.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      0     -0.0109" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_indice_3.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_hombro_alto_izq">
+    <inertial>
+      <mass value="1"/>
+      <origin xyz="0.01 0.01 0.04" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/hombro_alto.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/hombro_alto.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_pulgar_1_izq">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="-0.0119  -0.00434  0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/pulgar_1_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="-0.0119  -0.00434  0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/pulgar_1_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_menique_2_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0       0      -0.00899" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_menique_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0       0      -0.00899" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_menique_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_biceps_izq">
+    <inertial>
+      <mass value="2"/>
+      <origin xyz="0   0   0.17" rpy="0 0 0"/>
+      <inertia ixx="0.333333" ixy="0" ixz="0" iyy="0.333333" iyz="0" izz="0.333333"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0     0    -0.245" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/biceps_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0     0    -0.245" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/biceps_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_pecho">
+    <inertial>
+      <mass value="3"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00939939" ixy="0" ixz="0" iyy="0.037734" iyz="0" izz="0.0316875"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.346474 0.081888 0.175761"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.346474 0.081888 0.175761"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_pulgar_2_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="-0.014  0    -0.011" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/pulgar_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="-0.014  0    -0.011" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/pulgar_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_menique_3_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0      -0.48447  0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0       0      -0.00869" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_menique_3.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0       0      -0.00869" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_menique_3.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_tubo">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0510224" ixy="0" ixz="0" iyy="0.0510224" iyz="0" izz="3.965e-05"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.012594" length="1.10637"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.0125943" length="1.10637"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_pulgar_3_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0.0127   0      -0.00899" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/pulgar_3.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0.0127   0      -0.00899" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/pulgar_3.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_anular_1_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0     0    -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_anular_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0     0    -0.015" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_anular_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_base">
+    <inertial>
+      <mass value="70"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1.65566" ixy="0" ixz="0" iyy="1.95564" iyz="0" izz="3.60696"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0.23251  0.06305 -0.51126" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.684714 0.629951 0.02283"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0.23251  0.06305 -0.51126" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.684714 0.629951 0.02283"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_anular_2_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0     0    -0.013" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_anular_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0     0    -0.013" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_anular_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_anular_3_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0       0      -0.01175" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_anular_3.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0       0      -0.01175" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_anular_3.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_cordial_1_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      0     -0.0167" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_cordial_1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      0     -0.0167" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_cordial_1.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_cordial_2_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      0     -0.0142" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_cordial_2.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      0     -0.0142" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_cordial_2.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="xolobot_arm__link_cordial_3_izq">
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0      0     -0.0123" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_cordial_3.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0      0     -0.0123" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="model://meshes/dedos/dedo_cordial_3.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  
+
+  <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="xolobot_arm__jnt_biceps_codo">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="motor1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    
+  
+</robot>

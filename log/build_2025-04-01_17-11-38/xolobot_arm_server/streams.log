@@ -1,0 +1,167 @@
+[0.054s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.155s] -- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.785s] -- Found rclcpp: 21.0.8 (/opt/ros/iron/share/rclcpp/cmake)
+[0.856s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[0.879s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[0.915s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.957s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.418s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[1.418s] -- Found rmw_fastrtps_cpp: 7.1.4 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[1.709s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.201s] -- Found std_msgs: 5.0.1 (/opt/ros/iron/share/std_msgs/cmake)
+[2.293s] -- Found gazebo_msgs: 3.7.0 (/opt/ros/iron/share/gazebo_msgs/cmake)
+[4.067s] -- Configuring done
+[4.099s] -- Generating done
+[4.109s] -- Build files have been written to: /home/monica/ros2_ws/build/xolobot_arm_server
+[4.205s] [ 66%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o[0m
+[4.206s] [ 66%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o[0m
+[17.306s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[17.306s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:15:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcollision_subscriber_[m[K’ was not declared in this scope
+[17.310s]    15 |     [01;31m[Kcollision_subscriber_[m[K = this->create_subscription<ros_ign_interfaces::msg::Contacts>(
+[17.315s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[17.356s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:15:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kros_ign_interfaces[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_interfaces[m[K’?
+[17.357s]    15 |     collision_subscriber_ = this->create_subscription<[01;31m[Kros_ign_interfaces[m[K::msg::Contacts>(
+[17.358s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[17.361s]       |                                                       [32m[Krcl_interfaces[m[K
+[17.361s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:15:35:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[17.362s]    15 |     collision_subscriber_ = this->[01;31m[Kcreate_subscription<ros_ign_interfaces::msg::Contacts>[m[K(
+[17.365s]       |                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.366s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:17:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kros_ign_interfaces[m[K’ is not a class, namespace, or enumeration
+[17.366s]    17 |         [this]([01;31m[Kros_ign_interfaces[m[K::msg::Contacts::SharedPtr msg) {
+[17.366s]       |                [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[17.369s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:17:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kmsg[m[K’
+[17.369s]    17 |         [this](ros_ign_interfaces::msg::Contacts::SharedPtr [01;31m[Kmsg[m[K) {
+[17.371s]       |                                                             [01;31m[K^~~[m[K
+[17.371s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In lambda function:
+[17.371s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:18:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[17.371s]    18 |             if (![01;31m[Kmsg[m[K->contacts.empty()) {
+[17.380s]       |                  [01;31m[K^~~[m[K
+[17.383s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:18:18:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[17.383s] In file included from [01m[K/opt/ros/iron/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:7[m[K,
+[17.383s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/time.hpp:18[m[K,
+[17.389s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+[17.389s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:38[m[K,
+[17.392s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[17.394s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[17.395s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[17.395s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[17.396s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[17.397s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[17.397s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[17.397s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[17.401s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[17.405s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:4[m[K,
+[17.406s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.409s] [01m[K/opt/ros/iron/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[17.410s]    27 | namespace [01;36m[Kmsg[m[K
+[17.410s]       |           [01;36m[K^~~[m[K
+[17.418s] In file included from [01m[K/opt/ros/iron/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+[17.418s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+[17.419s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+[17.419s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+[17.419s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[17.424s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[17.425s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[17.425s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[17.427s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[17.428s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[17.428s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[17.428s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[17.433s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:4[m[K,
+[17.433s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.434s] [01m[K/opt/ros/iron/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[17.438s]    27 | namespace [01;36m[Kmsg[m[K
+[17.439s]       |           [01;36m[K^~~[m[K
+[17.440s] In file included from [01m[K/opt/ros/iron/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:23[m[K,
+[17.440s]                  from [01m[K/opt/ros/iron/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[17.444s]                  from [01m[K/opt/ros/iron/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[17.444s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[17.444s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[17.448s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[17.449s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[17.449s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[17.449s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[17.454s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[17.454s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[17.457s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[17.457s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[17.457s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:4[m[K,
+[17.458s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.461s] [01m[K/opt/ros/iron/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[17.461s]    27 | namespace [01;36m[Kmsg[m[K
+[17.463s]       |           [01;36m[K^~~[m[K
+[17.464s] In file included from [01m[K/opt/ros/iron/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:236[m[K,
+[17.466s]                  from [01m[K/opt/ros/iron/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:7[m[K,
+[17.467s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/parameter_client.hpp:28[m[K,
+[17.467s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+[17.467s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:4[m[K,
+[17.471s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.471s] [01m[K/opt/ros/iron/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:31:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kservice_msgs::msg[m[K’
+[17.472s]    31 | namespace [01;36m[Kmsg[m[K
+[17.472s]       |           [01;36m[K^~~[m[K
+[17.472s] In file included from [01m[K/opt/ros/iron/include/std_msgs/std_msgs/msg/float64.hpp:7[m[K,
+[17.478s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:5[m[K,
+[17.479s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.479s] [01m[K/opt/ros/iron/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[17.480s]    27 | namespace [01;36m[Kmsg[m[K
+[17.483s]       |           [01;36m[K^~~[m[K
+[17.485s] In file included from [01m[K/opt/ros/iron/include/geometry_msgs/geometry_msgs/msg/detail/wrench__struct.hpp:21[m[K,
+[17.487s]                  from [01m[K/opt/ros/iron/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.hpp:21[m[K,
+[17.487s]                  from [01m[K/opt/ros/iron/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.hpp:22[m[K,
+[17.487s]                  from [01m[K/opt/ros/iron/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.hpp:7[m[K,
+[17.491s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:6[m[K,
+[17.491s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.491s] [01m[K/opt/ros/iron/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:27:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+[17.495s]    27 | namespace [01;36m[Kmsg[m[K
+[17.495s]       |           [01;36m[K^~~[m[K
+[17.498s] In file included from [01m[K/opt/ros/iron/include/gazebo_msgs/gazebo_msgs/msg/detail/contacts_state__struct.hpp:22[m[K,
+[17.499s]                  from [01m[K/opt/ros/iron/include/gazebo_msgs/gazebo_msgs/msg/contacts_state.hpp:7[m[K,
+[17.499s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:6[m[K,
+[17.502s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.502s] [01m[K/opt/ros/iron/include/gazebo_msgs/gazebo_msgs/msg/detail/contact_state__struct.hpp:35:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgazebo_msgs::msg[m[K’
+[17.503s]    35 | namespace [01;36m[Kmsg[m[K
+[17.503s]       |           [01;36m[K^~~[m[K
+[17.503s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[17.509s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:15:89:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSimulationController::create_subscription<<expression error> >(const char [39], rclcpp::QoS, SimulationController::SimulationController()::<lambda(int)>)[m[K’
+[17.509s]    15 |     collision_subscriber_ = [01;31m[Kthis->create_subscription<ros_ign_interfaces::msg::Contacts>([m[K
+[17.509s]       |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[17.510s]    16 | [01;31m[K        "/world/coca_levitando/physics/contacts", rclcpp::QoS(10),[m[K
+[17.515s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+[17.517s]    17 | [01;31m[K        [this](ros_ign_interfaces::msg::Contacts::SharedPtr msg) {[m[K
+[17.520s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+[17.520s]    18 | [01;31m[K            if (!msg->contacts.empty()) {[m[K
+[17.520s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                                
+[17.524s]    19 | [01;31m[K                RCLCPP_WARN(this->get_logger(), "🚨 ¡Colisión detectada en el mundo Ignition!");[m[K
+[17.524s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.525s]    20 | [01;31m[K            }[m[K
+[17.528s]       |             [01;31m[K~[m[K                                                                            
+[17.528s]    21 | [01;31m[K        })[m[K;
+[17.528s]       |         [01;31m[K~~[m[K                                                                               
+[17.532s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[17.532s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[17.532s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[17.533s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:4[m[K,
+[17.533s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[17.533s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:220:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[17.541s]   220 |   [01;36m[Kcreate_subscription[m[K(
+[17.543s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[17.543s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:220:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[17.546s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:15:89:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[17.546s]    15 |     collision_subscriber_ = [01;31m[Kthis->create_subscription<ros_ign_interfaces::msg::Contacts>([m[K
+[17.546s]       |                             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[17.549s]    16 | [01;31m[K        "/world/coca_levitando/physics/contacts", rclcpp::QoS(10),[m[K
+[17.551s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+[17.551s]    17 | [01;31m[K        [this](ros_ign_interfaces::msg::Contacts::SharedPtr msg) {[m[K
+[17.553s]       |         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                       
+[17.553s]    18 | [01;31m[K            if (!msg->contacts.empty()) {[m[K
+[17.556s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K                                                
+[17.556s]    19 | [01;31m[K                RCLCPP_WARN(this->get_logger(), "🚨 ¡Colisión detectada en el mundo Ignition!");[m[K
+[17.559s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.560s]    20 | [01;31m[K            }[m[K
+[17.560s]       |             [01;31m[K~[m[K                                                                            
+[17.560s]    21 | [01;31m[K        })[m[K;
+[17.564s]       |         [01;31m[K~~[m[K                                                                               
+[22.053s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+[22.055s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[22.055s] gmake: *** [Makefile:146: all] Error 2
+[22.061s] Invoked command in '/home/monica/ros2_ws/build/xolobot_arm_server' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2

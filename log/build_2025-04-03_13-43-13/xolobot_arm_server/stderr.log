@@ -1,0 +1,23 @@
+In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:46:13:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   46 |     rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr suscriptorBicep;
+      |             [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/startServerNode.cpp:1[m[K:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:46:13:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   46 |     rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr suscriptorBicep;
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:5:[m[K [01;31m[Kerror: [m[K‘[01m[KsuscriptorBicep[m[K’ was not declared in this scope
+   33 |     [01;31m[KsuscriptorBicep[m[K = nh.subscribe("/bumper_states", 10, contactoDetectado);
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knh[m[K’ was not declared in this scope
+   33 |     suscriptorBicep = [01;31m[Knh[m[K.subscribe("/bumper_states", 10, contactoDetectado);
+      |                       [01;31m[K^~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:33:58:[m[K [01;31m[Kerror: [m[K‘[01m[KcontactoDetectado[m[K’ was not declared in this scope
+   33 |     suscriptorBicep = nh.subscribe("/bumper_states", 10, [01;31m[KcontactoDetectado[m[K);
+      |                                                          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:76: CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o] Error 1
+gmake[2]: *** Se espera a que terminen otras tareas....
+gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

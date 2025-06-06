@@ -1,0 +1,226 @@
+[0.053s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.255s] [35m[1mConsolidate compiler generated dependencies of target xolobot_arm_server[0m
+[0.752s] [ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o[0m
+[14.980s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:7:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState_<std::allocator<void> >::SharedPtr)[m[K’
+[14.980s]     7 | void [01;31m[KSimulationController[m[K::deteccionColision(gazebo_msgs::msg::ContactsState::SharedPtr msg) {
+[14.981s]       |      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[14.982s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:7:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState_<std::allocator<void> >::SharedPtr)[m[K’
+[14.984s] In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[14.984s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass SimulationController[m[K’ defined here
+[14.984s]    18 | class [01;36m[KSimulationController[m[K{
+[14.985s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[14.987s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In constructor ‘[01m[KSimulationController::SimulationController()[m[K’:
+[14.990s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:12:44:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::Node()[m[K’
+[14.990s]    12 | SimulationController::SimulationController([01;31m[K)[m[K{
+[14.990s]       |                                            [01;31m[K^[m[K
+[14.991s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[14.991s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[14.992s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[14.992s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[14.992s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[14.992s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:1579:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const rclcpp::Node&, const string&)[m[K’
+[14.994s]  1579 |   [01;36m[KNode[m[K(
+[14.994s]       |   [01;36m[K^~~~[m[K
+[14.995s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:1579:3:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[14.995s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:102:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const string&, const rclcpp::NodeOptions&)[m[K’
+[14.995s]   102 |   explicit [01;36m[KNode[m[K(
+[15.000s]       |            [01;36m[K^~~~[m[K
+[15.000s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:102:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[15.001s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:90:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Krclcpp::Node::Node(const string&, const rclcpp::NodeOptions&)[m[K’
+[15.001s]    90 |   explicit [01;36m[KNode[m[K(
+[15.001s]       |            [01;36m[K^~~~[m[K
+[15.001s] [01m[K/opt/ros/iron/include/rclcpp/rclcpp/node.hpp:90:12:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+[15.024s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:27:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kcreate_publisher[m[K’
+[15.025s]    27 |         jointPub[i] = this->[01;31m[Kcreate_publisher[m[K<std_msgs::msg::Float64>(topicCmd, 5);
+[15.025s]       |                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[15.026s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:27:68:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[15.026s]    27 |         jointPub[i] = this->create_publisher<std_msgs::msg::Float64[01;31m[K>[m[K(topicCmd, 5);
+[15.026s]       |                                                                    [01;31m[K^[m[K
+[15.030s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.030s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.032s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.033s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.033s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.033s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.033s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.037s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.037s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.038s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.038s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.038s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.038s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In member function ‘[01m[Kvoid SimulationController::startTrajectory()[m[K’:
+[15.039s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.039s]    34 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Iniciando simulacion");
+[15.040s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[15.040s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.040s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.040s]    34 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Iniciando simulacion");
+[15.045s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[15.045s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.045s]    34 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Iniciando simulacion");
+[15.045s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[15.049s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.049s]    34 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Iniciando simulacion");
+[15.050s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[15.050s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[15.050s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.051s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.051s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.051s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.051s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.054s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.055s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.055s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.055s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.055s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.058s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.061s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.061s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.061s]    34 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Iniciando simulacion");
+[15.062s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[15.063s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:34:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.063s]    34 |     RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Iniciando simulacion");
+[15.063s]       |                       [01;31m[K^~~~~~~~~~[m[K
+[15.064s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.064s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.064s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.064s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.068s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.068s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.069s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.069s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.069s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.069s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.072s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.072s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.073s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In member function ‘[01m[Kvoid SimulationController::generaAleatorios()[m[K’:
+[15.073s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.073s]    57 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
+[15.073s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.076s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.077s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.077s]    57 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
+[15.077s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.081s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.081s]    57 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
+[15.081s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.082s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.082s]    57 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
+[15.082s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.083s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[15.085s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.085s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.086s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.086s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.086s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.090s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.090s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.090s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.091s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.091s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.091s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.091s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.094s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.094s]    57 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
+[15.094s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.095s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:57:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.095s]    57 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu .Valor Fijo:%f", i+1, msg.data);
+[15.095s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.095s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.099s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.099s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.099s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.100s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.100s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.100s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.100s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.103s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.103s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.104s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.104s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.104s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.104s]    67 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
+[15.108s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.108s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.108s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.109s]    67 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
+[15.109s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.109s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.109s]    67 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
+[15.112s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.112s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.113s]    67 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
+[15.116s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.117s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[15.117s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.118s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.119s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.119s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.119s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.122s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.123s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.123s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.123s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.123s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.126s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.126s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.126s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.127s]    67 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
+[15.127s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.127s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:67:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.127s]    67 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu. Valor Fijo: %f",i+1, msg.data);
+[15.130s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.130s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:71:19:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[15.130s]    71 |             while([01;31m[K)[m[K{
+[15.130s]       |                   [01;31m[K^[m[K
+[15.132s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.132s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.132s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.132s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.133s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.133s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.133s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.136s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.136s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.136s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.137s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.137s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.137s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.141s]    74 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
+[15.141s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.142s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.142s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.142s]    74 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
+[15.142s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.147s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.147s]    74 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
+[15.148s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.148s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[15.148s]    74 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
+[15.148s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[15.151s] In file included from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[15.151s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/client.hpp:43[m[K,
+[15.152s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[15.152s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[15.154s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[15.154s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[15.155s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[15.155s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[15.155s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[15.155s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[15.157s]                  from [01m[K/opt/ros/iron/include/rclcpp/rclcpp/rclcpp.hpp:167[m[K,
+[15.157s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:4[m[K,
+[15.157s]                  from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[15.158s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.158s]    74 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
+[15.158s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.158s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:74:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulationController[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[15.163s]    74 |             RCLCPP_INFO(this->[01;31m[Kget_logger[m[K(), "Articulacion %lu  Moviendose:%f",i+1, msg.data);
+[15.163s]       |                               [01;31m[K^~~~~~~~~~[m[K
+[15.163s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:76:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64_<std::allocator<void> > > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<rclcpp::Publisher<std_msgs::msg::Float64_<std::allocator<void> > > >[m[K’} has no member named ‘[01m[Kpublish[m[K’
+[15.164s]    76 |         jointPub[i].[01;31m[Kpublish[m[K(msg);
+[15.164s]       |                     [01;31m[K^~~~~~~[m[K
+[18.292s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+[18.292s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[18.293s] gmake: *** [Makefile:146: all] Error 2
+[18.302s] Invoked command in '/home/monica/ros2_ws/build/xolobot_arm_server' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2

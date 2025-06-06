@@ -1,0 +1,20 @@
+[0.042s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.174s] [35m[1mConsolidate compiler generated dependencies of target xolobot_arm_server[0m
+[0.276s] [ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o[0m
+[11.804s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/startServerNode.cpp:[m[K In constructor ‘[01m[KXolobotArmServer::XolobotArmServer()[m[K’:
+[11.804s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/startServerNode.cpp:12:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSimulationController::SimulationController()[m[K’
+[11.805s]    12 |     XolobotArmServer() : Node("xolobot_arm_server"[01;31m[K)[m[K
+[11.805s]       |                                                   [01;31m[K^[m[K
+[11.805s] In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/startServerNode.cpp:1[m[K:
+[11.806s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:21:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSimulationController::SimulationController(rclcpp::Node::SharedPtr)[m[K’
+[11.806s]    21 |     [01;36m[KSimulationController[m[K(rclcpp::Node::SharedPtr node);
+[11.806s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[11.808s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:21:5:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[11.808s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:18:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KSimulationController::SimulationController(const SimulationController&)[m[K’
+[11.809s]    18 | class [01;36m[KSimulationController[m[K {
+[11.809s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[11.810s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.hpp:18:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[14.747s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:76: CMakeFiles/xolobot_arm_server.dir/src/startServerNode.cpp.o] Error 1
+[14.748s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[14.750s] gmake: *** [Makefile:146: all] Error 2
+[14.782s] Invoked command in '/home/monica/ros2_ws/build/xolobot_arm_server' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2

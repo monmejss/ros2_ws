@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<robot name="xolobot_arm">
+  <link name="xolobot_arm__link_antebrazo_izq">
+    <inertial>
+      <mass value="2"/>
+      <origin xyz="0   0   0.15" rpy="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="xolobot_arm__collision">
+      <origin xyz="0     0    -0.235" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/antebrazo_mano_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <visual name="xolobot_arm__visual">
+      <origin xyz="0     0    -0.235" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://meshes/antebrazo_mano_izq.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <plugin filename="libignition-gazebo-system.so" name="ignition::gazebo::systems::Physics">
+    <max_step_size>0.001</max_step_size>
+    <real_time_factor>1.0</real_time_factor>
+  </plugin>
+</robot>
