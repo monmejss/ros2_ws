@@ -12,8 +12,8 @@ def generate_launch_description():
     sdf_path = os.path.join(package_xolobot_arm, "models", "xolobot_arm.sdf")
     objeto_path = os.path.join(package_xolobot_arm, "models/utileria", "objeto.sdf")
     soporte_path = os.path.join(package_xolobot_arm, "models/utileria", "soporte.sdf")
-    objeto_path2 = os.path.join(package_xolobot_arm, "models/utileria", "objeto2.sdf")
-    soporte_path2 = os.path.join(package_xolobot_arm, "models/utileria", "soporte2.sdf")
+    #objeto_path2 = os.path.join(package_xolobot_arm, "models/utileria", "objeto2.sdf")
+    #soporte_path2 = os.path.join(package_xolobot_arm, "models/utileria", "soporte2.sdf")
 
     # Alinear tiempo de ros con el de la simulacion
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
@@ -57,21 +57,21 @@ def generate_launch_description():
         output='screen'
     )
     
-    objeto2 = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        name='spawn_lata2',
-        arguments=['-file', objeto_path2, '-entity', 'objeto2'],
-        output='screen'
-    )
+    #objeto2 = Node(
+    #    package='gazebo_ros',
+    #    executable='spawn_entity.py',
+    #    name='spawn_lata2',
+    #    arguments=['-file', objeto_path2, '-entity', 'objeto2'],
+    #    output='screen'
+    #)
     
-    soporte2 = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        name='spawn_soporte2',
-        arguments=['-file', soporte_path2, '-entity', 'soporte2'],
-        output='screen'
-    )
+    #soporte2 = Node(
+    #    package='gazebo_ros',
+    #    executable='spawn_entity.py',
+    #   name='spawn_soporte2',
+    #    arguments=['-file', soporte_path2, '-entity', 'soporte2'],
+    #    output='screen'
+    #)
 
     load_position_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
@@ -84,8 +84,8 @@ def generate_launch_description():
         robot_state_publisher,
         spawn_model,
         objeto,
-        objeto2,
+        #objeto2,
         soporte,
-        soporte2,
+        #soporte2,
         load_position_controller
     ])

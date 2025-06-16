@@ -430,19 +430,6 @@
           </contact>
         </surface>
       </collision>
-      <!--Bumper antebrazo
-      <sensor name="antebrazo_sensor" type="contact">
-        <update_rate>10</update_rate>
-        <contact>
-          <collision>collision</collision>
-        </contact>
-        <plugin name="bumper_plugin_antebrazo" filename="libgazebo_ros_bumper.so">
-          <always_on>true</always_on>
-          <frame_name>link_antebrazo_izq</frame_name>
-          <topic_name>/bumper_states_antebrazo</topic_name>
-        </plugin>
-      </sensor>-->
-
       <sensor name="antebrazo_sensor" type="contact">
         <update_rate>10</update_rate>
         <contact>
@@ -540,18 +527,6 @@
           </contact>
         </surface>
       </collision>
-      <!--Bumper
-      <sensor name="palma_sensor" type="contact">
-        <update_rate>10</update_rate>
-        <contact>
-          <collision>collision</collision>
-        </contact>
-        <plugin name="bumper_plugin_palma" filename="libgazebo_ros_bumper.so">
-          <always_on>true</always_on>
-          <frame_name>link_palma_izq</frame_name>
-          <topic_name>/bumper_states_palma</topic_name>
-        </plugin>
-      </sensor>-->
       <sensor name="palma_sensor" type="contact">
         <update_rate>10</update_rate>
         <contact>
@@ -820,7 +795,18 @@
           </contact>
         </surface>
       </collision>
+      <!--BUMPER PULGAR-->
+      <sensor name="pulgar_3_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_pulgar_3" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_pulgar_3</remapping>
+        </plugin>
+      </sensor>
     </link>
+    <!--Dedo indice-->
     <link name='link_indice_1_izq'>
       <inertial>
         <mass>0.02</mass>
@@ -1078,6 +1064,16 @@
           </contact>
         </surface>
       </collision>
+      <!--Bumper Indice-->
+      <sensor name="indice_3_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_indice_3" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_indice_3</remapping>
+        </plugin>
+      </sensor>
     </link>
     <link name='link_cordial_1_izq'>
       <inertial>
@@ -1336,6 +1332,16 @@
           </contact>
         </surface>
       </collision>
+      <!--BUMPER CORDIAL-->
+      <sensor name="cordial_3_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_cordial_3" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_cordial_3</remapping>
+        </plugin>
+      </sensor>
     </link>
     <link name='link_anular_1_izq'>
       <inertial>
@@ -1594,6 +1600,16 @@
           </contact>
         </surface>
       </collision>
+      <!--BUMPER ANULAR-->
+      <sensor name="anular_3_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_anular_3" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_anular_3</remapping>
+        </plugin>
+      </sensor>
     </link>
     <link name='link_menique_1_izq'>
       <inertial>
@@ -1852,6 +1868,16 @@
           </contact>
         </surface>
       </collision>
+      <!--BUMPER MENIQUE-->
+      <sensor name="menique_3_sensor" type="contact">
+        <update_rate>10</update_rate>
+        <contact>
+          <collision>collision</collision>
+        </contact>
+        <plugin name="bumper_plugin_menique_3" filename="libgazebo_ros_bumper.so">
+          <remapping>bumper_states:=bumper_states_menique_3</remapping>
+        </plugin>
+      </sensor>
     </link>
     <link name='link_pecho'>
       <inertial>

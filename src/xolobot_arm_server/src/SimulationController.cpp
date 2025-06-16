@@ -36,13 +36,30 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
     // Publicador para trayectoria completa
     jointTrajectoryPub = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
 
-    // Suscriptor para bumper
+    // Suscriptor para bumper palma
     suscriptorPalma = this ->create_subscription<gazebo_msgs::msg::ContactsState>
         ("/bumper_states_palma", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
 
-    // Suscriptor para bumper
+    // Suscriptor para bumper antebrazo
     suscriptorAntebrazo= this ->create_subscription<gazebo_msgs::msg::ContactsState>
         ("/bumper_states_antebrazo", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    
+    // DEDOS
+    // Suscriptor para dedo pulgar
+    suscriptorPulgar= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+        ("/bumper_states_pulgar_3", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    // Suscriptor para bumper dedo indice
+    suscriptorIndice= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+        ("/bumper_states_indice_3", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    // Suscriptor para bumper dedo cordial
+    suscriptorCordial= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+        ("/bumper_states_cordial_3", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    // Suscriptor para bumper dedo anular
+    suscriptorAnular= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+        ("/bumper_states_anular_3", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+    // Suscriptor para bumper dedo menique
+    suscriptorMenique= this ->create_subscription<gazebo_msgs::msg::ContactsState>
+        ("/bumper_states_menique_3", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
     
     timer_ = this->create_wall_timer(
         std::chrono::milliseconds(700),
@@ -107,38 +124,53 @@ void SimulationController::generaAleatorios(){
         }
         // Pulgar (6-7-8)
         else if(i==6 && colisionDetectada){
-            msg.data = 1.5708;
+            msg.data = 1.5708; //90°
         }
-        else if((i==7 || i==8) && colisionDetectada){
-            msg.data = -1.0;
+        else if(i==7 && colisionDetectada){
+            msg.data = 0.1222; //7°
+        }
+        else if(i==8 && colisionDetectada){
+            msg.data = 0.436; //25°
         }
         // Indice (9-10-11)
         else if(i==9 && colisionDetectada){
             msg.data = 0.80;
         }
-        else if((i==10 || i==11)&& colisionDetectada){
-            msg.data = -1.0;
+        else if(i==10 && colisionDetectada){
+            msg.data = 0.5236; //30
+        }
+        else if(i==11 && colisionDetectada){
+            msg.data = 0.5236; //30
         }
         // Cordial (12-13-14)
         else if(i==12 && colisionDetectada){
-            msg.data = 0.80;
+            msg.data = 1.1345; //65
         }
-        else if((i==13 || i==14)&& colisionDetectada){
-            msg.data = -1.0;
+        else if(i==13 && colisionDetectada){
+            msg.data = 0.5236; //30
+        }
+        else if(i==14 && colisionDetectada){
+            msg.data = 0.5236; //30
         }
         // Anular (15-16-17)
         else if(i==15 && colisionDetectada){
-            msg.data = 0.80;
+            msg.data = 1.1345; //65
         }
-        else if((i==16 || i==17)&& colisionDetectada){
-            msg.data = -1.0;
+        else if(i==16 && colisionDetectada){
+            msg.data = 0.5236; //30
+        }
+        else if(i==17 && colisionDetectada){
+            msg.data = 0.5236; //30
         }
         // Menique (18-19-20)
         else if(i==18 && colisionDetectada){
             msg.data = 0.80;
         }
-        else if((i==19 || i==20)&& colisionDetectada){
-            msg.data = -1.0;
+        else if(i==19 && colisionDetectada){
+            msg.data = 0.6109; //35
+        }
+        else if(i==20 && colisionDetectada){
+            msg.data = 0.5236; //30 
         }
         else{
             msg.data = 0.0;

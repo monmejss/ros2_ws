@@ -42,6 +42,12 @@ private:
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPalma;
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorAntebrazo;
+    //Suscriptores Dedos 
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPulgar;
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorIndice;
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorCordial;
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorAnular;
+    rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorMenique;
    
     void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
 };

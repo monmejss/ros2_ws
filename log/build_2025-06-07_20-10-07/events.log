@@ -1,0 +1,998 @@
+[0.000000] (-) TimerEvent: {}
+[0.002461] (xolobot_arm) JobQueued: {'identifier': 'xolobot_arm', 'dependencies': OrderedDict()}
+[0.002612] (xolobot_arm_server) JobQueued: {'identifier': 'xolobot_arm_server', 'dependencies': OrderedDict()}
+[0.002701] (xolobot_control) JobQueued: {'identifier': 'xolobot_control', 'dependencies': OrderedDict()}
+[0.004979] (xolobot_arm) JobStarted: {'identifier': 'xolobot_arm'}
+[0.050064] (xolobot_arm_server) JobStarted: {'identifier': 'xolobot_arm_server'}
+[0.096704] (xolobot_arm) JobProgress: {'identifier': 'xolobot_arm', 'progress': 'cmake'}
+[0.099832] (-) TimerEvent: {}
+[0.111538] (xolobot_arm) JobProgress: {'identifier': 'xolobot_arm', 'progress': 'build'}
+[0.111712] (xolobot_arm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/monica/ros2_ws/build/xolobot_arm', '--', '-j2', '-l2'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1449'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1421,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1421'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0e4e650_06c4_45a4_a0f5_f30984ee2ccb'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AX3572'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.133'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[0.140390] (xolobot_arm_server) JobProgress: {'identifier': 'xolobot_arm_server', 'progress': 'cmake'}
+[0.161110] (xolobot_arm_server) JobProgress: {'identifier': 'xolobot_arm_server', 'progress': 'build'}
+[0.174494] (xolobot_arm_server) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/monica/ros2_ws/build/xolobot_arm_server', '--', '-j2', '-l2'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm_server', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1449'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1421,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1421'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0e4e650_06c4_45a4_a0f5_f30984ee2ccb'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AX3572'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.133'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm_server'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[0.202480] (-) TimerEvent: {}
+[0.306436] (-) TimerEvent: {}
+[0.409862] (-) TimerEvent: {}
+[0.511657] (-) TimerEvent: {}
+[0.612822] (-) TimerEvent: {}
+[0.713486] (-) TimerEvent: {}
+[0.817445] (-) TimerEvent: {}
+[0.895657] (xolobot_arm) CommandEnded: {'returncode': 0}
+[0.904243] (xolobot_arm) JobProgress: {'identifier': 'xolobot_arm', 'progress': 'install'}
+[0.922803] (-) TimerEvent: {}
+[0.984681] (xolobot_arm) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/monica/ros2_ws/build/xolobot_arm'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1449'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1421,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1421'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0e4e650_06c4_45a4_a0f5_f30984ee2ccb'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AX3572'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.133'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[1.026865] (-) TimerEvent: {}
+[1.093589] (xolobot_arm) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.098504] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/launch\n'}
+[1.102421] (xolobot_arm) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/launch/xolobot_arm_control.launch.py\n'}
+[1.113057] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds\n'}
+[1.117626] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/worlds/coca_levitando.world\n'}
+[1.118073] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models\n'}
+[1.118377] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/xolobot.urdf\n'}
+[1.124420] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/model.config\n'}
+[1.124878] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria\n'}
+[1.125158] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/objeto.sdf\n'}
+[1.128441] (-) TimerEvent: {}
+[1.130417] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/model.config\n'}
+[1.130812] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/objeto2.sdf\n'}
+[1.131086] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/soporte.sdf\n'}
+[1.132486] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/utileria/soporte2.sdf\n'}
+[1.134405] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures\n'}
+[1.134734] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/metal.material\n'}
+[1.135007] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images\n'}
+[1.139458] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/metal-rosa.jpg\n'}
+[1.141767] (xolobot_arm_server) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target xolobot_arm_server\x1b[0m\n'}
+[1.142128] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/metal-hoyos.jpg\n'}
+[1.142433] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/blue-metal.jpg\n'}
+[1.142720] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/rose-gold.jpg\n'}
+[1.142995] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/piso-metal-barras.jpg\n'}
+[1.143266] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/images/piso-metal-blanco.jpg\n'}
+[1.150670] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/model.config\n'}
+[1.150946] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/textures/xolobot.material\n'}
+[1.151221] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/xolobot_arm.sdf\n'}
+[1.156164] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes\n'}
+[1.156531] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/pulgar_2.dae\n'}
+[1.156795] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq_2.dae\n'}
+[1.157055] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_juntos.dae\n'}
+[1.159582] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_der.dae\n'}
+[1.159868] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_izq.dae\n'}
+[1.160125] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/banda.blend\n'}
+[1.166380] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_juntos_nuevo.dae\n'}
+[1.166732] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izqprueba.dae\n'}
+[1.166996] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq_bak.dae\n'}
+[1.168645] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/mono.dae\n'}
+[1.168931] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_alto.dae\n'}
+[1.172326] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/codo_izq_colision.dae\n'}
+[1.172639] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_alto_colision.dae\n'}
+[1.172897] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/model.config\n'}
+[1.173188] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/antebrazo_mano_izq.dae\n'}
+[1.179630] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/codo_izq.dae\n'}
+[1.179950] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/biceps_izq_colision.dae\n'}
+[1.180224] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup\n'}
+[1.185359] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/pulgar_2.dae\n'}
+[1.185696] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_juntos.dae\n'}
+[1.185987] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_der.dae\n'}
+[1.186266] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_izq.dae\n'}
+[1.191851] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/biceps_juntos_nuevo.dae\n'}
+[1.194611] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/hombro_alto.dae\n'}
+[1.194946] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/antebrazo_mano_izq.dae\n'}
+[1.195224] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/codo_izq.dae\n'}
+[1.200730] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/hombro_bajo.dae\n'}
+[1.201829] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos\n'}
+[1.202157] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice.blend1\n'}
+[1.202543] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial_1.dae\n'}
+[1.202836] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_1.blend\n'}
+[1.203112] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice_2.dae\n'}
+[1.210834] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial.blend\n'}
+[1.211167] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_2.blend1\n'}
+[1.213862] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial_2.dae\n'}
+[1.214177] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice_1.dae\n'}
+[1.218152] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique.blend\n'}
+[1.220794] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_1.blend1\n'}
+[1.221106] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_2.dae\n'}
+[1.225601] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular_1.dae\n'}
+[1.225987] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_3.dae\n'}
+[1.226253] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial_3.dae\n'}
+[1.230751] (-) TimerEvent: {}
+[1.233042] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/mano_completa.blend\n'}
+[1.234811] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique.blend1\n'}
+[1.235129] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_2.blend\n'}
+[1.237581] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular.blend1\n'}
+[1.237903] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_3.blend1\n'}
+[1.238177] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_3.blend\n'}
+[1.244608] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_menique_1.dae\n'}
+[1.244987] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular.blend\n'}
+[1.245296] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice.blend\n'}
+[1.245590] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/mano_completa.blend1\n'}
+[1.245863] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular_3.dae\n'}
+[1.246137] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_anular_2.dae\n'}
+[1.252462] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_cordial.blend1\n'}
+[1.255420] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/dedos/dedo_indice_3.dae\n'}
+[1.255749] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/pulgar_1_izq.dae\n'}
+[1.256018] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/backup/pulgar_3.dae\n'}
+[1.259056] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_bajo.dae\n'}
+[1.261154] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos\n'}
+[1.261441] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_2.dae\n'}
+[1.262835] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_1_izq_colision.dae\n'}
+[1.264377] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3_colision.dae\n'}
+[1.264674] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice.blend1\n'}
+[1.264932] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_3_colision.dae\n'}
+[1.265197] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_3_colision.dae\n'}
+[1.268603] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_1.dae\n'}
+[1.270626] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2_colision.dae\n'}
+[1.270930] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1.blend\n'}
+[1.272829] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_2.dae\n'}
+[1.273107] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_3_colision.dae\n'}
+[1.274694] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial.blend\n'}
+[1.275011] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2.blend1\n'}
+[1.275273] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_2.dae\n'}
+[1.275561] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_1.dae\n'}
+[1.275818] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique.blend\n'}
+[1.276071] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_1_colision.dae\n'}
+[1.279458] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1.blend1\n'}
+[1.281841] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2.dae\n'}
+[1.283334] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_1.dae\n'}
+[1.284118] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_1_colision.dae\n'}
+[1.285505] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1_colision.dae\n'}
+[1.285774] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3.dae\n'}
+[1.286027] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_3_colision.dae\n'}
+[1.286296] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_1_colision.dae\n'}
+[1.286617] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_3.dae\n'}
+[1.290559] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_1_izq.dae\n'}
+[1.291489] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/mano_completa.blend\n'}
+[1.291763] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique.blend1\n'}
+[1.292022] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_2.blend\n'}
+[1.292291] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_2_colision.dae\n'}
+[1.292562] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular.blend1\n'}
+[1.292815] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial_2_colision.dae\n'}
+[1.293066] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3.blend1\n'}
+[1.297486] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_3.dae\n'}
+[1.304466] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_3.blend\n'}
+[1.304828] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_menique_1.dae\n'}
+[1.305130] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular.blend\n'}
+[1.309846] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice.blend\n'}
+[1.312248] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/mano_completa.blend1\n'}
+[1.312719] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_3.dae\n'}
+[1.313002] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_2.dae\n'}
+[1.315328] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_cordial.blend1\n'}
+[1.319785] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/pulgar_2_colision.dae\n'}
+[1.320406] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_anular_2_colision.dae\n'}
+[1.320739] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/dedos/dedo_indice_3.dae\n'}
+[1.321013] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/pulgar_1_izq.dae\n'}
+[1.325240] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/codo_izq_tuercas.dae\n'}
+[1.326712] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/hombro_bajo_colision.dae\n'}
+[1.326990] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/pulgar_3.dae\n'}
+[1.327263] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/banda_terminada.blend\n'}
+[1.327565] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/models/meshes/palma.dae\n'}
+[1.327834] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/ament_index/resource_index/package_run_dependencies/xolobot_arm\n'}
+[1.328117] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/ament_index/resource_index/parent_prefix_path/xolobot_arm\n'}
+[1.344535] (-) TimerEvent: {}
+[1.344921] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/ament_prefix_path.sh\n'}
+[1.345258] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/ament_prefix_path.dsv\n'}
+[1.346437] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/path.sh\n'}
+[1.346714] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/environment/path.dsv\n'}
+[1.346971] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.bash\n'}
+[1.347226] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.sh\n'}
+[1.364882] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.zsh\n'}
+[1.365616] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/local_setup.dsv\n'}
+[1.365952] (xolobot_arm) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/package.dsv\n'}
+[1.366214] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/ament_index/resource_index/packages/xolobot_arm\n'}
+[1.370618] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/cmake/xolobot_armConfig.cmake\n'}
+[1.370929] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/cmake/xolobot_armConfig-version.cmake\n'}
+[1.373365] (xolobot_arm) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm/share/xolobot_arm/package.xml\n'}
+[1.373657] (xolobot_arm) CommandEnded: {'returncode': 0}
+[1.446674] (-) TimerEvent: {}
+[1.511860] (xolobot_arm) JobEnded: {'identifier': 'xolobot_arm', 'rc': 0}
+[1.517228] (xolobot_control) JobStarted: {'identifier': 'xolobot_control'}
+[1.548085] (-) TimerEvent: {}
+[1.584383] (xolobot_control) JobProgress: {'identifier': 'xolobot_control', 'progress': 'cmake'}
+[1.596395] (xolobot_control) JobProgress: {'identifier': 'xolobot_control', 'progress': 'build'}
+[1.596572] (xolobot_control) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/monica/ros2_ws/build/xolobot_control', '--', '-j2', '-l2'], 'cwd': '/home/monica/ros2_ws/build/xolobot_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1449'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1421,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1421'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0e4e650_06c4_45a4_a0f5_f30984ee2ccb'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AX3572'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.133'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[1.617369] (xolobot_arm_server) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o\x1b[0m\n'}
+[1.651418] (-) TimerEvent: {}
+[1.757438] (-) TimerEvent: {}
+[1.860021] (-) TimerEvent: {}
+[1.966865] (-) TimerEvent: {}
+[2.033381] (xolobot_control) CommandEnded: {'returncode': 0}
+[2.040561] (xolobot_control) JobProgress: {'identifier': 'xolobot_control', 'progress': 'install'}
+[2.047561] (xolobot_control) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/monica/ros2_ws/build/xolobot_control'], 'cwd': '/home/monica/ros2_ws/build/xolobot_control', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1449'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1421,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1421'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0e4e650_06c4_45a4_a0f5_f30984ee2ccb'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AX3572'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.133'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_control'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[2.071007] (-) TimerEvent: {}
+[2.125805] (xolobot_control) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.129580] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/config\n'}
+[2.130038] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/config/xolobot_control.yaml\n'}
+[2.132986] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/launch\n'}
+[2.133478] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/launch/xolobot_control.launch.py\n'}
+[2.133780] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/ament_index/resource_index/package_run_dependencies/xolobot_control\n'}
+[2.134069] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/ament_index/resource_index/parent_prefix_path/xolobot_control\n'}
+[2.134373] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/ament_prefix_path.sh\n'}
+[2.134673] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/ament_prefix_path.dsv\n'}
+[2.142078] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/path.sh\n'}
+[2.142578] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/environment/path.dsv\n'}
+[2.142877] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.bash\n'}
+[2.143163] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.sh\n'}
+[2.150832] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.zsh\n'}
+[2.151168] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/local_setup.dsv\n'}
+[2.155892] (xolobot_control) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/package.dsv\n'}
+[2.156218] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/ament_index/resource_index/packages/xolobot_control\n'}
+[2.157176] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/cmake/xolobot_controlConfig.cmake\n'}
+[2.161401] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/cmake/xolobot_controlConfig-version.cmake\n'}
+[2.161864] (xolobot_control) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_control/share/xolobot_control/package.xml\n'}
+[2.170092] (xolobot_control) CommandEnded: {'returncode': 0}
+[2.177185] (-) TimerEvent: {}
+[2.279573] (-) TimerEvent: {}
+[2.302469] (xolobot_control) JobEnded: {'identifier': 'xolobot_control', 'rc': 0}
+[2.380163] (-) TimerEvent: {}
+[2.481668] (-) TimerEvent: {}
+[2.584030] (-) TimerEvent: {}
+[2.687873] (-) TimerEvent: {}
+[2.788556] (-) TimerEvent: {}
+[2.890500] (-) TimerEvent: {}
+[2.992651] (-) TimerEvent: {}
+[3.093811] (-) TimerEvent: {}
+[3.197508] (-) TimerEvent: {}
+[3.298091] (-) TimerEvent: {}
+[3.399732] (-) TimerEvent: {}
+[3.501904] (-) TimerEvent: {}
+[3.607762] (-) TimerEvent: {}
+[3.708358] (-) TimerEvent: {}
+[3.809685] (-) TimerEvent: {}
+[3.912593] (-) TimerEvent: {}
+[4.014004] (-) TimerEvent: {}
+[4.119733] (-) TimerEvent: {}
+[4.221425] (-) TimerEvent: {}
+[4.323433] (-) TimerEvent: {}
+[4.425595] (-) TimerEvent: {}
+[4.527419] (-) TimerEvent: {}
+[4.629585] (-) TimerEvent: {}
+[4.731673] (-) TimerEvent: {}
+[4.833458] (-) TimerEvent: {}
+[4.938540] (-) TimerEvent: {}
+[5.044431] (-) TimerEvent: {}
+[5.145057] (-) TimerEvent: {}
+[5.247579] (-) TimerEvent: {}
+[5.348816] (-) TimerEvent: {}
+[5.451571] (-) TimerEvent: {}
+[5.554421] (-) TimerEvent: {}
+[5.657768] (-) TimerEvent: {}
+[5.760442] (-) TimerEvent: {}
+[5.863574] (-) TimerEvent: {}
+[5.964478] (-) TimerEvent: {}
+[6.065946] (-) TimerEvent: {}
+[6.167561] (-) TimerEvent: {}
+[6.269992] (-) TimerEvent: {}
+[6.372267] (-) TimerEvent: {}
+[6.475433] (-) TimerEvent: {}
+[6.585345] (-) TimerEvent: {}
+[6.685949] (-) TimerEvent: {}
+[6.787264] (-) TimerEvent: {}
+[6.891575] (-) TimerEvent: {}
+[6.993424] (-) TimerEvent: {}
+[7.094023] (-) TimerEvent: {}
+[7.196453] (-) TimerEvent: {}
+[7.298882] (-) TimerEvent: {}
+[7.401479] (-) TimerEvent: {}
+[7.504432] (-) TimerEvent: {}
+[7.606028] (-) TimerEvent: {}
+[7.708655] (-) TimerEvent: {}
+[7.811471] (-) TimerEvent: {}
+[7.913447] (-) TimerEvent: {}
+[8.015264] (-) TimerEvent: {}
+[8.117439] (-) TimerEvent: {}
+[8.219412] (-) TimerEvent: {}
+[8.324594] (-) TimerEvent: {}
+[8.425227] (-) TimerEvent: {}
+[8.527159] (-) TimerEvent: {}
+[8.630466] (-) TimerEvent: {}
+[8.732204] (-) TimerEvent: {}
+[8.836176] (-) TimerEvent: {}
+[8.938414] (-) TimerEvent: {}
+[9.040432] (-) TimerEvent: {}
+[9.142753] (-) TimerEvent: {}
+[9.246395] (-) TimerEvent: {}
+[9.347458] (-) TimerEvent: {}
+[9.450109] (-) TimerEvent: {}
+[9.553735] (-) TimerEvent: {}
+[9.656618] (-) TimerEvent: {}
+[9.759013] (-) TimerEvent: {}
+[9.860614] (-) TimerEvent: {}
+[9.963436] (-) TimerEvent: {}
+[10.065030] (-) TimerEvent: {}
+[10.167548] (-) TimerEvent: {}
+[10.269250] (-) TimerEvent: {}
+[10.371101] (-) TimerEvent: {}
+[10.473017] (-) TimerEvent: {}
+[10.574986] (-) TimerEvent: {}
+[10.676190] (-) TimerEvent: {}
+[10.777845] (-) TimerEvent: {}
+[10.879474] (-) TimerEvent: {}
+[10.981221] (-) TimerEvent: {}
+[11.082636] (-) TimerEvent: {}
+[11.184483] (-) TimerEvent: {}
+[11.286545] (-) TimerEvent: {}
+[11.389410] (-) TimerEvent: {}
+[11.490054] (-) TimerEvent: {}
+[11.591978] (-) TimerEvent: {}
+[11.693333] (-) TimerEvent: {}
+[11.795870] (-) TimerEvent: {}
+[11.898314] (-) TimerEvent: {}
+[11.998941] (-) TimerEvent: {}
+[12.101010] (-) TimerEvent: {}
+[12.203023] (-) TimerEvent: {}
+[12.306415] (-) TimerEvent: {}
+[12.410938] (-) TimerEvent: {}
+[12.512438] (-) TimerEvent: {}
+[12.614662] (-) TimerEvent: {}
+[12.722407] (-) TimerEvent: {}
+[12.823137] (-) TimerEvent: {}
+[12.923779] (-) TimerEvent: {}
+[13.025155] (-) TimerEvent: {}
+[13.127526] (-) TimerEvent: {}
+[13.228976] (-) TimerEvent: {}
+[13.332779] (-) TimerEvent: {}
+[13.434218] (-) TimerEvent: {}
+[13.536438] (-) TimerEvent: {}
+[13.638026] (-) TimerEvent: {}
+[13.740428] (-) TimerEvent: {}
+[13.845214] (-) TimerEvent: {}
+[13.946147] (-) TimerEvent: {}
+[14.048591] (-) TimerEvent: {}
+[14.150172] (-) TimerEvent: {}
+[14.253418] (-) TimerEvent: {}
+[14.357008] (-) TimerEvent: {}
+[14.458427] (-) TimerEvent: {}
+[14.560440] (-) TimerEvent: {}
+[14.662411] (-) TimerEvent: {}
+[14.764833] (-) TimerEvent: {}
+[14.866954] (-) TimerEvent: {}
+[14.968303] (-) TimerEvent: {}
+[15.073769] (-) TimerEvent: {}
+[15.174386] (-) TimerEvent: {}
+[15.275848] (-) TimerEvent: {}
+[15.377886] (-) TimerEvent: {}
+[15.479431] (-) TimerEvent: {}
+[15.582473] (-) TimerEvent: {}
+[15.684447] (-) TimerEvent: {}
+[15.786552] (-) TimerEvent: {}
+[15.889627] (-) TimerEvent: {}
+[15.992091] (-) TimerEvent: {}
+[16.094415] (-) TimerEvent: {}
+[16.195353] (-) TimerEvent: {}
+[16.297415] (-) TimerEvent: {}
+[16.399378] (-) TimerEvent: {}
+[16.504439] (-) TimerEvent: {}
+[16.605554] (-) TimerEvent: {}
+[16.707850] (-) TimerEvent: {}
+[16.808854] (-) TimerEvent: {}
+[16.912526] (-) TimerEvent: {}
+[17.014512] (-) TimerEvent: {}
+[17.115558] (-) TimerEvent: {}
+[17.217216] (-) TimerEvent: {}
+[17.319418] (-) TimerEvent: {}
+[17.421626] (-) TimerEvent: {}
+[17.522228] (-) TimerEvent: {}
+[17.624402] (-) TimerEvent: {}
+[17.725133] (-) TimerEvent: {}
+[17.827930] (-) TimerEvent: {}
+[17.928554] (-) TimerEvent: {}
+[18.030508] (-) TimerEvent: {}
+[18.132402] (-) TimerEvent: {}
+[18.234700] (-) TimerEvent: {}
+[18.336916] (-) TimerEvent: {}
+[18.439710] (-) TimerEvent: {}
+[18.540570] (-) TimerEvent: {}
+[18.642696] (-) TimerEvent: {}
+[18.744266] (-) TimerEvent: {}
+[18.845069] (-) TimerEvent: {}
+[18.945730] (-) TimerEvent: {}
+[19.048248] (-) TimerEvent: {}
+[19.149415] (-) TimerEvent: {}
+[19.251175] (-) TimerEvent: {}
+[19.354426] (-) TimerEvent: {}
+[19.457534] (-) TimerEvent: {}
+[19.558197] (-) TimerEvent: {}
+[19.658805] (-) TimerEvent: {}
+[19.760430] (-) TimerEvent: {}
+[19.861426] (-) TimerEvent: {}
+[19.963896] (-) TimerEvent: {}
+[20.064550] (-) TimerEvent: {}
+[20.167185] (-) TimerEvent: {}
+[20.268169] (-) TimerEvent: {}
+[20.369316] (-) TimerEvent: {}
+[20.472712] (-) TimerEvent: {}
+[20.573341] (-) TimerEvent: {}
+[20.674419] (-) TimerEvent: {}
+[20.777001] (-) TimerEvent: {}
+[20.878155] (-) TimerEvent: {}
+[20.979882] (-) TimerEvent: {}
+[21.082253] (-) TimerEvent: {}
+[21.184199] (-) TimerEvent: {}
+[21.286595] (-) TimerEvent: {}
+[21.387234] (-) TimerEvent: {}
+[21.488844] (-) TimerEvent: {}
+[21.590431] (-) TimerEvent: {}
+[21.691899] (-) TimerEvent: {}
+[21.793580] (-) TimerEvent: {}
+[21.895409] (-) TimerEvent: {}
+[21.996428] (-) TimerEvent: {}
+[22.097913] (-) TimerEvent: {}
+[22.200093] (-) TimerEvent: {}
+[22.301446] (-) TimerEvent: {}
+[22.402650] (-) TimerEvent: {}
+[22.503864] (-) TimerEvent: {}
+[22.605409] (-) TimerEvent: {}
+[22.707424] (-) TimerEvent: {}
+[22.808439] (-) TimerEvent: {}
+[22.910435] (-) TimerEvent: {}
+[23.011051] (-) TimerEvent: {}
+[23.113411] (-) TimerEvent: {}
+[23.214024] (-) TimerEvent: {}
+[23.315319] (-) TimerEvent: {}
+[23.419905] (-) TimerEvent: {}
+[23.520517] (-) TimerEvent: {}
+[23.623626] (-) TimerEvent: {}
+[23.724241] (-) TimerEvent: {}
+[23.825221] (-) TimerEvent: {}
+[23.927095] (-) TimerEvent: {}
+[24.028146] (-) TimerEvent: {}
+[24.131064] (-) TimerEvent: {}
+[24.231775] (-) TimerEvent: {}
+[24.333244] (-) TimerEvent: {}
+[24.436409] (-) TimerEvent: {}
+[24.538396] (-) TimerEvent: {}
+[24.638982] (-) TimerEvent: {}
+[24.740772] (-) TimerEvent: {}
+[24.843414] (-) TimerEvent: {}
+[24.944038] (-) TimerEvent: {}
+[25.046346] (-) TimerEvent: {}
+[25.149243] (-) TimerEvent: {}
+[25.250107] (-) TimerEvent: {}
+[25.351100] (-) TimerEvent: {}
+[25.451721] (-) TimerEvent: {}
+[25.552357] (-) TimerEvent: {}
+[25.653447] (-) TimerEvent: {}
+[25.754770] (-) TimerEvent: {}
+[25.856449] (-) TimerEvent: {}
+[25.959506] (-) TimerEvent: {}
+[26.061144] (-) TimerEvent: {}
+[26.163412] (-) TimerEvent: {}
+[26.264142] (-) TimerEvent: {}
+[26.365475] (-) TimerEvent: {}
+[26.467951] (-) TimerEvent: {}
+[26.570406] (-) TimerEvent: {}
+[26.671555] (-) TimerEvent: {}
+[26.773044] (-) TimerEvent: {}
+[26.873664] (-) TimerEvent: {}
+[26.974307] (-) TimerEvent: {}
+[27.076750] (-) TimerEvent: {}
+[27.178369] (-) TimerEvent: {}
+[27.279828] (-) TimerEvent: {}
+[27.382036] (-) TimerEvent: {}
+[27.485431] (-) TimerEvent: {}
+[27.586609] (-) TimerEvent: {}
+[27.688233] (-) TimerEvent: {}
+[27.789758] (-) TimerEvent: {}
+[27.892094] (-) TimerEvent: {}
+[27.993608] (-) TimerEvent: {}
+[28.095967] (-) TimerEvent: {}
+[28.197409] (-) TimerEvent: {}
+[28.299425] (-) TimerEvent: {}
+[28.401749] (-) TimerEvent: {}
+[28.502997] (-) TimerEvent: {}
+[28.605297] (-) TimerEvent: {}
+[28.705889] (-) TimerEvent: {}
+[28.806641] (-) TimerEvent: {}
+[28.908563] (-) TimerEvent: {}
+[29.009889] (-) TimerEvent: {}
+[29.111437] (-) TimerEvent: {}
+[29.213002] (-) TimerEvent: {}
+[29.314052] (-) TimerEvent: {}
+[29.415653] (-) TimerEvent: {}
+[29.517606] (-) TimerEvent: {}
+[29.619529] (-) TimerEvent: {}
+[29.720637] (-) TimerEvent: {}
+[29.822920] (-) TimerEvent: {}
+[29.924438] (-) TimerEvent: {}
+[30.026096] (-) TimerEvent: {}
+[30.128410] (-) TimerEvent: {}
+[30.230735] (-) TimerEvent: {}
+[30.331386] (-) TimerEvent: {}
+[30.435016] (-) TimerEvent: {}
+[30.536534] (-) TimerEvent: {}
+[30.637860] (-) TimerEvent: {}
+[30.739619] (-) TimerEvent: {}
+[30.841098] (-) TimerEvent: {}
+[30.944167] (-) TimerEvent: {}
+[31.047872] (-) TimerEvent: {}
+[31.148918] (-) TimerEvent: {}
+[31.250712] (-) TimerEvent: {}
+[31.353503] (-) TimerEvent: {}
+[31.454343] (-) TimerEvent: {}
+[31.555739] (-) TimerEvent: {}
+[31.657767] (-) TimerEvent: {}
+[31.759256] (-) TimerEvent: {}
+[31.860880] (-) TimerEvent: {}
+[31.962583] (-) TimerEvent: {}
+[32.064004] (-) TimerEvent: {}
+[32.165434] (-) TimerEvent: {}
+[32.268167] (-) TimerEvent: {}
+[32.376440] (-) TimerEvent: {}
+[32.477012] (-) TimerEvent: {}
+[32.578414] (-) TimerEvent: {}
+[32.679023] (-) TimerEvent: {}
+[32.780568] (-) TimerEvent: {}
+[32.882273] (-) TimerEvent: {}
+[32.983614] (-) TimerEvent: {}
+[33.085771] (-) TimerEvent: {}
+[33.187414] (-) TimerEvent: {}
+[33.288418] (-) TimerEvent: {}
+[33.390228] (-) TimerEvent: {}
+[33.492603] (-) TimerEvent: {}
+[33.593652] (-) TimerEvent: {}
+[33.696148] (-) TimerEvent: {}
+[33.798432] (-) TimerEvent: {}
+[33.899889] (-) TimerEvent: {}
+[34.002793] (-) TimerEvent: {}
+[34.103784] (-) TimerEvent: {}
+[34.206472] (-) TimerEvent: {}
+[34.307432] (-) TimerEvent: {}
+[34.409434] (-) TimerEvent: {}
+[34.511793] (-) TimerEvent: {}
+[34.614614] (-) TimerEvent: {}
+[34.716443] (-) TimerEvent: {}
+[34.818485] (-) TimerEvent: {}
+[34.919713] (-) TimerEvent: {}
+[35.021752] (-) TimerEvent: {}
+[35.123590] (-) TimerEvent: {}
+[35.226634] (-) TimerEvent: {}
+[35.327375] (-) TimerEvent: {}
+[35.429432] (-) TimerEvent: {}
+[35.531153] (-) TimerEvent: {}
+[35.635421] (-) TimerEvent: {}
+[35.736194] (-) TimerEvent: {}
+[35.839962] (-) TimerEvent: {}
+[35.940867] (-) TimerEvent: {}
+[36.044418] (-) TimerEvent: {}
+[36.145020] (-) TimerEvent: {}
+[36.246121] (-) TimerEvent: {}
+[36.347431] (-) TimerEvent: {}
+[36.450902] (-) TimerEvent: {}
+[36.551536] (-) TimerEvent: {}
+[36.653600] (-) TimerEvent: {}
+[36.755135] (-) TimerEvent: {}
+[36.856679] (-) TimerEvent: {}
+[36.958830] (-) TimerEvent: {}
+[37.061372] (-) TimerEvent: {}
+[37.162758] (-) TimerEvent: {}
+[37.264449] (-) TimerEvent: {}
+[37.365803] (-) TimerEvent: {}
+[37.468116] (-) TimerEvent: {}
+[37.569537] (-) TimerEvent: {}
+[37.671206] (-) TimerEvent: {}
+[37.774760] (-) TimerEvent: {}
+[37.875633] (-) TimerEvent: {}
+[37.977195] (-) TimerEvent: {}
+[38.078407] (-) TimerEvent: {}
+[38.179376] (-) TimerEvent: {}
+[38.282302] (-) TimerEvent: {}
+[38.383002] (-) TimerEvent: {}
+[38.483637] (-) TimerEvent: {}
+[38.584231] (-) TimerEvent: {}
+[38.685479] (-) TimerEvent: {}
+[38.788415] (-) TimerEvent: {}
+[38.889174] (-) TimerEvent: {}
+[38.989816] (-) TimerEvent: {}
+[39.091473] (-) TimerEvent: {}
+[39.194880] (-) TimerEvent: {}
+[39.298710] (-) TimerEvent: {}
+[39.399650] (-) TimerEvent: {}
+[39.501271] (-) TimerEvent: {}
+[39.604061] (-) TimerEvent: {}
+[39.704699] (-) TimerEvent: {}
+[39.757511] (xolobot_arm_server) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable xolobot_arm_server\x1b[0m\n'}
+[39.804875] (-) TimerEvent: {}
+[39.908075] (-) TimerEvent: {}
+[40.012512] (-) TimerEvent: {}
+[40.113131] (-) TimerEvent: {}
+[40.216554] (-) TimerEvent: {}
+[40.317176] (-) TimerEvent: {}
+[40.418434] (-) TimerEvent: {}
+[40.519917] (-) TimerEvent: {}
+[40.623443] (-) TimerEvent: {}
+[40.724664] (-) TimerEvent: {}
+[40.826378] (-) TimerEvent: {}
+[40.928184] (-) TimerEvent: {}
+[41.030439] (-) TimerEvent: {}
+[41.133350] (-) TimerEvent: {}
+[41.233987] (-) TimerEvent: {}
+[41.335519] (-) TimerEvent: {}
+[41.437646] (-) TimerEvent: {}
+[41.539467] (-) TimerEvent: {}
+[41.641465] (-) TimerEvent: {}
+[41.743414] (-) TimerEvent: {}
+[41.844887] (-) TimerEvent: {}
+[41.946621] (-) TimerEvent: {}
+[42.049302] (-) TimerEvent: {}
+[42.151389] (-) TimerEvent: {}
+[42.252450] (-) TimerEvent: {}
+[42.355133] (-) TimerEvent: {}
+[42.456801] (-) TimerEvent: {}
+[42.560445] (-) TimerEvent: {}
+[42.661120] (-) TimerEvent: {}
+[42.764439] (-) TimerEvent: {}
+[42.865901] (-) TimerEvent: {}
+[42.968435] (-) TimerEvent: {}
+[43.070316] (-) TimerEvent: {}
+[43.172428] (-) TimerEvent: {}
+[43.274511] (-) TimerEvent: {}
+[43.376266] (-) TimerEvent: {}
+[43.480437] (-) TimerEvent: {}
+[43.581165] (-) TimerEvent: {}
+[43.683110] (-) TimerEvent: {}
+[43.785324] (-) TimerEvent: {}
+[43.886823] (-) TimerEvent: {}
+[43.989027] (-) TimerEvent: {}
+[44.091230] (-) TimerEvent: {}
+[44.193856] (-) TimerEvent: {}
+[44.296496] (-) TimerEvent: {}
+[44.398779] (-) TimerEvent: {}
+[44.500614] (-) TimerEvent: {}
+[44.603581] (-) TimerEvent: {}
+[44.706836] (-) TimerEvent: {}
+[44.808741] (-) TimerEvent: {}
+[44.910996] (-) TimerEvent: {}
+[45.013463] (-) TimerEvent: {}
+[45.117677] (-) TimerEvent: {}
+[45.219153] (-) TimerEvent: {}
+[45.321439] (-) TimerEvent: {}
+[45.424418] (-) TimerEvent: {}
+[45.526541] (-) TimerEvent: {}
+[45.628907] (-) TimerEvent: {}
+[45.731447] (-) TimerEvent: {}
+[45.833434] (-) TimerEvent: {}
+[45.936323] (-) TimerEvent: {}
+[46.038975] (-) TimerEvent: {}
+[46.141612] (-) TimerEvent: {}
+[46.243791] (-) TimerEvent: {}
+[46.347516] (-) TimerEvent: {}
+[46.448181] (-) TimerEvent: {}
+[46.549839] (-) TimerEvent: {}
+[46.653443] (-) TimerEvent: {}
+[46.755480] (-) TimerEvent: {}
+[46.857751] (-) TimerEvent: {}
+[46.959432] (-) TimerEvent: {}
+[47.061227] (-) TimerEvent: {}
+[47.163676] (-) TimerEvent: {}
+[47.266384] (-) TimerEvent: {}
+[47.370461] (-) TimerEvent: {}
+[47.471362] (-) TimerEvent: {}
+[47.575403] (-) TimerEvent: {}
+[47.677264] (-) TimerEvent: {}
+[47.778034] (-) TimerEvent: {}
+[47.881797] (-) TimerEvent: {}
+[47.984738] (-) TimerEvent: {}
+[48.088350] (-) TimerEvent: {}
+[48.189856] (-) TimerEvent: {}
+[48.292074] (-) TimerEvent: {}
+[48.394113] (-) TimerEvent: {}
+[48.496951] (-) TimerEvent: {}
+[48.600016] (-) TimerEvent: {}
+[48.701812] (-) TimerEvent: {}
+[48.805421] (-) TimerEvent: {}
+[48.906677] (-) TimerEvent: {}
+[49.009139] (-) TimerEvent: {}
+[49.112173] (-) TimerEvent: {}
+[49.217393] (-) TimerEvent: {}
+[49.319659] (-) TimerEvent: {}
+[49.422357] (-) TimerEvent: {}
+[49.526566] (-) TimerEvent: {}
+[49.628250] (-) TimerEvent: {}
+[49.730752] (-) TimerEvent: {}
+[49.832714] (-) TimerEvent: {}
+[49.936449] (-) TimerEvent: {}
+[50.038447] (-) TimerEvent: {}
+[50.139835] (-) TimerEvent: {}
+[50.242436] (-) TimerEvent: {}
+[50.345683] (-) TimerEvent: {}
+[50.447581] (-) TimerEvent: {}
+[50.550485] (-) TimerEvent: {}
+[50.652964] (-) TimerEvent: {}
+[50.755958] (-) TimerEvent: {}
+[50.859423] (-) TimerEvent: {}
+[50.961552] (-) TimerEvent: {}
+[51.063148] (-) TimerEvent: {}
+[51.165451] (-) TimerEvent: {}
+[51.269435] (-) TimerEvent: {}
+[51.370871] (-) TimerEvent: {}
+[51.472876] (-) TimerEvent: {}
+[51.574616] (-) TimerEvent: {}
+[51.677470] (-) TimerEvent: {}
+[51.779430] (-) TimerEvent: {}
+[51.880419] (-) TimerEvent: {}
+[51.981616] (-) TimerEvent: {}
+[52.084605] (-) TimerEvent: {}
+[52.187525] (-) TimerEvent: {}
+[52.289640] (-) TimerEvent: {}
+[52.391775] (-) TimerEvent: {}
+[52.494107] (-) TimerEvent: {}
+[52.596159] (-) TimerEvent: {}
+[52.698716] (-) TimerEvent: {}
+[52.801731] (-) TimerEvent: {}
+[52.903890] (-) TimerEvent: {}
+[53.006309] (-) TimerEvent: {}
+[53.108443] (-) TimerEvent: {}
+[53.209874] (-) TimerEvent: {}
+[53.311172] (-) TimerEvent: {}
+[53.412437] (-) TimerEvent: {}
+[53.514073] (-) TimerEvent: {}
+[53.617437] (-) TimerEvent: {}
+[53.718062] (-) TimerEvent: {}
+[53.820219] (-) TimerEvent: {}
+[53.922618] (-) TimerEvent: {}
+[54.025375] (-) TimerEvent: {}
+[54.128508] (-) TimerEvent: {}
+[54.229215] (-) TimerEvent: {}
+[54.330834] (-) TimerEvent: {}
+[54.433184] (-) TimerEvent: {}
+[54.536399] (-) TimerEvent: {}
+[54.638444] (-) TimerEvent: {}
+[54.740593] (-) TimerEvent: {}
+[54.843490] (-) TimerEvent: {}
+[54.945438] (-) TimerEvent: {}
+[55.047958] (-) TimerEvent: {}
+[55.150418] (-) TimerEvent: {}
+[55.252162] (-) TimerEvent: {}
+[55.355517] (-) TimerEvent: {}
+[55.457188] (-) TimerEvent: {}
+[55.558867] (-) TimerEvent: {}
+[55.660614] (-) TimerEvent: {}
+[55.761495] (-) TimerEvent: {}
+[55.862906] (-) TimerEvent: {}
+[55.967065] (-) TimerEvent: {}
+[56.068576] (-) TimerEvent: {}
+[56.171688] (-) TimerEvent: {}
+[56.273900] (-) TimerEvent: {}
+[56.375423] (-) TimerEvent: {}
+[56.478414] (-) TimerEvent: {}
+[56.580389] (-) TimerEvent: {}
+[56.682792] (-) TimerEvent: {}
+[56.785762] (-) TimerEvent: {}
+[56.887728] (-) TimerEvent: {}
+[56.991421] (-) TimerEvent: {}
+[57.092082] (-) TimerEvent: {}
+[57.194986] (-) TimerEvent: {}
+[57.299392] (-) TimerEvent: {}
+[57.400031] (-) TimerEvent: {}
+[57.503421] (-) TimerEvent: {}
+[57.605432] (-) TimerEvent: {}
+[57.707315] (-) TimerEvent: {}
+[57.809298] (-) TimerEvent: {}
+[57.911422] (-) TimerEvent: {}
+[58.013793] (-) TimerEvent: {}
+[58.117438] (-) TimerEvent: {}
+[58.224425] (-) TimerEvent: {}
+[58.325940] (-) TimerEvent: {}
+[58.431420] (-) TimerEvent: {}
+[58.535646] (-) TimerEvent: {}
+[58.636799] (-) TimerEvent: {}
+[58.739254] (-) TimerEvent: {}
+[58.842220] (-) TimerEvent: {}
+[58.943960] (-) TimerEvent: {}
+[59.046435] (-) TimerEvent: {}
+[59.148961] (-) TimerEvent: {}
+[59.251257] (-) TimerEvent: {}
+[59.353776] (-) TimerEvent: {}
+[59.455813] (-) TimerEvent: {}
+[59.557598] (-) TimerEvent: {}
+[59.660453] (-) TimerEvent: {}
+[59.762215] (-) TimerEvent: {}
+[59.865446] (-) TimerEvent: {}
+[59.967825] (-) TimerEvent: {}
+[60.069771] (-) TimerEvent: {}
+[60.172106] (-) TimerEvent: {}
+[60.277218] (-) TimerEvent: {}
+[60.379440] (-) TimerEvent: {}
+[60.482421] (-) TimerEvent: {}
+[60.583062] (-) TimerEvent: {}
+[60.686457] (-) TimerEvent: {}
+[60.787144] (-) TimerEvent: {}
+[60.890008] (-) TimerEvent: {}
+[60.993655] (-) TimerEvent: {}
+[61.095325] (-) TimerEvent: {}
+[61.197557] (-) TimerEvent: {}
+[61.300773] (-) TimerEvent: {}
+[61.401583] (-) TimerEvent: {}
+[61.503908] (-) TimerEvent: {}
+[61.605747] (-) TimerEvent: {}
+[61.707455] (-) TimerEvent: {}
+[61.810426] (-) TimerEvent: {}
+[61.914106] (-) TimerEvent: {}
+[62.015419] (-) TimerEvent: {}
+[62.117650] (-) TimerEvent: {}
+[62.220098] (-) TimerEvent: {}
+[62.322113] (-) TimerEvent: {}
+[62.423435] (-) TimerEvent: {}
+[62.525769] (-) TimerEvent: {}
+[62.628038] (-) TimerEvent: {}
+[62.730702] (-) TimerEvent: {}
+[62.833459] (-) TimerEvent: {}
+[62.936360] (-) TimerEvent: {}
+[63.038672] (-) TimerEvent: {}
+[63.142615] (-) TimerEvent: {}
+[63.244808] (-) TimerEvent: {}
+[63.346891] (-) TimerEvent: {}
+[63.449416] (-) TimerEvent: {}
+[63.551430] (-) TimerEvent: {}
+[63.654428] (-) TimerEvent: {}
+[63.756542] (-) TimerEvent: {}
+[63.861691] (-) TimerEvent: {}
+[63.963410] (-) TimerEvent: {}
+[64.065684] (-) TimerEvent: {}
+[64.166732] (-) TimerEvent: {}
+[64.269476] (-) TimerEvent: {}
+[64.371829] (-) TimerEvent: {}
+[64.473964] (-) TimerEvent: {}
+[64.576440] (-) TimerEvent: {}
+[64.679467] (-) TimerEvent: {}
+[64.781731] (-) TimerEvent: {}
+[64.884022] (-) TimerEvent: {}
+[64.987041] (-) TimerEvent: {}
+[65.089138] (-) TimerEvent: {}
+[65.191242] (-) TimerEvent: {}
+[65.294423] (-) TimerEvent: {}
+[65.396923] (-) TimerEvent: {}
+[65.499455] (-) TimerEvent: {}
+[65.602464] (-) TimerEvent: {}
+[65.703704] (-) TimerEvent: {}
+[65.808453] (-) TimerEvent: {}
+[65.909408] (-) TimerEvent: {}
+[66.012619] (-) TimerEvent: {}
+[66.113766] (-) TimerEvent: {}
+[66.216117] (-) TimerEvent: {}
+[66.318706] (-) TimerEvent: {}
+[66.421962] (-) TimerEvent: {}
+[66.523433] (-) TimerEvent: {}
+[66.625950] (-) TimerEvent: {}
+[66.727427] (-) TimerEvent: {}
+[66.829827] (-) TimerEvent: {}
+[66.933231] (-) TimerEvent: {}
+[67.035340] (-) TimerEvent: {}
+[67.137384] (-) TimerEvent: {}
+[67.240251] (-) TimerEvent: {}
+[67.341697] (-) TimerEvent: {}
+[67.445377] (-) TimerEvent: {}
+[67.547545] (-) TimerEvent: {}
+[67.648436] (-) TimerEvent: {}
+[67.751019] (-) TimerEvent: {}
+[67.853109] (-) TimerEvent: {}
+[67.955304] (-) TimerEvent: {}
+[68.057714] (-) TimerEvent: {}
+[68.160461] (-) TimerEvent: {}
+[68.262149] (-) TimerEvent: {}
+[68.364619] (-) TimerEvent: {}
+[68.467177] (-) TimerEvent: {}
+[68.569577] (-) TimerEvent: {}
+[68.672927] (-) TimerEvent: {}
+[68.775441] (-) TimerEvent: {}
+[68.876613] (-) TimerEvent: {}
+[68.979966] (-) TimerEvent: {}
+[69.081729] (-) TimerEvent: {}
+[69.185173] (-) TimerEvent: {}
+[69.290176] (-) TimerEvent: {}
+[69.393900] (-) TimerEvent: {}
+[69.496508] (-) TimerEvent: {}
+[69.599128] (-) TimerEvent: {}
+[69.701102] (-) TimerEvent: {}
+[69.803124] (-) TimerEvent: {}
+[69.904199] (-) TimerEvent: {}
+[70.005415] (-) TimerEvent: {}
+[70.106823] (-) TimerEvent: {}
+[70.209432] (-) TimerEvent: {}
+[70.312425] (-) TimerEvent: {}
+[70.413041] (-) TimerEvent: {}
+[70.514655] (-) TimerEvent: {}
+[70.615558] (-) TimerEvent: {}
+[70.717461] (-) TimerEvent: {}
+[70.818695] (-) TimerEvent: {}
+[70.919832] (-) TimerEvent: {}
+[71.021416] (-) TimerEvent: {}
+[71.124066] (-) TimerEvent: {}
+[71.225639] (-) TimerEvent: {}
+[71.327739] (-) TimerEvent: {}
+[71.430424] (-) TimerEvent: {}
+[71.531768] (-) TimerEvent: {}
+[71.632461] (-) TimerEvent: {}
+[71.734082] (-) TimerEvent: {}
+[71.836397] (-) TimerEvent: {}
+[71.937410] (-) TimerEvent: {}
+[72.039908] (-) TimerEvent: {}
+[72.142565] (-) TimerEvent: {}
+[72.244656] (-) TimerEvent: {}
+[72.345487] (-) TimerEvent: {}
+[72.449026] (-) TimerEvent: {}
+[72.552202] (-) TimerEvent: {}
+[72.652908] (-) TimerEvent: {}
+[72.756766] (-) TimerEvent: {}
+[72.857433] (-) TimerEvent: {}
+[72.958096] (-) TimerEvent: {}
+[73.061427] (-) TimerEvent: {}
+[73.162511] (-) TimerEvent: {}
+[73.263170] (-) TimerEvent: {}
+[73.365256] (-) TimerEvent: {}
+[73.467409] (-) TimerEvent: {}
+[73.568058] (-) TimerEvent: {}
+[73.670437] (-) TimerEvent: {}
+[73.771579] (-) TimerEvent: {}
+[73.873430] (-) TimerEvent: {}
+[73.974418] (-) TimerEvent: {}
+[74.077661] (-) TimerEvent: {}
+[74.178392] (-) TimerEvent: {}
+[74.280200] (-) TimerEvent: {}
+[74.382577] (-) TimerEvent: {}
+[74.483524] (-) TimerEvent: {}
+[74.585107] (-) TimerEvent: {}
+[74.688082] (-) TimerEvent: {}
+[74.788725] (-) TimerEvent: {}
+[74.889797] (-) TimerEvent: {}
+[74.991407] (-) TimerEvent: {}
+[75.092247] (-) TimerEvent: {}
+[75.193423] (-) TimerEvent: {}
+[75.295731] (-) TimerEvent: {}
+[75.396690] (-) TimerEvent: {}
+[75.498963] (-) TimerEvent: {}
+[75.599622] (-) TimerEvent: {}
+[75.700560] (-) TimerEvent: {}
+[75.802632] (-) TimerEvent: {}
+[75.903895] (-) TimerEvent: {}
+[76.004914] (-) TimerEvent: {}
+[76.109421] (-) TimerEvent: {}
+[76.210039] (-) TimerEvent: {}
+[76.311227] (-) TimerEvent: {}
+[76.412436] (-) TimerEvent: {}
+[76.516644] (-) TimerEvent: {}
+[76.617659] (-) TimerEvent: {}
+[76.719640] (-) TimerEvent: {}
+[76.820253] (-) TimerEvent: {}
+[76.923573] (-) TimerEvent: {}
+[77.024201] (-) TimerEvent: {}
+[77.126813] (-) TimerEvent: {}
+[77.229423] (-) TimerEvent: {}
+[77.332402] (-) TimerEvent: {}
+[77.434125] (-) TimerEvent: {}
+[77.537159] (-) TimerEvent: {}
+[77.642135] (-) TimerEvent: {}
+[77.742925] (-) TimerEvent: {}
+[77.844057] (-) TimerEvent: {}
+[77.946416] (-) TimerEvent: {}
+[78.049391] (-) TimerEvent: {}
+[78.151584] (-) TimerEvent: {}
+[78.255909] (-) TimerEvent: {}
+[78.356860] (-) TimerEvent: {}
+[78.386805] (xolobot_arm_server) StdoutLine: {'line': b'[100%] Built target xolobot_arm_server\n'}
+[78.456990] (-) TimerEvent: {}
+[78.458837] (xolobot_arm_server) CommandEnded: {'returncode': 0}
+[78.467364] (xolobot_arm_server) JobProgress: {'identifier': 'xolobot_arm_server', 'progress': 'install'}
+[78.467549] (xolobot_arm_server) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/monica/ros2_ws/build/xolobot_arm_server'], 'cwd': '/home/monica/ros2_ws/build/xolobot_arm_server', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'es:en'), ('USER', 'monica'), ('LC_TIME', 'en_US.UTF-8'), ('ROS_PACKAGE_PATH', '/opt/ros/iron/share'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/x86_64-linux-gnu:/opt/ros/iron/lib:/opt/ros/iron/lib'), ('HOME', '/home/monica'), ('OLDPWD', '/home/monica'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'en_US.UTF-8'), ('SYSTEMD_EXEC_PID', '1449'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/monica/ros2_ws/install'), ('ROS_DISTRO', 'iron'), ('LOGNAME', 'monica'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'monica'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('PATH', '/usr/lib/jvm/java-17-openjdk-amd64/bin:/opt/ros/iron/bin:/home/monica/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/monica/bin'), ('SESSION_MANAGER', 'local/monica-Lenovo-Ideapad-S145-14IGM:@/tmp/.ICE-unix/1421,unix/monica-Lenovo-Ideapad-S145-14IGM:/tmp/.ICE-unix/1421'), ('PAPERSIZE', 'letter'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'en_US.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/c0e4e650_06c4_45a4_a0f5_f30984ee2ccb'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'es_ES.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'en_US.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.AX3572'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.133'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('LC_NAME', 'en_US.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('IGN_GAZEBO_RESOURCE_PATH', '/home/monica/ros2_ws/src/xolobot_arm/models:'), ('LC_MEASUREMENT', 'en_US.UTF-8'), ('LC_IDENTIFICATION', 'en_US.UTF-8'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-17-openjdk-amd64'), ('PWD', '/home/monica/ros2_ws/build/xolobot_arm_server'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('GAZEBO_PLUGIN_PATH', '/opt/ros/iron/lib:'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('LC_NUMERIC', 'en_US.UTF-8'), ('LC_PAPER', 'en_US.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/monica/ros2_ws/install/xolobot_control:/home/monica/ros2_ws/install/xolobot_arm_server:/home/monica/ros2_ws/install/xolobot_arm:/opt/ros/iron')]), 'shell': False}
+[78.524751] (xolobot_arm_server) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[78.529170] (xolobot_arm_server) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_arm_server/lib/xolobot_arm_server/xolobot_arm_server\n'}
+[78.557420] (-) TimerEvent: {}
+[78.581679] (xolobot_arm_server) StdoutLine: {'line': b'-- Set runtime path of "/home/monica/ros2_ws/install/xolobot_arm_server/lib/xolobot_arm_server/xolobot_arm_server" to ""\n'}
+[78.584149] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/ament_index/resource_index/package_run_dependencies/xolobot_arm_server\n'}
+[78.584530] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/ament_index/resource_index/parent_prefix_path/xolobot_arm_server\n'}
+[78.584831] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/environment/ament_prefix_path.sh\n'}
+[78.595918] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/environment/ament_prefix_path.dsv\n'}
+[78.596665] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/environment/path.sh\n'}
+[78.597004] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/environment/path.dsv\n'}
+[78.599403] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/local_setup.bash\n'}
+[78.600111] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/local_setup.sh\n'}
+[78.600401] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/local_setup.zsh\n'}
+[78.601439] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/local_setup.dsv\n'}
+[78.601731] (xolobot_arm_server) StdoutLine: {'line': b'-- Installing: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/package.dsv\n'}
+[78.608694] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/ament_index/resource_index/packages/xolobot_arm_server\n'}
+[78.609133] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/cmake/xolobot_arm_serverConfig.cmake\n'}
+[78.610744] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/cmake/xolobot_arm_serverConfig-version.cmake\n'}
+[78.611119] (xolobot_arm_server) StdoutLine: {'line': b'-- Up-to-date: /home/monica/ros2_ws/install/xolobot_arm_server/share/xolobot_arm_server/package.xml\n'}
+[78.617541] (xolobot_arm_server) CommandEnded: {'returncode': 0}
+[78.658807] (-) TimerEvent: {}
+[78.704567] (xolobot_arm_server) JobEnded: {'identifier': 'xolobot_arm_server', 'rc': 0}
+[78.708443] (-) EventReactorShutdown: {}
