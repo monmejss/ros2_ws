@@ -8,7 +8,7 @@
     <link name='link'>
       <inertial>
         <pose>0 0 0.06 0 0 0</pose>
-        <mass>0.39</mass>
+        <mass>0.10</mass>  <!--Masa de la lata-->
         <inertia>
           <ixx>0.00055575</ixx>
           <ixy>0</ixy>
@@ -27,6 +27,12 @@
           </mesh>
         </geometry>
         <surface>
+          <friction>
+            <ode>
+              <mu>20</mu>  
+              <mu2>20</mu2>
+            </ode>
+          </friction>
           <contact>
               <kp>1e+07</kp>
               <kd>1</kd>

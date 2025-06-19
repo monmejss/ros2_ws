@@ -1,0 +1,28 @@
+[0.053s] Invoking command in '/home/monica/ros2_ws/build/xolobot_arm_server': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2
+[0.324s] [35m[1mConsolidate compiler generated dependencies of target xolobot_arm_server[0m
+[0.480s] [ 33%] [32mBuilding CXX object CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o[0m
+[10.042s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In member function ‘[01m[Kvoid SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState_<std::allocator<void> >::SharedPtr)[m[K’:
+[10.044s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:82:9:[m[K [01;31m[Kerror: [m[K‘[01m[KtemporizadorHombro[m[K’ was not declared in this scope
+[10.044s]    82 |         [01;31m[KtemporizadorHombro[m[K = this->create_wall_timer(
+[10.044s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[10.045s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:83:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kbin[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Ksin[m[K’?
+[10.047s]    83 |             std::chrono::seconds(30), std::[01;31m[Kbin[m[K(&SimulationController::moverHombro, this));
+[10.047s]       |                                            [01;31m[K^~~[m[K
+[10.047s]       |                                            [32m[Ksin[m[K
+[10.048s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:83:71:[m[K [01;31m[Kerror: [m[K‘[01m[KmoverHombro[m[K’ is not a member of ‘[01m[KSimulationController[m[K’
+[10.048s]    83 | :chrono::seconds(30), std::bin(&SimulationController::[01;31m[KmoverHombro[m[K, this));
+[10.048s]       |                                                       [01;31m[K^~~~~~~~~~~[m[K
+[10.048s] 
+[10.052s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K At global scope:
+[10.053s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:92:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid SimulationController::moverHombro()[m[K’
+[10.053s]    92 | void [01;31m[KSimulationController[m[K::moverHombro(){
+[10.053s]       |      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[10.053s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:92:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid SimulationController::moverHombro()[m[K’
+[10.053s] In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[10.056s] [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:22:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass SimulationController[m[K’ defined here
+[10.057s]    22 | class [01;36m[KSimulationController[m[K : public rclcpp::Node{
+[10.057s]       |       [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[16.645s] gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+[16.646s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+[16.647s] gmake: *** [Makefile:146: all] Error 2
+[16.652s] Invoked command in '/home/monica/ros2_ws/build/xolobot_arm_server' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/monica/ros2_ws/build/xolobot_arm_server -- -j2 -l2

@@ -10,6 +10,7 @@
 #include <random>  
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
+#include <chrono>
 
 #define TOTAL_JOINTS 21
 
@@ -40,6 +41,9 @@ private:
 
     // Publicador para la trayectoria completa
     rclcpp::Publisher<trajectory_msgs::msg::JointTrajectory>::SharedPtr jointTrajectoryPub;
+    // Publicador para el controlador de esfuerzo
+    rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr jointEffortPub;
+    
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorPalma;
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorAntebrazo;
     //Suscriptores Dedos 
@@ -49,7 +53,11 @@ private:
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorAnular;
     rclcpp::Subscription<gazebo_msgs::msg::ContactsState>::SharedPtr suscriptorMenique;
    
+    rclcpp::TimerBase::SharedPtr temporizadorHombro;
+
     void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
+    void moverHombro();
+    void aplicarFuerza();
 };
 
 #endif /* SRC_SIMULATIONCONTROLLER_H_ */

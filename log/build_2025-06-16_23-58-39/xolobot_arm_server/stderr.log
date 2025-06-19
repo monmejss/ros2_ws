@@ -1,0 +1,23 @@
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:76:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid SimulationController::moverHombro()[m[K’
+   76 | void [01;31m[KSimulationController[m[K::moverHombro(){
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:76:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid SimulationController::moverHombro()[m[K’
+In file included from [01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:1[m[K:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.h:22:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass SimulationController[m[K’ defined here
+   22 | class [01;36m[KSimulationController[m[K : public rclcpp::Node{
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:[m[K In member function ‘[01m[Kvoid SimulationController::deteccionColision(gazebo_msgs::msg::ContactsState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:90:9:[m[K [01;31m[Kerror: [m[K‘[01m[KtemporizadorHombro[m[K’ was not declared in this scope
+   90 |         [01;31m[KtemporizadorHombro[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:91:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kbin[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Ksin[m[K’?
+   91 |             std::chrono::seconds(30), std::[01;31m[Kbin[m[K(&SimulationController::moverHombro, this));
+      |                                            [01;31m[K^~~[m[K
+      |                                            [32m[Ksin[m[K
+[01m[K/home/monica/ros2_ws/src/xolobot_arm_server/src/SimulationController.cpp:91:71:[m[K [01;31m[Kerror: [m[K‘[01m[KmoverHombro[m[K’ is not a member of ‘[01m[KSimulationController[m[K’
+   91 | :chrono::seconds(30), std::bin(&SimulationController::[01;31m[KmoverHombro[m[K, this));
+      |                                                       [01;31m[K^~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/xolobot_arm_server.dir/build.make:90: CMakeFiles/xolobot_arm_server.dir/src/SimulationController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/xolobot_arm_server.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

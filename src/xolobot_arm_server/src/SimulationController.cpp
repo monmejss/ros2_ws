@@ -4,6 +4,7 @@
 #include "gazebo_msgs/msg/contacts_state.hpp"
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
+#include <chrono>
 
 SimulationController::SimulationController() : rclcpp::Node("simulation_controller"){
     // Inicializar los límites de las articulaciones (en radianes)
@@ -35,6 +36,9 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
 
     // Publicador para trayectoria completa
     jointTrajectoryPub = this->create_publisher<trajectory_msgs::msg::JointTrajectory>("/joint_trajectory_controller/joint_trajectory", 10);
+    // Publicador para el controlador de esfuerzo
+    jointEffortPub = this->create_publisher<std_msgs::msg::Float64>("/effort_controller/command", 10);
+
 
     // Suscriptor para bumper palma
     suscriptorPalma = this ->create_subscription<gazebo_msgs::msg::ContactsState>
@@ -44,7 +48,6 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
     suscriptorAntebrazo= this ->create_subscription<gazebo_msgs::msg::ContactsState>
         ("/bumper_states_antebrazo", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
     
-    // DEDOS
     // Suscriptor para dedo pulgar
     suscriptorPulgar= this ->create_subscription<gazebo_msgs::msg::ContactsState>
         ("/bumper_states_pulgar_3", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
@@ -75,12 +78,35 @@ void SimulationController::deteccionColision(const gazebo_msgs::msg::ContactsSta
     if(!msg->states.empty() && !colisionDetectada){
         colisionDetectada = true;
         RCLCPP_WARN(this->get_logger(),"¡Colision detectada!");
+        
+        if (!temporizadorHombro) {
+            RCLCPP_WARN(this->get_logger(),"¡Temporizador creado!");
+            temporizadorHombro = this->create_wall_timer(
+                std::chrono::seconds(10), std::bind(&SimulationController::moverHombro, this));
+        }
     }
 }
 
+
+
 void SimulationController::startTrajectory(){
-    RCLCPP_INFO(this->get_logger(), "Iniciando simulacion");
+    //RCLCPP_INFO(this->get_logger(), "Iniciando simulacion");
     generaAleatorios(); 
+}
+
+void SimulationController::moverHombro(){
+    if(colisionDetectada){
+        RCLCPP_WARN(this->get_logger(),"¡Moviendo hombro!");
+        jointValues[1]= 0.30;
+        colisionDetectada = false; 
+    }
+}
+
+void SimulationController::aplicarFuerza(){
+    std_msgs::msg::Float64 torque_msg;
+    torque_msg.data = 8000.0;
+    // Publica en articulaciones
+    jointEffortPub->publish(torque_msg);
 }
 
 void SimulationController::generaAleatorios(){
@@ -101,8 +127,12 @@ void SimulationController::generaAleatorios(){
 
     for (size_t i = 0; i < TOTAL_JOINTS; ++i){
         std_msgs::msg::Float64 msg;
+        //jnt_hombro_hoombro
+        if(i==1 && colisionDetectada){
+            msg.data = jointValues[1];
+        }
         //jnt_codo_antebrazo
-        if(i==4){
+        else if(i==4){
             msg.data = -1.5708;
         }
         //jnt_biceps_codo 
@@ -127,40 +157,40 @@ void SimulationController::generaAleatorios(){
             msg.data = 1.5708; //90°
         }
         else if(i==7 && colisionDetectada){
-            msg.data = 0.1222; //7°
+            msg.data = 0.2094; //12
         }
         else if(i==8 && colisionDetectada){
-            msg.data = 0.436; //25°
+            msg.data = 0.5236; //30
         }
         // Indice (9-10-11)
         else if(i==9 && colisionDetectada){
-            msg.data = 0.80;
+            msg.data = 0.80; // 46
         }
         else if(i==10 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.6109; //35
         }
         else if(i==11 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.6981; //40
         }
         // Cordial (12-13-14)
         else if(i==12 && colisionDetectada){
             msg.data = 1.1345; //65
         }
         else if(i==13 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.6109; //35
         }
         else if(i==14 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.6109; //35
         }
         // Anular (15-16-17)
         else if(i==15 && colisionDetectada){
             msg.data = 1.1345; //65
         }
         else if(i==16 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.6109; //35
         }
         else if(i==17 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.6109; //35
         }
         // Menique (18-19-20)
         else if(i==18 && colisionDetectada){
@@ -170,7 +200,7 @@ void SimulationController::generaAleatorios(){
             msg.data = 0.6109; //35
         }
         else if(i==20 && colisionDetectada){
-            msg.data = 0.5236; //30 
+            msg.data = 0.6109; //35
         }
         else{
             msg.data = 0.0;

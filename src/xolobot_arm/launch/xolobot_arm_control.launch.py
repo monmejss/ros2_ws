@@ -73,8 +73,12 @@ def generate_launch_description():
     #    output='screen'
     #)
 
-    load_position_controller = ExecuteProcess(
+    load_trajectory_controller = ExecuteProcess(
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
+        output='screen'
+    )
+    load_effort_controller = ExecuteProcess(
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'effort_controller'],
         output='screen'
     )
 
@@ -87,5 +91,6 @@ def generate_launch_description():
         #objeto2,
         soporte,
         #soporte2,
-        load_position_controller
+        load_trajectory_controller,
+        load_effort_controller
     ])
