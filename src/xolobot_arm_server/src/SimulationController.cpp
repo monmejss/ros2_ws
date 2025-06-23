@@ -92,6 +92,9 @@ void SimulationController::deteccionColision(const gazebo_msgs::msg::ContactsSta
 void SimulationController::startTrajectory(){
     //RCLCPP_INFO(this->get_logger(), "Iniciando simulacion");
     generaAleatorios(); 
+    if(colisionDetectada){
+        aplicarFuerza();
+    }
 }
 
 void SimulationController::moverHombro(){
@@ -103,8 +106,9 @@ void SimulationController::moverHombro(){
 }
 
 void SimulationController::aplicarFuerza(){
+    RCLCPP_WARN(this->get_logger(),"Funcion de fuerza!");
     std_msgs::msg::Float64 torque_msg;
-    torque_msg.data = 8000.0;
+    torque_msg.data = 80000;
     // Publica en articulaciones
     jointEffortPub->publish(torque_msg);
 }
@@ -157,50 +161,50 @@ void SimulationController::generaAleatorios(){
             msg.data = 1.5708; //90°
         }
         else if(i==7 && colisionDetectada){
-            msg.data = 0.2094; //12
+            msg.data = 0.1222; //7°
         }
         else if(i==8 && colisionDetectada){
-            msg.data = 0.5236; //30
+            msg.data = 0.7854; //45
         }
         // Indice (9-10-11)
         else if(i==9 && colisionDetectada){
-            msg.data = 0.80; // 46
+            msg.data = 0.80;
         }
         else if(i==10 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data = 0.7854; //45
         }
         else if(i==11 && colisionDetectada){
-            msg.data = 0.6981; //40
+            msg.data = 0.7854; //45
         }
         // Cordial (12-13-14)
         else if(i==12 && colisionDetectada){
             msg.data = 1.1345; //65
         }
         else if(i==13 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data = 0.7854; //45
         }
         else if(i==14 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data = 0.7854; //45
         }
         // Anular (15-16-17)
         else if(i==15 && colisionDetectada){
             msg.data = 1.1345; //65
         }
         else if(i==16 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data =0.7854; //45
         }
         else if(i==17 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data = 0.7854; //45
         }
         // Menique (18-19-20)
         else if(i==18 && colisionDetectada){
             msg.data = 0.80;
         }
         else if(i==19 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data =0.7854; //45
         }
         else if(i==20 && colisionDetectada){
-            msg.data = 0.6109; //35
+            msg.data = 0.7854; //45
         }
         else{
             msg.data = 0.0;

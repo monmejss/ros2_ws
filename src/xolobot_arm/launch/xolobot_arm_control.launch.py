@@ -41,19 +41,19 @@ def generate_launch_description():
         output='screen'
     )
     
-    objeto = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        name='spawn_lata',
-        arguments=['-file', objeto_path, '-entity', 'objeto'],
-        output='screen'
-    )
-    
     soporte = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         name='spawn_soporte',
         arguments=['-file', soporte_path, '-entity', 'soporte'],
+        output='screen'
+    )
+    
+    objeto = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        name='spawn_lata',
+        arguments=['-file', objeto_path, '-entity', 'objeto'],
         output='screen'
     )
     
@@ -87,10 +87,10 @@ def generate_launch_description():
         gazebo,
         robot_state_publisher,
         spawn_model,
-        objeto,
         #objeto2,
         soporte,
         #soporte2,
         load_trajectory_controller,
-        load_effort_controller
+        load_effort_controller,
+        objeto
     ])
