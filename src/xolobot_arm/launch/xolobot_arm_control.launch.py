@@ -41,19 +41,19 @@ def generate_launch_description():
         output='screen'
     )
     
-    soporte = Node(
-        package='gazebo_ros',
-        executable='spawn_entity.py',
-        name='spawn_soporte',
-        arguments=['-file', soporte_path, '-entity', 'soporte'],
-        output='screen'
-    )
-    
     objeto = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         name='spawn_lata',
         arguments=['-file', objeto_path, '-entity', 'objeto'],
+        output='screen'
+    )
+    
+    soporte = Node(
+        package='gazebo_ros',
+        executable='spawn_entity.py',
+        name='spawn_soporte',
+        arguments=['-file', soporte_path, '-entity', 'soporte'],
         output='screen'
     )
     
@@ -77,20 +77,20 @@ def generate_launch_description():
         cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'joint_trajectory_controller'],
         output='screen'
     )
-    load_effort_controller = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'effort_controller'],
-        output='screen'
-    )
+    #load_effort_controller = ExecuteProcess(
+    #    cmd=['ros2', 'control', 'load_controller', '--set-state', 'active', 'effort_controller'],
+    #    output='screen'
+    #)
 
 
     return LaunchDescription([
         gazebo,
         robot_state_publisher,
         spawn_model,
+        objeto,
         #objeto2,
         soporte,
         #soporte2,
         load_trajectory_controller,
-        load_effort_controller,
-        objeto
+        #load_effort_controller
     ])

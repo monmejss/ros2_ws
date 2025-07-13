@@ -9,6 +9,8 @@ find_package(trajectory_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(gazebo_ros REQUIRED)
 find_package(gazebo_ros2_control REQUIRED)
+find_package(linkattacher_msgs REQUIRED)
+
 
 
 include_directories(include)
@@ -40,6 +42,7 @@ ament_target_dependencies(xolobot_arm_server
   trajectory_msgs
   std_msgs
   gazebo_ros
+  linkattacher_msgs
 )
 
 ament_package()

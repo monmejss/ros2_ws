@@ -56,8 +56,10 @@ private:
     rclcpp::TimerBase::SharedPtr temporizadorHombro;
 
     void deteccionColision(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
+    void deteccionColisionPalma(const gazebo_msgs::msg::ContactsState::SharedPtr msg);
     void moverHombro();
-    void aplicarFuerza();
+    void agarre_objeto();
+
 };
 
 #endif /* SRC_SIMULATIONCONTROLLER_H_ */

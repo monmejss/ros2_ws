@@ -1,10 +1,11 @@
 #include "SimulationController.h"
 #include "std_msgs/msg/float64.hpp"
-#include <random>
 #include "gazebo_msgs/msg/contacts_state.hpp"
 #include "trajectory_msgs/msg/joint_trajectory.hpp"
 #include "trajectory_msgs/msg/joint_trajectory_point.hpp"
 #include <chrono>
+#include "linkattacher_msgs/srv/attach_link.hpp"
+
 
 SimulationController::SimulationController() : rclcpp::Node("simulation_controller"){
     // Inicializar los límites de las articulaciones (en radianes)
@@ -42,7 +43,7 @@ SimulationController::SimulationController() : rclcpp::Node("simulation_controll
 
     // Suscriptor para bumper palma
     suscriptorPalma = this ->create_subscription<gazebo_msgs::msg::ContactsState>
-        ("/bumper_states_palma", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColision, this, std::placeholders::_1));
+        ("/bumper_states_palma", rclcpp::SensorDataQoS(), std::bind(&SimulationController::deteccionColisionPalma, this, std::placeholders::_1));
 
     // Suscriptor para bumper antebrazo
     suscriptorAntebrazo= this ->create_subscription<gazebo_msgs::msg::ContactsState>
@@ -82,19 +83,28 @@ void SimulationController::deteccionColision(const gazebo_msgs::msg::ContactsSta
         if (!temporizadorHombro) {
             RCLCPP_WARN(this->get_logger(),"¡Temporizador creado!");
             temporizadorHombro = this->create_wall_timer(
-                std::chrono::seconds(10), std::bind(&SimulationController::moverHombro, this));
+                std::chrono::seconds(8), std::bind(&SimulationController::moverHombro, this));
         }
     }
 }
 
-
+void SimulationController::deteccionColisionPalma(const gazebo_msgs::msg::ContactsState::SharedPtr msg){
+    if(!msg->states.empty() && !colisionDetectada){
+        colisionDetectada = true;
+        RCLCPP_WARN(this->get_logger(),"¡Colision detectada!");
+        agarre_objeto();
+        
+        if (!temporizadorHombro) {
+            RCLCPP_WARN(this->get_logger(),"¡Temporizador creado!");
+            temporizadorHombro = this->create_wall_timer(
+                std::chrono::seconds(8), std::bind(&SimulationController::moverHombro, this));
+        }
+    }
+}
 
 void SimulationController::startTrajectory(){
     //RCLCPP_INFO(this->get_logger(), "Iniciando simulacion");
     generaAleatorios(); 
-    if(colisionDetectada){
-        aplicarFuerza();
-    }
 }
 
 void SimulationController::moverHombro(){
@@ -105,12 +115,35 @@ void SimulationController::moverHombro(){
     }
 }
 
-void SimulationController::aplicarFuerza(){
-    RCLCPP_WARN(this->get_logger(),"Funcion de fuerza!");
-    std_msgs::msg::Float64 torque_msg;
-    torque_msg.data = 80000;
-    // Publica en articulaciones
-    jointEffortPub->publish(torque_msg);
+void SimulationController::agarre_objeto(){
+    /*Cliente para el servicio /link_attacher_node/ATTACHLINK
+    envia la solicitud al servidor de servicios*/
+    auto client = this->create_client<linkattacher_msgs::srv::AttachLink>("/link_attacher_node/ATTACHLINK");
+    
+    // Solicitud que se enviara al servicio
+    auto request = std::make_shared<linkattacher_msgs::srv::AttachLink::Request>();
+    request->model1_name = "xolobot_arm";
+    request->link1_name  = "link_palma_izq";
+    request->model2_name = "objeto";
+    request->link2_name  = "link";
+
+    if (!client->wait_for_service(std::chrono::seconds(10))) {
+        RCLCPP_WARN(this->get_logger(), "Servicio de attach no disponible");
+        return;
+    }
+    // Envia la solicitud al servicio 
+    // callback para manejar la respuesta
+    client->async_send_request(request,
+        [this](rclcpp::Client<linkattacher_msgs::srv::AttachLink>::SharedFuture future) {
+            auto response = future.get();
+            if (response->success) {
+                RCLCPP_INFO(this->get_logger(), "Attach correcto: %s", response->message.c_str());
+            } else {
+                RCLCPP_WARN(this->get_logger(), "Attach fallido: %s", response->message.c_str());
+            }
+        });
+    
+    RCLCPP_INFO(this->get_logger(), "Solicitud de attach enviada");
 }
 
 void SimulationController::generaAleatorios(){
@@ -161,50 +194,50 @@ void SimulationController::generaAleatorios(){
             msg.data = 1.5708; //90°
         }
         else if(i==7 && colisionDetectada){
-            msg.data = 0.1222; //7°
+            msg.data = 0.2094; //12
         }
         else if(i==8 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.5236; //30
         }
         // Indice (9-10-11)
         else if(i==9 && colisionDetectada){
-            msg.data = 0.80;
+            msg.data = 0.80; // 46
         }
         else if(i==10 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.6109; //35
         }
         else if(i==11 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.6981; //40
         }
         // Cordial (12-13-14)
         else if(i==12 && colisionDetectada){
             msg.data = 1.1345; //65
         }
         else if(i==13 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.6109; //35
         }
         else if(i==14 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.6109; //35
         }
         // Anular (15-16-17)
         else if(i==15 && colisionDetectada){
             msg.data = 1.1345; //65
         }
         else if(i==16 && colisionDetectada){
-            msg.data =0.7854; //45
+            msg.data = 0.6109; //35
         }
         else if(i==17 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.6109; //35
         }
         // Menique (18-19-20)
         else if(i==18 && colisionDetectada){
             msg.data = 0.80;
         }
         else if(i==19 && colisionDetectada){
-            msg.data =0.7854; //45
+            msg.data = 0.6109; //35
         }
         else if(i==20 && colisionDetectada){
-            msg.data = 0.7854; //45
+            msg.data = 0.6109; //35
         }
         else{
             msg.data = 0.0;
