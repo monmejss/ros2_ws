@@ -1,4 +1,7 @@
 # Brazo robótico antropomórfico 🦾
+## SRC
+Carpeta principal de este repositorio.
+
 ## Comandos
 ### Para lanzar el mundo - ejecutar 
 1. colcon build
@@ -17,3 +20,8 @@
 2. pkill -9 gzclient
 3. pkill -9 gazebo
 
+### Paquete de Python
+ros2 pkg create --build-type ament_python --license Apache-2.0 modulos
+
+## SRC_LATA
+Esta es una carpeta que puede servir de prueba. Tiene el proyecto del brazo robótico antropomórfico que carga la lata y simula el agarre.
