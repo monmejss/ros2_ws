@@ -1,5 +1,5 @@
 # Brazo robótico antropomórfico 🦾
-## SRC
+## src
 Carpeta principal de este repositorio.
 
 ## Comandos
@@ -23,5 +23,5 @@ Carpeta principal de este repositorio.
 ### Paquete de Python
 ros2 pkg create --build-type ament_python --license Apache-2.0 modulos
 
-## SRC_LATA
+## src_lata
 Esta es una carpeta que puede servir de prueba. Tiene el proyecto del brazo robótico antropomórfico que carga la lata y simula el agarre.
